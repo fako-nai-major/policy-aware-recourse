@@ -3,7 +3,7 @@ message: "If you use this code, please cite the paper."
 title: "Policy-aware counterfactual recourse with verified acceptance for educational early warning: code, configuration and per-query results"
 type: software
 license: MIT
-repository-code: "https://github.com/[account]/policy-aware-recourse"
+repository-code: "https://github.com/fako-nai-major/policy-aware-recourse"
 authors:
   - family-names: Ako-Nai
     given-names: Frederick
