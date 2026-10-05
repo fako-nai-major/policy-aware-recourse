@@ -1,0 +1,8 @@
+dataset,regime,DiCE first candidate,Post-hoc policy filter,Post-hoc full-gate filter,Policy-aware ranking (no edit),Policy-aware ranking + edit (framework),Framework + fallback over ranked pool,Direct policy repair (no DiCE),Direct policy repair + classifier escalation,Policy reachable within bounds (upper bound)
+AUC,aligned,28.0 ± 3.8,36.2 ± 3.2,37.3 ± 2.9,36.7 ± 2.9,65.6 ± 4.2,66.3 ± 4.4,11.7 ± 1.8,65.9 ± 4.3,67.7 ± 4.3
+AUC,floor,26.6 ± 3.2,34.2 ± 3.3,35.6 ± 3.2,34.0 ± 3.1,64.6 ± 4.3,66.3 ± 4.4,11.7 ± 1.8,65.9 ± 4.3,67.7 ± 4.3
+AUC,mismatch,28.0 ± 3.8,36.2 ± 3.2,37.3 ± 2.9,36.0 ± 3.0,65.0 ± 4.5,66.3 ± 4.4,11.7 ± 1.8,65.9 ± 4.3,67.7 ± 4.3
+HarvardX,aligned,98.5 ± 0.4,98.5 ± 0.4,99.9 ± 0.1,99.9 ± 0.1,99.9 ± 0.1,99.9 ± 0.1,,,
+OULAD,aligned,76.5 ± 2.1,97.1 ± 0.8,99.3 ± 0.4,99.2 ± 0.5,99.9 ± 0.1,100.0 ± 0.0,36.1 ± 9.4,91.2 ± 8.6,100.0 ± 0.0
+OULAD,floor,0.3 ± 0.1,0.5 ± 0.1,0.7 ± 0.2,0.7 ± 0.2,98.5 ± 1.4,99.9 ± 0.1,84.8 ± 8.4,99.6 ± 0.3,100.0 ± 0.0
+OULAD,mismatch,0.3 ± 0.1,0.5 ± 0.2,0.7 ± 0.2,0.7 ± 0.2,98.6 ± 1.2,99.9 ± 0.1,84.8 ± 8.4,99.6 ± 0.3,100.0 ± 0.0

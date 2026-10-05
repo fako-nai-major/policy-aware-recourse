@@ -1,0 +1,10 @@
+Dataset,Model input,Friedman p,CatBoost mean rank,Best model,Best ROC-AUC,CatBoost ROC-AUC
+OULAD,Stage 1,< .001,2.6,MLP,0.662,0.660
+OULAD,Stage 2,< .001,2.6,Gradient boosting,0.784,0.782
+OULAD,Stage 3,< .001,3.0,MLP,0.857,0.854
+OULAD,Complete,< .001,1.4,CatBoost,0.926,0.926
+AUC,Stage 1,< .001,4.2,Logistic regression,0.822,0.811
+AUC,Stage 2,< .001,5.0,MLP,0.929,0.919
+AUC,Stage 3,< .001,5.1,MLP,0.948,0.937
+AUC,Complete,< .001,5.2,MLP,1.000,0.999
+HarvardX,Complete,< .001,2.2,MLP,0.960,0.958

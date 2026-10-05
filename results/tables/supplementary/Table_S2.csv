@@ -1,0 +1,8 @@
+Dataset,Stage,Eligible / evaluated,True failures,DiCE first,DiCE + full gate,"Ranking, no edit",Framework,Framework + fallback,Repair + escalation
+OULAD,Stage 1,183 / 183,61%,71.2,99.2,99.2,100.0,100.0,92.8
+OULAD,Stage 2,405 / 300,73%,77.7,99.3,99.3,100.0,100.0,88.3
+OULAD,Stage 3,518 / 300,82%,78.7,99.3,99.2,99.9,100.0,93.1
+AUC,Stage 1,88 / 88,81%,3.9,11.9,11.7,96.3,96.5,96.5
+AUC,Stage 2,85 / 85,88%,50.0,63.9,62.9,63.0,64.1,64.1
+AUC,Stage 3,85 / 85,90%,30.7,36.8,36.2,36.2,36.8,35.9
+HarvardX,–,"1,971 / 400",95%,98.5,99.9,99.9,99.9,99.9,n/a

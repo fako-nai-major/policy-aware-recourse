@@ -1,0 +1,89 @@
+Attribute,Group,Queries,Accepted yield (%),Mean effort,Mean policy score
+*DiCE first candidate*,,,,,
+Gender,Female,"1,647",59.0,1.418,64.7
+Gender,Male,"2,267",89.3,1.224,85.3
+Age band,0-35,"2,825",78.5,1.273,79.6
+Age band,35+,"1,089",71.3,1.327,75.9
+IMD band,IMD 0-30% (most deprived),"1,609",76.2,1.303,78.6
+IMD band,IMD 30-70%,"1,370",74.4,1.288,77.4
+IMD band,IMD 70-100%,806,77.9,1.276,79.2
+IMD band,IMD missing,129,95.3,1.177,85.7
+Disability,Disability: no,"3,532",77.1,1.291,78.8
+Disability,Disability: yes,382,71.2,1.253,77.1
+*DiCE + full gate*,,,,,
+Gender,Female,"1,647",98.5,1.485,59.6
+Gender,Male,"2,267",99.8,1.242,83.1
+Age band,0-35,"2,825",99.4,1.328,74.4
+Age band,35+,"1,089",99.0,1.385,70.3
+IMD band,IMD 0-30% (most deprived),"1,609",99.3,1.361,73.1
+IMD band,IMD 30-70%,"1,370",99.2,1.349,72.1
+IMD band,IMD 70-100%,806,99.4,1.325,74.0
+IMD band,IMD missing,129,100.0,1.185,84.9
+Disability,Disability: no,"3,532",99.3,1.345,73.6
+Disability,Disability: yes,382,99.5,1.335,70.9
+*Framework*,,,,,
+Gender,Female,"1,647",99.9,1.125,50.8
+Gender,Male,"2,267",100.0,0.690,66.0
+Age band,0-35,"2,825",100.0,0.854,60.4
+Age band,35+,"1,089",99.9,0.922,57.7
+IMD band,IMD 0-30% (most deprived),"1,609",100.0,0.904,59.0
+IMD band,IMD 30-70%,"1,370",99.9,0.878,59.2
+IMD band,IMD 70-100%,806,100.0,0.840,60.6
+IMD band,IMD missing,129,100.0,0.642,66.4
+Disability,Disability: no,"3,532",99.9,0.870,59.9
+Disability,Disability: yes,382,100.0,0.902,57.4
+*Framework + fallback*,,,,,
+Gender,Female,"1,647",100.0,1.125,50.8
+Gender,Male,"2,267",100.0,0.691,66.0
+Age band,0-35,"2,825",100.0,0.854,60.4
+Age band,35+,"1,089",100.0,0.923,57.7
+IMD band,IMD 0-30% (most deprived),"1,609",100.0,0.904,59.0
+IMD band,IMD 30-70%,"1,370",100.0,0.879,59.2
+IMD band,IMD 70-100%,806,100.0,0.840,60.6
+IMD band,IMD missing,129,100.0,0.642,66.4
+Disability,Disability: no,"3,532",100.0,0.870,59.9
+Disability,Disability: yes,382,100.0,0.902,57.4
+*Policy repair + escalation*,,,,,
+Gender,Female,"1,647",96.5,0.944,46.1
+Gender,Male,"2,267",87.3,0.479,52.1
+Age band,0-35,"2,825",90.4,0.670,50.0
+Age band,35+,"1,089",93.2,0.726,48.0
+IMD band,IMD 0-30% (most deprived),"1,609",91.2,0.721,49.5
+IMD band,IMD 30-70%,"1,370",92.6,0.695,49.3
+IMD band,IMD 70-100%,806,89.1,0.640,48.9
+IMD band,IMD missing,129,89.9,0.434,51.9
+Disability,Disability: no,"3,532",91.1,0.682,49.5
+Disability,Disability: yes,382,92.4,0.718,48.6
+*NICE (bounded)*,,,,,
+Gender,Female,"1,647",5.2,0.560,46.1
+Gender,Male,"2,267",22.9,0.514,47.5
+Age band,0-35,"2,825",16.6,0.516,47.4
+Age band,35+,"1,089",12.2,0.537,47.1
+IMD band,IMD 0-30% (most deprived),"1,609",13.0,0.516,46.7
+IMD band,IMD 30-70%,"1,370",17.9,0.525,48.3
+IMD band,IMD 70-100%,806,15.1,0.523,46.6
+IMD band,IMD missing,129,20.9,0.512,46.2
+Disability,Disability: no,"3,532",15.7,0.527,47.4
+Disability,Disability: yes,382,13.1,0.455,46.7
+*MCCE (bounded)*,,,,,
+Gender,Female,"1,647",28.1,1.252,46.2
+Gender,Male,"2,267",55.9,1.294,48.7
+Age band,0-35,"2,825",45.3,1.287,48.1
+Age band,35+,"1,089",41.3,1.270,47.8
+IMD band,IMD 0-30% (most deprived),"1,609",41.1,1.299,47.9
+IMD band,IMD 30-70%,"1,370",43.8,1.298,48.3
+IMD band,IMD 70-100%,806,47.5,1.247,48.0
+IMD band,IMD missing,129,66.7,1.215,47.2
+Disability,Disability: no,"3,532",44.3,1.287,48.1
+Disability,Disability: yes,382,43.2,1.238,47.8
+*CARE (bounded)*,,,,,
+Gender,Female,134,19.4,0.858,45.3
+Gender,Male,166,63.3,0.767,47.7
+Age band,0-35,223,44.8,0.765,47.2
+Age band,35+,77,40.3,0.849,47.3
+IMD band,IMD 0-30% (most deprived),133,43.6,0.841,47.3
+IMD band,IMD 30-70%,104,43.3,0.731,46.5
+IMD band,IMD 70-100%,57,42.1,0.724,47.3
+IMD band,IMD missing,6,66.7,0.941,53.3
+Disability,Disability: no,270,43.3,0.805,47.4
+Disability,Disability: yes,30,46.7,0.613,45.4

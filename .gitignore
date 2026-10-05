@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+catboost_info/
+logs/
+external/
+.DS_Store
+# institutional / licence-restricted data (see data/README.md)
+data/AUC/*.csv
+data/HarvardX/*.csv
+data/OULAD/studentInfo.csv

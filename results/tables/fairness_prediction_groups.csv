@@ -1,0 +1,41 @@
+model,attribute,group,n,base_fail,flag_rate,fail_recall,false_flag
+complete record,age,0-35,1902.6,0.297,0.238,0.706,0.041
+complete record,age,35+,857.0,0.238,0.182,0.673,0.028
+complete record,disability,Disability: no,2538.4,0.272,0.214,0.696,0.034
+complete record,disability,Disability: yes,221.2,0.367,0.305,0.715,0.068
+complete record,gender,Female,1241.4,0.264,0.214,0.703,0.038
+complete record,gender,Male,1518.2,0.291,0.227,0.694,0.035
+complete record,imd,IMD 0-30% (most deprived),827.4,0.369,0.299,0.736,0.043
+complete record,imd,IMD 30-70%,1093.4,0.251,0.196,0.678,0.034
+complete record,imd,IMD 70-100%,743.4,0.233,0.177,0.658,0.031
+complete record,imd,IMD missing,95.4,0.174,0.176,0.683,0.065
+stage 1,age,0-35,1902.6,0.297,0.067,0.138,0.036
+stage 1,age,35+,857.0,0.238,0.065,0.163,0.035
+stage 1,disability,Disability: no,2538.4,0.272,0.065,0.141,0.036
+stage 1,disability,Disability: yes,221.2,0.367,0.085,0.177,0.032
+stage 1,gender,Female,1241.4,0.264,0.065,0.148,0.035
+stage 1,gender,Male,1518.2,0.291,0.068,0.143,0.037
+stage 1,imd,IMD 0-30% (most deprived),827.4,0.369,0.093,0.177,0.044
+stage 1,imd,IMD 30-70%,1093.4,0.251,0.06,0.127,0.037
+stage 1,imd,IMD 70-100%,743.4,0.233,0.044,0.11,0.025
+stage 1,imd,IMD missing,95.4,0.174,0.08,0.206,0.056
+stage 2,age,0-35,1902.6,0.297,0.153,0.385,0.055
+stage 2,age,35+,857.0,0.238,0.132,0.375,0.056
+stage 2,disability,Disability: no,2538.4,0.272,0.143,0.382,0.054
+stage 2,disability,Disability: yes,221.2,0.367,0.186,0.389,0.07
+stage 2,gender,Female,1241.4,0.264,0.125,0.342,0.047
+stage 2,gender,Male,1518.2,0.291,0.164,0.412,0.062
+stage 2,imd,IMD 0-30% (most deprived),827.4,0.369,0.194,0.428,0.057
+stage 2,imd,IMD 30-70%,1093.4,0.251,0.13,0.354,0.054
+stage 2,imd,IMD 70-100%,743.4,0.233,0.122,0.349,0.053
+stage 2,imd,IMD missing,95.4,0.174,0.126,0.37,0.078
+stage 3,age,0-35,1902.6,0.297,0.198,0.55,0.048
+stage 3,age,35+,857.0,0.238,0.166,0.563,0.041
+stage 3,disability,Disability: no,2538.4,0.272,0.183,0.555,0.044
+stage 3,disability,Disability: yes,221.2,0.367,0.242,0.54,0.072
+stage 3,gender,Female,1241.4,0.264,0.184,0.544,0.054
+stage 3,gender,Male,1518.2,0.291,0.191,0.56,0.039
+stage 3,imd,IMD 0-30% (most deprived),827.4,0.369,0.249,0.594,0.047
+stage 3,imd,IMD 30-70%,1093.4,0.251,0.167,0.524,0.047
+stage 3,imd,IMD 70-100%,743.4,0.233,0.155,0.523,0.043
+stage 3,imd,IMD missing,95.4,0.174,0.147,0.581,0.054

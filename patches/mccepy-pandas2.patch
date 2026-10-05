@@ -1,0 +1,22 @@
+diff --git a/mcce/mcce.py b/mcce/mcce.py
+index 69bb678..b4f5c68 100644
+--- a/mcce/mcce.py
++++ b/mcce/mcce.py
+@@ -130,7 +130,7 @@ class MCCE:
+         self.predictor_matrix = np.zeros([len(self.visit_sequence), len(self.visit_sequence)], dtype=int)
+         self.predictor_matrix = pd.DataFrame(self.predictor_matrix, index=self.visit_sequence.index, columns=self.visit_sequence.index)
+         visited_columns = []
+-        for col, _ in self.visit_sequence.sort_values().iteritems():
++        for col, _ in self.visit_sequence.sort_values().items():
+             self.predictor_matrix.loc[col, visited_columns] = 1
+             visited_columns.append(col)
+         
+@@ -150,7 +150,7 @@ class MCCE:
+ 
+         # Train
+         self.predictor_matrix_columns = self.predictor_matrix.columns.to_numpy()
+-        for col, _ in self.visit_sequence.sort_values().iteritems():
++        for col, _ in self.visit_sequence.sort_values().items():
+             
+             # Initialise the method
+             col_method = METHODS_MAP[self.method[col]](dtype=self.df_dtypes[col],

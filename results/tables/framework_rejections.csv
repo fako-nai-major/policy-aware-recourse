@@ -1,0 +1,8 @@
+dataset,regime,below_policy_threshold,classifier_target_not_met,no_candidate,out_of_bounds
+AUC,aligned,42.8,0.0,57.2,0.0
+AUC,floor,44.4,0.0,55.6,0.0
+AUC,mismatch,43.8,0.0,56.2,0.0
+HarvardX,aligned,0.0,0.0,100.0,0.0
+OULAD,aligned,50.0,50.0,0.0,0.0
+OULAD,floor,0.0,100.0,0.0,0.0
+OULAD,mismatch,1.8,96.4,0.0,1.8

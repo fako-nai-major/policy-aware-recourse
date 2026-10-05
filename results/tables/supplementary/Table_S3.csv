@@ -1,0 +1,20 @@
+Strategy,OULAD aligned,OULAD floor,OULAD mismatch,AUC aligned,AUC floor,AUC mismatch
+"DiCE, first candidate",76.5 ± 2.1,0.3 ± 0.1,0.3 ± 0.1,28.0 ± 3.8,26.6 ± 3.2,28.0 ± 3.8
+"DiCE, post-hoc policy filter",97.1 ± 0.8,0.5 ± 0.1,0.5 ± 0.2,36.2 ± 3.2,34.2 ± 3.3,36.2 ± 3.2
+"DiCE, post-hoc full-gate filter",99.3 ± 0.4,0.7 ± 0.2,0.7 ± 0.2,37.3 ± 2.9,35.6 ± 3.2,37.3 ± 2.9
+"Policy-aware ranking, no editing",99.2 ± 0.5,0.7 ± 0.2,0.7 ± 0.2,36.7 ± 2.9,34.0 ± 3.1,36.0 ± 3.0
+Framework (ranking + editing + gate),99.9 ± 0.1,98.5 ± 1.4,98.6 ± 1.2,65.6 ± 4.2,64.6 ± 4.3,65.0 ± 4.5
+Framework with fallback,100.0 ± 0.0,99.9 ± 0.1,99.9 ± 0.1,66.3 ± 4.4,66.3 ± 4.4,66.3 ± 4.4
+Direct policy repair (no DiCE),36.1 ± 9.4,84.8 ± 8.4,84.8 ± 8.4,11.7 ± 1.8,11.7 ± 1.8,11.7 ± 1.8
+Direct policy repair + escalation,91.2 ± 8.6,99.6 ± 0.3,99.6 ± 0.3,65.9 ± 4.3,65.9 ± 4.3,65.9 ± 4.3
+Policy reachable within bounds (ceiling),100.0 ± 0.0,100.0 ± 0.0,100.0 ± 0.0,67.7 ± 4.3,67.7 ± 4.3,67.7 ± 4.3
+"*External methods (same queries, models, bounds and gate)*",,,,,,
+NICE native,15.5 ± 7.7,0.0 ± 0.1,–,14.3 ± 3.4,–,–
+NICE bounded,15.5 ± 7.7,87.1 ± 5.2,–,14.4 ± 3.8,–,–
+NICE bounded + editing,57.9 ± 9.6,87.1 ± 5.2,–,28.0 ± 3.4,–,–
+MCCE native,26.5 ± 3.3,0.1 ± 0.1,–,19.3 ± 4.9,–,–
+MCCE bounded,44.3 ± 5.3,14.8 ± 2.1,–,31.1 ± 6.3,–,–
+MCCE bounded + editing,67.3 ± 2.1,14.8 ± 2.1,–,31.1 ± 6.3,–,–
+CARE native,14.7 ± 3.1,0.0,–,13.7 ± 4.2,–,–
+CARE bounded,43.7 ± 3.1,20.0,–,38.0 ± 9.5,–,–
+CARE bounded + editing,83.0 ± 8.2,80.0,–,39.0 ± 10.1,–,–

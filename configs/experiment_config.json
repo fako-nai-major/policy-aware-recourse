@@ -1,0 +1,362 @@
+{
+  "generated_by": "tools/dump_config.py",
+  "splits": {
+    "predictive": "StratifiedGroupKFold(n_splits=5, shuffle=True, random_state=0) on the learner key",
+    "prescriptive": "GroupShuffleSplit(test_size=0.2) on the learner key, random_state = seed"
+  },
+  "seeds": {
+    "AUC": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "OULAD": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "HarvardX": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "max_queries_per_stage_and_seed": {
+    "AUC": null,
+    "OULAD": 300,
+    "HarvardX": 400
+  },
+  "classifiers": {
+    "models": [
+      "NB",
+      "DT",
+      "XT",
+      "RF",
+      "MLP",
+      "KNN",
+      "Ridge",
+      "LR",
+      "SVC",
+      "ABC",
+      "GBC",
+      "XGB",
+      "CB"
+    ],
+    "samplers": [
+      "none",
+      "smote",
+      "nearmiss"
+    ],
+    "resampling": "training folds only",
+    "outcome_and_early_warning_model": "CatBoostClassifier(iterations=500, random_seed=seed)",
+    "at_risk_rule": "predicted pass probability < 0.5"
+  },
+  "dice": {
+    "method": "random",
+    "total_CFs": 10,
+    "desired_class": 1,
+    "backend": "sklearn",
+    "random_seed": "seed * 100003 + query index"
+  },
+  "objective_weights": {
+    "lambda_policy": 1000.0,
+    "lambda_feas": 1000.0,
+    "lambda_prox": 1.0,
+    "lambda_spar": 0.5
+  },
+  "objective_weight_variants": {
+    "drop_policy": {
+      "lambda_policy": 0.0,
+      "lambda_feas": 1000.0,
+      "lambda_prox": 1.0,
+      "lambda_spar": 0.5
+    },
+    "drop_feas": {
+      "lambda_policy": 1000.0,
+      "lambda_feas": 0.0,
+      "lambda_prox": 1.0,
+      "lambda_spar": 0.5
+    },
+    "drop_prox": {
+      "lambda_policy": 1000.0,
+      "lambda_feas": 1000.0,
+      "lambda_prox": 0.0,
+      "lambda_spar": 0.5
+    },
+    "drop_spar": {
+      "lambda_policy": 1000.0,
+      "lambda_feas": 1000.0,
+      "lambda_prox": 1.0,
+      "lambda_spar": 0.0
+    },
+    "lp_1": {
+      "lambda_policy": 1.0,
+      "lambda_feas": 1000.0,
+      "lambda_prox": 1.0,
+      "lambda_spar": 0.5
+    },
+    "lp_10": {
+      "lambda_policy": 10.0,
+      "lambda_feas": 1000.0,
+      "lambda_prox": 1.0,
+      "lambda_spar": 0.5
+    },
+    "lp_100": {
+      "lambda_policy": 100.0,
+      "lambda_feas": 1000.0,
+      "lambda_prox": 1.0,
+      "lambda_spar": 0.5
+    },
+    "lx_0.1": {
+      "lambda_policy": 1000.0,
+      "lambda_feas": 1000.0,
+      "lambda_prox": 0.1,
+      "lambda_spar": 0.5
+    },
+    "lx_10": {
+      "lambda_policy": 1000.0,
+      "lambda_feas": 1000.0,
+      "lambda_prox": 10.0,
+      "lambda_spar": 0.5
+    }
+  },
+  "bounded_completion": {
+    "grid": "10 evenly spaced values in [lb, ub]",
+    "applies_to": "actionable features equal to 0"
+  },
+  "bound_regimes": {
+    "floor_fraction": 0.4,
+    "aligned": "DiCE range = gate bounds = [0, w]",
+    "floor": "DiCE range = gate bounds = [0.4w, w]",
+    "mismatch": "DiCE range = [0, w]; gate and completion bounds = [0.4w, w]"
+  },
+  "acceptance_gate": [
+    "policy score >= threshold",
+    "fresh prediction of f = pass",
+    "actionable features within bounds",
+    "non-actionable features unchanged"
+  ],
+  "external_baselines": {
+    "NICE": {
+      "package": "NICEx 0.2.3",
+      "optimization": "sparsity",
+      "justified_cf": true
+    },
+    "MCCE": {
+      "package": "mccepy @63e4fa3 (patches/mccepy-pandas2.patch)",
+      "K": 1000
+    },
+    "CARE": {
+      "package": "CARE @811ff09",
+      "soundness": true,
+      "n_population": 200,
+      "n_generation": 20
+    },
+    "care_queries_per_seed": 100,
+    "snap_tolerance": "1e-6 * max(1, |x0|)"
+  },
+  "datasets": {
+    "OULAD": {
+      "records": 13776,
+      "learners": 12996,
+      "outcome": "y",
+      "pass_rate": 0.7215,
+      "group_key": "id_student",
+      "features": [
+        "Test_1",
+        "Test_2",
+        "Test_3",
+        "Test_4",
+        "Test_5",
+        "Test_6",
+        "sum_click",
+        "mod_AAA",
+        "mod_BBB",
+        "mod_EEE",
+        "mod_FFF"
+      ],
+      "assessments": [
+        "Test_1",
+        "Test_2",
+        "Test_3",
+        "Test_4",
+        "Test_5",
+        "Test_6"
+      ],
+      "immutable_extra": [
+        "mod_AAA",
+        "mod_BBB",
+        "mod_EEE",
+        "mod_FFF"
+      ],
+      "engagement_increase_only": [
+        "sum_click"
+      ],
+      "stages": [
+        1,
+        2,
+        3
+      ],
+      "policy": {
+        "description": "sum of weighted assessment contributions (0-100 scale) >= 40 (OU pass mark)",
+        "weights": {
+          "Test_1": 1.0,
+          "Test_2": 1.0,
+          "Test_3": 1.0,
+          "Test_4": 1.0,
+          "Test_5": 1.0,
+          "Test_6": 1.0
+        },
+        "threshold": 40.0,
+        "threshold_sweep": [
+          30.0,
+          40.0,
+          50.0,
+          60.0
+        ]
+      },
+      "modules": [
+        "AAA",
+        "BBB",
+        "EEE",
+        "FFF"
+      ],
+      "assessment_upper_bounds_by_module": {
+        "AAA": {
+          "Test_1": 9.75,
+          "Test_2": 19.0,
+          "Test_3": 21.0,
+          "Test_4": 22.75,
+          "Test_5": 29.4,
+          "Test_6": 0.0
+        },
+        "BBB": {
+          "Test_1": 73.0,
+          "Test_2": 18.0,
+          "Test_3": 19.8,
+          "Test_4": 34.3,
+          "Test_5": 35.0,
+          "Test_6": 18.0
+        },
+        "EEE": {
+          "Test_1": 73.0,
+          "Test_2": 28.0,
+          "Test_3": 28.0,
+          "Test_4": 28.0,
+          "Test_5": 100.0,
+          "Test_6": 22.0
+        },
+        "FFF": {
+          "Test_1": 47.0,
+          "Test_2": 26.88,
+          "Test_3": 27.44,
+          "Test_4": 26.6,
+          "Test_5": 100.0,
+          "Test_6": 18.8
+        }
+      },
+      "sum_click_upper_bound_by_module": {
+        "AAA": 4.6132,
+        "BBB": 4.7727,
+        "EEE": 5.6648,
+        "FFF": 5.8594
+      }
+    },
+    "AUC": {
+      "records": 670,
+      "learners": 670,
+      "outcome": "y",
+      "pass_rate": 0.3582,
+      "group_key": "id_student",
+      "features": [
+        "Test_1",
+        "Test_2",
+        "Test_3",
+        "Test_4",
+        "sum_click"
+      ],
+      "assessments": [
+        "Test_1",
+        "Test_2",
+        "Test_3",
+        "Test_4"
+      ],
+      "immutable_extra": [],
+      "engagement_increase_only": [
+        "sum_click"
+      ],
+      "stages": [
+        1,
+        2,
+        3
+      ],
+      "policy": {
+        "description": "0.25 * sum(assignment marks) > 15 (the rule that generated the label)",
+        "weights": {
+          "Test_1": 0.25,
+          "Test_2": 0.25,
+          "Test_3": 0.25,
+          "Test_4": 0.25
+        },
+        "threshold": 15.001,
+        "threshold_sweep": [
+          12.5,
+          15.001,
+          16.0,
+          17.0
+        ]
+      },
+      "assessment_upper_bounds": {
+        "Test_1": 10.0,
+        "Test_2": 20.0,
+        "Test_3": 20.0,
+        "Test_4": 20.0
+      },
+      "sum_click_upper_bound": 1338.2
+    },
+    "HarvardX": {
+      "records": 11023,
+      "learners": 11023,
+      "outcome": "y",
+      "pass_rate": 0.1163,
+      "group_key": "userid",
+      "features": [
+        "nevents",
+        "ndays_act",
+        "nchapters"
+      ],
+      "assessments": [],
+      "immutable_extra": [],
+      "engagement_increase_only": [
+        "nevents",
+        "ndays_act",
+        "nchapters"
+      ],
+      "stages": [
+        0
+      ],
+      "policy": {
+        "description": "no institutional grading rule exists; policy criterion not applicable",
+        "weights": null,
+        "threshold": null,
+        "threshold_sweep": []
+      },
+      "engagement_upper_bounds": {
+        "nevents": 729.0,
+        "ndays_act": 61.0,
+        "nchapters": 12.0
+      }
+    }
+  }
+}

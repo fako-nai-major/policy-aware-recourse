@@ -1,0 +1,7 @@
+dataset,baseline,n_both,effort_framework,effort_baseline,score_framework,score_baseline
+OULAD,posthoc_full_gate,3886,0.868,1.344,59.749,73.297
+OULAD,policy_repair_escalate,3568,0.865,0.686,58.744,49.429
+OULAD,dice_first,2996,0.749,1.287,62.623,78.63
+AUC,posthoc_full_gate,948,1.651,1.919,15.228,15.56
+AUC,policy_repair_escalate,1688,2.093,2.186,15.259,15.789
+AUC,dice_first,716,1.546,1.848,15.214,15.571
