@@ -5,7 +5,7 @@
 | Path | Included | Source |
 |---|---|---|
 | `OULAD/OULAD_All_Courses.csv` | yes | Derived from the Open University Learning Analytics Dataset |
-| `HarvardX/harvardx-cs250.csv` | no | HarvardX person-course data; download and prepare as described below |
+| `HarvardX/harvardx-cs250.csv` | no | HarvardX-MITx person-course data (CS50x, 2012); download and run `tools/prepare_harvardx.py` |
 | `AUC/assignment_grades_cleaned.csv` | no | Institutional course records from Athabasca University; not publicly available |
 | `OULAD/studentInfo.csv` | no | Raw OULAD file; needed only by `fairness.py` |
 
@@ -27,10 +27,16 @@ The raw tables, including `studentInfo.csv` for the group-level audit, are avail
 
 ## HarvardX
 
-`harvardx-cs250.csv` has the columns `certified`, `nevents`, `ndays_act`, `nchapters` and `userid` (one row per learner, 11,023 rows). It comes from the HarvardX person-course data:
+`harvardx-cs250.csv` has the columns `certified`, `nevents`, `ndays_act`, `nchapters` and `userid` (one row per learner, 11,023 rows; 1,282 certified, 11.6%).
 
-- Source: [dataset citation, DOI and course filter]
-- Preparation: [steps used to create the extract]
+**Source.** HarvardX-MITx Person-Course Academic Year 2013 De-Identified dataset, version 2.0 (HarvardX & MITx, 2014), Harvard Dataverse, https://doi.org/10.7910/DVN/26147. We use the records for the course `HarvardX/CS50x/2012` (169,621 registrants). The file name keeps an internal label ("cs250"); the course is CS50x.
+
+**Preparation** (`tools/prepare_harvardx.py` rebuilds the file from the person-course CSV):
+
+1. Keep the rows with `course_id == "HarvardX/CS50x/2012"`.
+2. Keep learners with `explored == 1`, i.e. who accessed more than half of the course chapters (11,023 learners).
+3. Derive `userid` from `userid_di` by dropping its `MHxPC` prefix (`MHxPC130471418` → `130471418`).
+4. Keep `certified` (the outcome) and the engagement counts `nevents`, `ndays_act` and `nchapters`. Demographic fields, dates, `grade`, `viewed` and `explored` are dropped; `nplay_video` and `nforum_posts` are dropped because they are 0 for every learner in this extract.
 
 The data are de-identified but subject to the provider's terms of use, so they are not redistributed here.
 

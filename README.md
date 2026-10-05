@@ -29,7 +29,8 @@ fairness.py                  group-level audit on OULAD (needs OULAD studentInfo
 configs/experiment_config.json  every setting used, generated from the code (tools/dump_config.py)
 scripts/setup_external.sh    fetches mccepy and CARE at the pinned commits
 scripts/run_all.sh           runs the complete pipeline in order
-tools/                       dump_config.py (regenerates configs/), supplementary_tables.py (Tables S1-S6)
+tools/                       dump_config.py (regenerates configs/), supplementary_tables.py (Tables S1-S6),
+                             prepare_harvardx.py (builds the HarvardX extract)
 patches/                     one-line pandas-2 patch for mccepy
 data/                        input data (see data/README.md)
 results/                     per-query results and all tables (see results/README.md)
