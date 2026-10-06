@@ -44,51 +44,51 @@ HarvardX,aligned,"NICE queries (n=1999, seeds=5)",DiCE first candidate,98.5 ± 0
 HarvardX,aligned,"NICE queries (n=1999, seeds=5)",DiCE + post-hoc full gate,99.9 ± 0.1,1.412
 HarvardX,aligned,"NICE queries (n=1999, seeds=5)",Framework (ranking + edit + gate),99.9 ± 0.1,0.843
 HarvardX,aligned,"NICE queries (n=1999, seeds=5)",Framework + fallback,99.9 ± 0.1,0.843
-OULAD,aligned,"CARE queries (n=300, seeds=3)",CARE_bounded,43.7 ± 3.1,0.785
-OULAD,aligned,"CARE queries (n=300, seeds=3)",CARE_bounded+edit,83.0 ± 8.2,0.991
-OULAD,aligned,"CARE queries (n=300, seeds=3)",CARE_native,14.7 ± 3.1,0.681
-OULAD,aligned,"CARE queries (n=300, seeds=3)",DiCE first candidate,76.0 ± 5.0,1.29
-OULAD,aligned,"CARE queries (n=300, seeds=3)",Direct policy repair + escalation,94.7 ± 2.1,0.706
-OULAD,aligned,"CARE queries (n=300, seeds=3)",DiCE + post-hoc full gate,98.7 ± 0.6,1.371
-OULAD,aligned,"CARE queries (n=300, seeds=3)",Framework (ranking + edit + gate),100.0 ± 0.0,0.879
-OULAD,aligned,"CARE queries (n=300, seeds=3)",Framework + fallback,100.0 ± 0.0,0.879
-OULAD,aligned,"MCCE queries (n=3914, seeds=5)",MCCE_bounded,44.3 ± 5.3,1.283
-OULAD,aligned,"MCCE queries (n=3914, seeds=5)",MCCE_bounded+edit,67.3 ± 2.1,1.363
-OULAD,aligned,"MCCE queries (n=3914, seeds=5)",MCCE_native,26.5 ± 3.3,1.223
-OULAD,aligned,"MCCE queries (n=3914, seeds=5)",DiCE first candidate,76.5 ± 2.1,1.287
-OULAD,aligned,"MCCE queries (n=3914, seeds=5)",Direct policy repair + escalation,91.2 ± 8.6,0.686
-OULAD,aligned,"MCCE queries (n=3914, seeds=5)",DiCE + post-hoc full gate,99.3 ± 0.4,1.344
-OULAD,aligned,"MCCE queries (n=3914, seeds=5)",Framework (ranking + edit + gate),99.9 ± 0.1,0.873
-OULAD,aligned,"MCCE queries (n=3914, seeds=5)",Framework + fallback,100.0 ± 0.0,0.873
-OULAD,aligned,"NICE queries (n=3914, seeds=5)",NICE_bounded,15.5 ± 7.7,0.521
-OULAD,aligned,"NICE queries (n=3914, seeds=5)",NICE_bounded+edit,57.9 ± 9.6,0.902
-OULAD,aligned,"NICE queries (n=3914, seeds=5)",NICE_native,15.5 ± 7.7,0.521
-OULAD,aligned,"NICE queries (n=3914, seeds=5)",DiCE first candidate,76.5 ± 2.1,1.287
-OULAD,aligned,"NICE queries (n=3914, seeds=5)",Direct policy repair + escalation,91.2 ± 8.6,0.686
-OULAD,aligned,"NICE queries (n=3914, seeds=5)",DiCE + post-hoc full gate,99.3 ± 0.4,1.344
-OULAD,aligned,"NICE queries (n=3914, seeds=5)",Framework (ranking + edit + gate),99.9 ± 0.1,0.873
-OULAD,aligned,"NICE queries (n=3914, seeds=5)",Framework + fallback,100.0 ± 0.0,0.873
-OULAD,floor,"CARE queries (n=100, seeds=1)",CARE_bounded,20.0,3.729
-OULAD,floor,"CARE queries (n=100, seeds=1)",CARE_bounded+edit,80.0,3.371
-OULAD,floor,"CARE queries (n=100, seeds=1)",CARE_native,0.0,
-OULAD,floor,"CARE queries (n=100, seeds=1)",DiCE first candidate,0.0,
-OULAD,floor,"CARE queries (n=100, seeds=1)",Direct policy repair + escalation,99.0,2.753
-OULAD,floor,"CARE queries (n=100, seeds=1)",DiCE + post-hoc full gate,1.0,3.043
-OULAD,floor,"CARE queries (n=100, seeds=1)",Framework (ranking + edit + gate),96.0,3.273
-OULAD,floor,"CARE queries (n=100, seeds=1)",Framework + fallback,100.0,3.28
-OULAD,floor,"MCCE queries (n=3914, seeds=5)",MCCE_bounded,14.8 ± 2.1,4.132
-OULAD,floor,"MCCE queries (n=3914, seeds=5)",MCCE_bounded+edit,14.8 ± 2.1,4.132
-OULAD,floor,"MCCE queries (n=3914, seeds=5)",MCCE_native,0.1 ± 0.1,1.894
-OULAD,floor,"MCCE queries (n=3914, seeds=5)",DiCE first candidate,0.3 ± 0.1,2.496
-OULAD,floor,"MCCE queries (n=3914, seeds=5)",Direct policy repair + escalation,99.6 ± 0.3,2.655
-OULAD,floor,"MCCE queries (n=3914, seeds=5)",DiCE + post-hoc full gate,0.7 ± 0.2,2.58
-OULAD,floor,"MCCE queries (n=3914, seeds=5)",Framework (ranking + edit + gate),98.5 ± 1.4,3.166
-OULAD,floor,"MCCE queries (n=3914, seeds=5)",Framework + fallback,99.9 ± 0.1,3.17
-OULAD,floor,"NICE queries (n=3914, seeds=5)",NICE_bounded,87.1 ± 5.2,2.72
-OULAD,floor,"NICE queries (n=3914, seeds=5)",NICE_bounded+edit,87.1 ± 5.2,2.72
-OULAD,floor,"NICE queries (n=3914, seeds=5)",NICE_native,0.0 ± 0.1,1.588
-OULAD,floor,"NICE queries (n=3914, seeds=5)",DiCE first candidate,0.3 ± 0.1,2.496
-OULAD,floor,"NICE queries (n=3914, seeds=5)",Direct policy repair + escalation,99.6 ± 0.3,2.655
-OULAD,floor,"NICE queries (n=3914, seeds=5)",DiCE + post-hoc full gate,0.7 ± 0.2,2.58
-OULAD,floor,"NICE queries (n=3914, seeds=5)",Framework (ranking + edit + gate),98.5 ± 1.4,3.166
-OULAD,floor,"NICE queries (n=3914, seeds=5)",Framework + fallback,99.9 ± 0.1,3.17
+OULAD,aligned,"CARE queries (n=300, seeds=3)",CARE_bounded,29.3 ± 7.1,1.599
+OULAD,aligned,"CARE queries (n=300, seeds=3)",CARE_bounded+edit,67.0 ± 2.6,1.813
+OULAD,aligned,"CARE queries (n=300, seeds=3)",CARE_native,9.0 ± 4.6,1.267
+OULAD,aligned,"CARE queries (n=300, seeds=3)",DiCE first candidate,37.7 ± 2.5,1.724
+OULAD,aligned,"CARE queries (n=300, seeds=3)",Direct policy repair + escalation,91.0 ± 2.6,1.911
+OULAD,aligned,"CARE queries (n=300, seeds=3)",DiCE + post-hoc full gate,70.0 ± 7.5,1.789
+OULAD,aligned,"CARE queries (n=300, seeds=3)",Framework (ranking + edit + gate),93.3 ± 1.2,1.759
+OULAD,aligned,"CARE queries (n=300, seeds=3)",Framework + fallback,94.3 ± 1.2,1.765
+OULAD,aligned,"MCCE queries (n=4500, seeds=5)",MCCE_bounded,45.2 ± 2.2,2.426
+OULAD,aligned,"MCCE queries (n=4500, seeds=5)",MCCE_bounded+edit,62.5 ± 1.8,2.414
+OULAD,aligned,"MCCE queries (n=4500, seeds=5)",MCCE_native,25.5 ± 5.0,1.967
+OULAD,aligned,"MCCE queries (n=4500, seeds=5)",DiCE first candidate,34.5 ± 3.6,1.706
+OULAD,aligned,"MCCE queries (n=4500, seeds=5)",Direct policy repair + escalation,91.2 ± 2.0,1.955
+OULAD,aligned,"MCCE queries (n=4500, seeds=5)",DiCE + post-hoc full gate,70.7 ± 6.5,1.802
+OULAD,aligned,"MCCE queries (n=4500, seeds=5)",Framework (ranking + edit + gate),94.2 ± 1.2,1.776
+OULAD,aligned,"MCCE queries (n=4500, seeds=5)",Framework + fallback,95.2 ± 1.0,1.782
+OULAD,aligned,"NICE queries (n=4500, seeds=5)",NICE_bounded,4.9 ± 1.2,1.244
+OULAD,aligned,"NICE queries (n=4500, seeds=5)",NICE_bounded+edit,37.4 ± 5.6,1.693
+OULAD,aligned,"NICE queries (n=4500, seeds=5)",NICE_native,4.9 ± 1.2,1.244
+OULAD,aligned,"NICE queries (n=4500, seeds=5)",DiCE first candidate,34.5 ± 3.6,1.706
+OULAD,aligned,"NICE queries (n=4500, seeds=5)",Direct policy repair + escalation,91.2 ± 2.0,1.955
+OULAD,aligned,"NICE queries (n=4500, seeds=5)",DiCE + post-hoc full gate,70.7 ± 6.5,1.802
+OULAD,aligned,"NICE queries (n=4500, seeds=5)",Framework (ranking + edit + gate),94.2 ± 1.2,1.776
+OULAD,aligned,"NICE queries (n=4500, seeds=5)",Framework + fallback,95.2 ± 1.0,1.782
+OULAD,floor,"CARE queries (n=100, seeds=1)",CARE_bounded,40.0,3.222
+OULAD,floor,"CARE queries (n=100, seeds=1)",CARE_bounded+edit,65.0,4.913
+OULAD,floor,"CARE queries (n=100, seeds=1)",CARE_native,3.0,1.68
+OULAD,floor,"CARE queries (n=100, seeds=1)",DiCE first candidate,10.0,2.408
+OULAD,floor,"CARE queries (n=100, seeds=1)",Direct policy repair + escalation,93.0,4.512
+OULAD,floor,"CARE queries (n=100, seeds=1)",DiCE + post-hoc full gate,21.0,2.55
+OULAD,floor,"CARE queries (n=100, seeds=1)",Framework (ranking + edit + gate),85.0,4.721
+OULAD,floor,"CARE queries (n=100, seeds=1)",Framework + fallback,86.0,4.776
+OULAD,floor,"MCCE queries (n=4500, seeds=5)",MCCE_bounded,64.1 ± 1.7,5.543
+OULAD,floor,"MCCE queries (n=4500, seeds=5)",MCCE_bounded+edit,64.1 ± 1.7,5.543
+OULAD,floor,"MCCE queries (n=4500, seeds=5)",MCCE_native,6.1 ± 1.8,2.414
+OULAD,floor,"MCCE queries (n=4500, seeds=5)",DiCE first candidate,7.7 ± 1.1,2.359
+OULAD,floor,"MCCE queries (n=4500, seeds=5)",Direct policy repair + escalation,91.2 ± 2.0,4.507
+OULAD,floor,"MCCE queries (n=4500, seeds=5)",DiCE + post-hoc full gate,20.6 ± 2.2,2.581
+OULAD,floor,"MCCE queries (n=4500, seeds=5)",Framework (ranking + edit + gate),82.8 ± 5.5,4.464
+OULAD,floor,"MCCE queries (n=4500, seeds=5)",Framework + fallback,86.0 ± 3.9,4.516
+OULAD,floor,"NICE queries (n=4500, seeds=5)",NICE_bounded,47.3 ± 5.9,4.312
+OULAD,floor,"NICE queries (n=4500, seeds=5)",NICE_bounded+edit,47.3 ± 5.9,4.312
+OULAD,floor,"NICE queries (n=4500, seeds=5)",NICE_native,0.7 ± 0.4,1.889
+OULAD,floor,"NICE queries (n=4500, seeds=5)",DiCE first candidate,7.7 ± 1.1,2.359
+OULAD,floor,"NICE queries (n=4500, seeds=5)",Direct policy repair + escalation,91.2 ± 2.0,4.507
+OULAD,floor,"NICE queries (n=4500, seeds=5)",DiCE + post-hoc full gate,20.6 ± 2.2,2.581
+OULAD,floor,"NICE queries (n=4500, seeds=5)",Framework (ranking + edit + gate),82.8 ± 5.5,4.464
+OULAD,floor,"NICE queries (n=4500, seeds=5)",Framework + fallback,86.0 ± 3.9,4.516

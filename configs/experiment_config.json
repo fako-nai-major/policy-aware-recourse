@@ -168,10 +168,10 @@
   },
   "datasets": {
     "OULAD": {
-      "records": 13776,
-      "learners": 12996,
+      "records": 13714,
+      "learners": 13642,
       "outcome": "y",
-      "pass_rate": 0.7215,
+      "pass_rate": 0.6988,
       "group_key": "id_student",
       "features": [
         "Test_1",
@@ -180,6 +180,11 @@
         "Test_4",
         "Test_5",
         "Test_6",
+        "Test_7",
+        "Test_8",
+        "Test_9",
+        "Test_10",
+        "Test_11",
         "sum_click",
         "mod_AAA",
         "mod_BBB",
@@ -192,7 +197,12 @@
         "Test_3",
         "Test_4",
         "Test_5",
-        "Test_6"
+        "Test_6",
+        "Test_7",
+        "Test_8",
+        "Test_9",
+        "Test_10",
+        "Test_11"
       ],
       "immutable_extra": [
         "mod_AAA",
@@ -209,14 +219,19 @@
         3
       ],
       "policy": {
-        "description": "sum of weighted assessment contributions (0-100 scale) >= 40 (OU pass mark)",
+        "description": "coursework score (sum of weighted assessment contributions, 0-100) >= 40 (OU threshold)",
         "weights": {
           "Test_1": 1.0,
           "Test_2": 1.0,
           "Test_3": 1.0,
           "Test_4": 1.0,
           "Test_5": 1.0,
-          "Test_6": 1.0
+          "Test_6": 1.0,
+          "Test_7": 1.0,
+          "Test_8": 1.0,
+          "Test_9": 1.0,
+          "Test_10": 1.0,
+          "Test_11": 1.0
         },
         "threshold": 40.0,
         "threshold_sweep": [
@@ -232,45 +247,118 @@
         "EEE",
         "FFF"
       ],
-      "assessment_upper_bounds_by_module": {
-        "AAA": {
-          "Test_1": 9.75,
-          "Test_2": 19.0,
-          "Test_3": 21.0,
-          "Test_4": 22.75,
-          "Test_5": 29.4,
-          "Test_6": 0.0
+      "assessment_weights_by_presentation": {
+        "AAA 2013J": {
+          "Test_1": 10.0,
+          "Test_2": 20.0,
+          "Test_3": 20.0,
+          "Test_4": 20.0,
+          "Test_5": 30.0
         },
-        "BBB": {
-          "Test_1": 73.0,
+        "AAA 2014J": {
+          "Test_1": 10.0,
+          "Test_2": 20.0,
+          "Test_3": 20.0,
+          "Test_4": 20.0,
+          "Test_5": 30.0
+        },
+        "BBB 2013B": {
+          "Test_1": 5.0,
           "Test_2": 18.0,
-          "Test_3": 19.8,
-          "Test_4": 34.3,
-          "Test_5": 35.0,
-          "Test_6": 18.0
+          "Test_3": 1.0,
+          "Test_4": 18.0,
+          "Test_5": 1.0,
+          "Test_6": 18.0,
+          "Test_7": 1.0,
+          "Test_8": 18.0,
+          "Test_9": 1.0,
+          "Test_10": 18.0,
+          "Test_11": 1.0
         },
-        "EEE": {
-          "Test_1": 73.0,
+        "BBB 2013J": {
+          "Test_1": 5.0,
+          "Test_2": 18.0,
+          "Test_3": 1.0,
+          "Test_4": 18.0,
+          "Test_5": 1.0,
+          "Test_6": 18.0,
+          "Test_7": 1.0,
+          "Test_8": 18.0,
+          "Test_9": 1.0,
+          "Test_10": 18.0,
+          "Test_11": 1.0
+        },
+        "BBB 2014B": {
+          "Test_1": 5.0,
+          "Test_2": 18.0,
+          "Test_3": 1.0,
+          "Test_4": 18.0,
+          "Test_5": 1.0,
+          "Test_6": 18.0,
+          "Test_7": 1.0,
+          "Test_8": 18.0,
+          "Test_9": 1.0,
+          "Test_10": 18.0,
+          "Test_11": 1.0
+        },
+        "BBB 2014J": {
+          "Test_1": 10.0,
+          "Test_2": 20.0,
+          "Test_3": 35.0,
+          "Test_4": 35.0
+        },
+        "EEE 2013J": {
+          "Test_1": 16.0,
           "Test_2": 28.0,
           "Test_3": 28.0,
-          "Test_4": 28.0,
-          "Test_5": 100.0,
-          "Test_6": 22.0
+          "Test_4": 28.0
         },
-        "FFF": {
-          "Test_1": 47.0,
-          "Test_2": 26.88,
-          "Test_3": 27.44,
-          "Test_4": 26.6,
-          "Test_5": 100.0,
-          "Test_6": 18.8
+        "EEE 2014B": {
+          "Test_1": 16.0,
+          "Test_2": 28.0,
+          "Test_3": 28.0,
+          "Test_4": 28.0
+        },
+        "EEE 2014J": {
+          "Test_1": 16.0,
+          "Test_2": 28.0,
+          "Test_3": 28.0,
+          "Test_4": 28.0
+        },
+        "FFF 2013B": {
+          "Test_1": 12.5,
+          "Test_2": 12.5,
+          "Test_3": 25.0,
+          "Test_4": 25.0,
+          "Test_5": 25.0
+        },
+        "FFF 2013J": {
+          "Test_1": 12.5,
+          "Test_2": 12.5,
+          "Test_3": 25.0,
+          "Test_4": 25.0,
+          "Test_5": 25.0
+        },
+        "FFF 2014B": {
+          "Test_1": 12.5,
+          "Test_2": 12.5,
+          "Test_3": 25.0,
+          "Test_4": 25.0,
+          "Test_5": 25.0
+        },
+        "FFF 2014J": {
+          "Test_1": 12.5,
+          "Test_2": 12.5,
+          "Test_3": 25.0,
+          "Test_4": 25.0,
+          "Test_5": 25.0
         }
       },
       "sum_click_upper_bound_by_module": {
-        "AAA": 4.6132,
-        "BBB": 4.7727,
-        "EEE": 5.6648,
-        "FFF": 5.8594
+        "AAA": 5517.3,
+        "BBB": 2762.0,
+        "EEE": 4361.15,
+        "FFF": 7322.3
       }
     },
     "AUC": {

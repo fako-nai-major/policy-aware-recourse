@@ -1,251 +1,251 @@
 ## A. Early-warning fairness (mean over 5 seeds)
 |                                                         |      n |   base_fail |   flag_rate |   fail_recall |   false_flag |
 |:--------------------------------------------------------|-------:|------------:|------------:|--------------:|-------------:|
-| ('complete record', 'age', '0-35')                      | 1902.6 |       0.297 |       0.238 |         0.706 |        0.041 |
-| ('complete record', 'age', '35+')                       |  857   |       0.238 |       0.182 |         0.673 |        0.028 |
-| ('complete record', 'disability', 'Disability: no')     | 2538.4 |       0.272 |       0.214 |         0.696 |        0.034 |
-| ('complete record', 'disability', 'Disability: yes')    |  221.2 |       0.367 |       0.305 |         0.715 |        0.068 |
-| ('complete record', 'gender', 'Female')                 | 1241.4 |       0.264 |       0.214 |         0.703 |        0.038 |
-| ('complete record', 'gender', 'Male')                   | 1518.2 |       0.291 |       0.227 |         0.694 |        0.035 |
-| ('complete record', 'imd', 'IMD 0-30% (most deprived)') |  827.4 |       0.369 |       0.299 |         0.736 |        0.043 |
-| ('complete record', 'imd', 'IMD 30-70%')                | 1093.4 |       0.251 |       0.196 |         0.678 |        0.034 |
-| ('complete record', 'imd', 'IMD 70-100%')               |  743.4 |       0.233 |       0.177 |         0.658 |        0.031 |
-| ('complete record', 'imd', 'IMD missing')               |   95.4 |       0.174 |       0.176 |         0.683 |        0.065 |
-| ('stage 1', 'age', '0-35')                              | 1902.6 |       0.297 |       0.067 |         0.138 |        0.036 |
-| ('stage 1', 'age', '35+')                               |  857   |       0.238 |       0.065 |         0.163 |        0.035 |
-| ('stage 1', 'disability', 'Disability: no')             | 2538.4 |       0.272 |       0.065 |         0.141 |        0.036 |
-| ('stage 1', 'disability', 'Disability: yes')            |  221.2 |       0.367 |       0.085 |         0.177 |        0.032 |
-| ('stage 1', 'gender', 'Female')                         | 1241.4 |       0.264 |       0.065 |         0.148 |        0.035 |
-| ('stage 1', 'gender', 'Male')                           | 1518.2 |       0.291 |       0.068 |         0.143 |        0.037 |
-| ('stage 1', 'imd', 'IMD 0-30% (most deprived)')         |  827.4 |       0.369 |       0.093 |         0.177 |        0.044 |
-| ('stage 1', 'imd', 'IMD 30-70%')                        | 1093.4 |       0.251 |       0.06  |         0.127 |        0.037 |
-| ('stage 1', 'imd', 'IMD 70-100%')                       |  743.4 |       0.233 |       0.044 |         0.11  |        0.025 |
-| ('stage 1', 'imd', 'IMD missing')                       |   95.4 |       0.174 |       0.08  |         0.206 |        0.056 |
-| ('stage 2', 'age', '0-35')                              | 1902.6 |       0.297 |       0.153 |         0.385 |        0.055 |
-| ('stage 2', 'age', '35+')                               |  857   |       0.238 |       0.132 |         0.375 |        0.056 |
-| ('stage 2', 'disability', 'Disability: no')             | 2538.4 |       0.272 |       0.143 |         0.382 |        0.054 |
-| ('stage 2', 'disability', 'Disability: yes')            |  221.2 |       0.367 |       0.186 |         0.389 |        0.07  |
-| ('stage 2', 'gender', 'Female')                         | 1241.4 |       0.264 |       0.125 |         0.342 |        0.047 |
-| ('stage 2', 'gender', 'Male')                           | 1518.2 |       0.291 |       0.164 |         0.412 |        0.062 |
-| ('stage 2', 'imd', 'IMD 0-30% (most deprived)')         |  827.4 |       0.369 |       0.194 |         0.428 |        0.057 |
-| ('stage 2', 'imd', 'IMD 30-70%')                        | 1093.4 |       0.251 |       0.13  |         0.354 |        0.054 |
-| ('stage 2', 'imd', 'IMD 70-100%')                       |  743.4 |       0.233 |       0.122 |         0.349 |        0.053 |
-| ('stage 2', 'imd', 'IMD missing')                       |   95.4 |       0.174 |       0.126 |         0.37  |        0.078 |
-| ('stage 3', 'age', '0-35')                              | 1902.6 |       0.297 |       0.198 |         0.55  |        0.048 |
-| ('stage 3', 'age', '35+')                               |  857   |       0.238 |       0.166 |         0.563 |        0.041 |
-| ('stage 3', 'disability', 'Disability: no')             | 2538.4 |       0.272 |       0.183 |         0.555 |        0.044 |
-| ('stage 3', 'disability', 'Disability: yes')            |  221.2 |       0.367 |       0.242 |         0.54  |        0.072 |
-| ('stage 3', 'gender', 'Female')                         | 1241.4 |       0.264 |       0.184 |         0.544 |        0.054 |
-| ('stage 3', 'gender', 'Male')                           | 1518.2 |       0.291 |       0.191 |         0.56  |        0.039 |
-| ('stage 3', 'imd', 'IMD 0-30% (most deprived)')         |  827.4 |       0.369 |       0.249 |         0.594 |        0.047 |
-| ('stage 3', 'imd', 'IMD 30-70%')                        | 1093.4 |       0.251 |       0.167 |         0.524 |        0.047 |
-| ('stage 3', 'imd', 'IMD 70-100%')                       |  743.4 |       0.233 |       0.155 |         0.523 |        0.043 |
-| ('stage 3', 'imd', 'IMD missing')                       |   95.4 |       0.174 |       0.147 |         0.581 |        0.054 |
+| ('complete record', 'age', '0-35')                      | 1901.6 |       0.323 |       0.278 |         0.776 |        0.041 |
+| ('complete record', 'age', '35+')                       |  844.6 |       0.245 |       0.209 |         0.768 |        0.028 |
+| ('complete record', 'disability', 'Disability: no')     | 2533   |       0.293 |       0.252 |         0.772 |        0.037 |
+| ('complete record', 'disability', 'Disability: yes')    |  213.2 |       0.366 |       0.312 |         0.79  |        0.034 |
+| ('complete record', 'gender', 'Female')                 | 1255.2 |       0.289 |       0.243 |         0.756 |        0.034 |
+| ('complete record', 'gender', 'Male')                   | 1491   |       0.308 |       0.269 |         0.788 |        0.039 |
+| ('complete record', 'imd', 'IMD 0-30% (most deprived)') |  852.8 |       0.395 |       0.345 |         0.805 |        0.045 |
+| ('complete record', 'imd', 'IMD 30-70%')                | 1072.2 |       0.28  |       0.244 |         0.773 |        0.037 |
+| ('complete record', 'imd', 'IMD 70-100%')               |  721.4 |       0.228 |       0.184 |         0.717 |        0.027 |
+| ('complete record', 'imd', 'IMD missing')               |   99.8 |       0.187 |       0.172 |         0.729 |        0.044 |
+| ('stage 1', 'age', '0-35')                              | 1901.6 |       0.323 |       0.128 |         0.315 |        0.038 |
+| ('stage 1', 'age', '35+')                               |  844.6 |       0.245 |       0.116 |         0.365 |        0.035 |
+| ('stage 1', 'disability', 'Disability: no')             | 2533   |       0.293 |       0.122 |         0.328 |        0.037 |
+| ('stage 1', 'disability', 'Disability: yes')            |  213.2 |       0.366 |       0.141 |         0.324 |        0.034 |
+| ('stage 1', 'gender', 'Female')                         | 1255.2 |       0.289 |       0.127 |         0.342 |        0.039 |
+| ('stage 1', 'gender', 'Male')                           | 1491   |       0.308 |       0.122 |         0.317 |        0.035 |
+| ('stage 1', 'imd', 'IMD 0-30% (most deprived)')         |  852.8 |       0.395 |       0.17  |         0.36  |        0.045 |
+| ('stage 1', 'imd', 'IMD 30-70%')                        | 1072.2 |       0.28  |       0.12  |         0.326 |        0.04  |
+| ('stage 1', 'imd', 'IMD 70-100%')                       |  721.4 |       0.228 |       0.082 |         0.28  |        0.023 |
+| ('stage 1', 'imd', 'IMD missing')                       |   99.8 |       0.187 |       0.074 |         0.226 |        0.044 |
+| ('stage 2', 'age', '0-35')                              | 1901.6 |       0.323 |       0.196 |         0.5   |        0.051 |
+| ('stage 2', 'age', '35+')                               |  844.6 |       0.245 |       0.162 |         0.535 |        0.041 |
+| ('stage 2', 'disability', 'Disability: no')             | 2533   |       0.293 |       0.183 |         0.508 |        0.048 |
+| ('stage 2', 'disability', 'Disability: yes')            |  213.2 |       0.366 |       0.216 |         0.504 |        0.047 |
+| ('stage 2', 'gender', 'Female')                         | 1255.2 |       0.289 |       0.166 |         0.47  |        0.043 |
+| ('stage 2', 'gender', 'Male')                           | 1491   |       0.308 |       0.201 |         0.539 |        0.052 |
+| ('stage 2', 'imd', 'IMD 0-30% (most deprived)')         |  852.8 |       0.395 |       0.247 |         0.544 |        0.054 |
+| ('stage 2', 'imd', 'IMD 30-70%')                        | 1072.2 |       0.28  |       0.179 |         0.505 |        0.053 |
+| ('stage 2', 'imd', 'IMD 70-100%')                       |  721.4 |       0.228 |       0.131 |         0.455 |        0.035 |
+| ('stage 2', 'imd', 'IMD missing')                       |   99.8 |       0.187 |       0.115 |         0.425 |        0.048 |
+| ('stage 3', 'age', '0-35')                              | 1901.6 |       0.323 |       0.223 |         0.599 |        0.044 |
+| ('stage 3', 'age', '35+')                               |  844.6 |       0.245 |       0.184 |         0.642 |        0.036 |
+| ('stage 3', 'disability', 'Disability: no')             | 2533   |       0.293 |       0.207 |         0.609 |        0.041 |
+| ('stage 3', 'disability', 'Disability: yes')            |  213.2 |       0.366 |       0.257 |         0.618 |        0.047 |
+| ('stage 3', 'gender', 'Female')                         | 1255.2 |       0.289 |       0.192 |         0.548 |        0.047 |
+| ('stage 3', 'gender', 'Male')                           | 1491   |       0.308 |       0.228 |         0.658 |        0.036 |
+| ('stage 3', 'imd', 'IMD 0-30% (most deprived)')         |  852.8 |       0.395 |       0.289 |         0.649 |        0.055 |
+| ('stage 3', 'imd', 'IMD 30-70%')                        | 1072.2 |       0.28  |       0.195 |         0.594 |        0.04  |
+| ('stage 3', 'imd', 'IMD 70-100%')                       |  721.4 |       0.228 |       0.152 |         0.562 |        0.031 |
+| ('stage 3', 'imd', 'IMD missing')                       |   99.8 |       0.187 |       0.144 |         0.595 |        0.042 |
 
 ## A. Gaps (max-min across groups; mean, SD over seeds)
 |                                   |   ('DPD', 'mean') |   ('DPD', 'std') |   ('EOD', 'mean') |   ('EOD', 'std') |   ('FPR_gap', 'mean') |   ('FPR_gap', 'std') |
 |:----------------------------------|------------------:|-----------------:|------------------:|-----------------:|----------------------:|---------------------:|
-| ('complete record', 'age')        |             0.057 |            0.023 |             0.043 |            0.035 |                 0.013 |                0.007 |
-| ('complete record', 'disability') |             0.092 |            0.026 |             0.019 |            0.024 |                 0.034 |                0.031 |
-| ('complete record', 'gender')     |             0.013 |            0.011 |             0.018 |            0.013 |                 0.005 |                0.004 |
-| ('complete record', 'imd')        |             0.151 |            0.038 |             0.137 |            0.076 |                 0.051 |                0.008 |
-| ('stage 1', 'age')                |             0.009 |            0.009 |             0.033 |            0.023 |                 0.01  |                0.008 |
-| ('stage 1', 'disability')         |             0.02  |            0.012 |             0.036 |            0.01  |                 0.007 |                0.004 |
-| ('stage 1', 'gender')             |             0.013 |            0.01  |             0.031 |            0.017 |                 0.008 |                0.006 |
-| ('stage 1', 'imd')                |             0.055 |            0.01  |             0.115 |            0.085 |                 0.036 |                0.016 |
-| ('stage 2', 'age')                |             0.021 |            0.013 |             0.037 |            0.03  |                 0.005 |                0.004 |
-| ('stage 2', 'disability')         |             0.043 |            0.02  |             0.026 |            0.028 |                 0.016 |                0.004 |
-| ('stage 2', 'gender')             |             0.039 |            0.008 |             0.07  |            0.014 |                 0.015 |                0.009 |
-| ('stage 2', 'imd')                |             0.083 |            0.013 |             0.134 |            0.039 |                 0.03  |                0.023 |
-| ('stage 3', 'age')                |             0.032 |            0.013 |             0.019 |            0.014 |                 0.008 |                0.006 |
-| ('stage 3', 'disability')         |             0.059 |            0.018 |             0.032 |            0.033 |                 0.028 |                0.017 |
-| ('stage 3', 'gender')             |             0.01  |            0.011 |             0.021 |            0.015 |                 0.016 |                0.012 |
-| ('stage 3', 'imd')                |             0.122 |            0.024 |             0.149 |            0.055 |                 0.025 |                0.008 |
+| ('complete record', 'age')        |             0.069 |            0.013 |             0.032 |            0.016 |                 0.012 |                0.008 |
+| ('complete record', 'disability') |             0.063 |            0.036 |             0.054 |            0.028 |                 0.009 |                0.012 |
+| ('complete record', 'gender')     |             0.028 |            0.021 |             0.041 |            0.016 |                 0.009 |                0.001 |
+| ('complete record', 'imd')        |             0.178 |            0.037 |             0.135 |            0.031 |                 0.034 |                0.009 |
+| ('stage 1', 'age')                |             0.015 |            0.008 |             0.051 |            0.037 |                 0.004 |                0.003 |
+| ('stage 1', 'disability')         |             0.023 |            0.02  |             0.035 |            0.023 |                 0.01  |                0.007 |
+| ('stage 1', 'gender')             |             0.018 |            0.006 |             0.041 |            0.022 |                 0.013 |                0.006 |
+| ('stage 1', 'imd')                |             0.1   |            0.011 |             0.185 |            0.08  |                 0.027 |                0.005 |
+| ('stage 2', 'age')                |             0.034 |            0.021 |             0.063 |            0.028 |                 0.01  |                0.009 |
+| ('stage 2', 'disability')         |             0.033 |            0.022 |             0.034 |            0.013 |                 0.012 |                0.009 |
+| ('stage 2', 'gender')             |             0.035 |            0.013 |             0.068 |            0.033 |                 0.009 |                0.003 |
+| ('stage 2', 'imd')                |             0.132 |            0.027 |             0.166 |            0.078 |                 0.031 |                0.006 |
+| ('stage 3', 'age')                |             0.039 |            0.016 |             0.049 |            0.035 |                 0.008 |                0.006 |
+| ('stage 3', 'disability')         |             0.049 |            0.028 |             0.036 |            0.031 |                 0.008 |                0.003 |
+| ('stage 3', 'gender')             |             0.036 |            0.01  |             0.111 |            0.014 |                 0.011 |                0.009 |
+| ('stage 3', 'imd')                |             0.154 |            0.023 |             0.13  |            0.028 |                 0.03  |                0.009 |
 
 ## B. Recourse by group
 | method                     | attribute   | group                     |    n |   yield_pct |   effort |   policy_score |
 |:---------------------------|:------------|:--------------------------|-----:|------------:|---------:|---------------:|
-| CARE (bounded)             | gender      | Female                    |  134 |      19.403 |    0.858 |         45.33  |
-| CARE (bounded)             | gender      | Male                      |  166 |      63.253 |    0.767 |         47.664 |
-| CARE (bounded)             | age         | 0-35                      |  223 |      44.843 |    0.765 |         47.16  |
-| CARE (bounded)             | age         | 35+                       |   77 |      40.26  |    0.849 |         47.334 |
-| CARE (bounded)             | imd         | IMD 0-30% (most deprived) |  133 |      43.609 |    0.841 |         47.269 |
-| CARE (bounded)             | imd         | IMD 30-70%                |  104 |      43.269 |    0.731 |         46.542 |
-| CARE (bounded)             | imd         | IMD 70-100%               |   57 |      42.105 |    0.724 |         47.255 |
-| CARE (bounded)             | imd         | IMD missing               |    6 |      66.667 |    0.941 |         53.291 |
-| CARE (bounded)             | disability  | Disability: no            |  270 |      43.333 |    0.805 |         47.419 |
-| CARE (bounded)             | disability  | Disability: yes           |   30 |      46.667 |    0.613 |         45.376 |
-| MCCE (bounded)             | gender      | Female                    | 1647 |      28.112 |    1.252 |         46.202 |
-| MCCE (bounded)             | gender      | Male                      | 2267 |      55.933 |    1.294 |         48.728 |
-| MCCE (bounded)             | age         | 0-35                      | 2825 |      45.345 |    1.287 |         48.149 |
-| MCCE (bounded)             | age         | 35+                       | 1089 |      41.322 |    1.27  |         47.778 |
-| MCCE (bounded)             | imd         | IMD 0-30% (most deprived) | 1609 |      41.144 |    1.299 |         47.909 |
-| MCCE (bounded)             | imd         | IMD 30-70%                | 1370 |      43.796 |    1.298 |         48.342 |
-| MCCE (bounded)             | imd         | IMD 70-100%               |  806 |      47.519 |    1.247 |         48.036 |
-| MCCE (bounded)             | imd         | IMD missing               |  129 |      66.667 |    1.215 |         47.206 |
-| MCCE (bounded)             | disability  | Disability: no            | 3532 |      44.337 |    1.287 |         48.076 |
-| MCCE (bounded)             | disability  | Disability: yes           |  382 |      43.194 |    1.238 |         47.829 |
-| NICE (bounded)             | gender      | Female                    | 1647 |       5.161 |    0.56  |         46.115 |
-| NICE (bounded)             | gender      | Male                      | 2267 |      22.85  |    0.514 |         47.517 |
-| NICE (bounded)             | age         | 0-35                      | 2825 |      16.637 |    0.516 |         47.387 |
-| NICE (bounded)             | age         | 35+                       | 1089 |      12.213 |    0.537 |         47.081 |
-| NICE (bounded)             | imd         | IMD 0-30% (most deprived) | 1609 |      12.989 |    0.516 |         46.723 |
-| NICE (bounded)             | imd         | IMD 30-70%                | 1370 |      17.883 |    0.525 |         48.284 |
-| NICE (bounded)             | imd         | IMD 70-100%               |  806 |      15.136 |    0.523 |         46.644 |
-| NICE (bounded)             | imd         | IMD missing               |  129 |      20.93  |    0.512 |         46.231 |
-| NICE (bounded)             | disability  | Disability: no            | 3532 |      15.657 |    0.527 |         47.379 |
-| NICE (bounded)             | disability  | Disability: yes           |  382 |      13.089 |    0.455 |         46.666 |
-| DiCE first candidate       | gender      | Female                    | 1647 |      59.016 |    1.418 |         64.698 |
-| DiCE first candidate       | gender      | Male                      | 2267 |      89.281 |    1.224 |         85.321 |
-| DiCE first candidate       | age         | 0-35                      | 2825 |      78.549 |    1.273 |         79.579 |
-| DiCE first candidate       | age         | 35+                       | 1089 |      71.35  |    1.327 |         75.92  |
-| DiCE first candidate       | imd         | IMD 0-30% (most deprived) | 1609 |      76.196 |    1.303 |         78.619 |
-| DiCE first candidate       | imd         | IMD 30-70%                | 1370 |      74.38  |    1.288 |         77.433 |
-| DiCE first candidate       | imd         | IMD 70-100%               |  806 |      77.916 |    1.276 |         79.215 |
-| DiCE first candidate       | imd         | IMD missing               |  129 |      95.349 |    1.177 |         85.677 |
-| DiCE first candidate       | disability  | Disability: no            | 3532 |      77.123 |    1.291 |         78.788 |
-| DiCE first candidate       | disability  | Disability: yes           |  382 |      71.204 |    1.253 |         77.053 |
-| Policy repair + escalation | gender      | Female                    | 1647 |      96.539 |    0.944 |         46.096 |
-| Policy repair + escalation | gender      | Male                      | 2267 |      87.34  |    0.479 |         52.096 |
-| Policy repair + escalation | age         | 0-35                      | 2825 |      90.442 |    0.67  |         49.976 |
-| Policy repair + escalation | age         | 35+                       | 1089 |      93.205 |    0.726 |         48.034 |
-| Policy repair + escalation | imd         | IMD 0-30% (most deprived) | 1609 |      91.175 |    0.721 |         49.542 |
-| Policy repair + escalation | imd         | IMD 30-70%                | 1370 |      92.628 |    0.695 |         49.342 |
-| Policy repair + escalation | imd         | IMD 70-100%               |  806 |      89.082 |    0.64  |         48.931 |
-| Policy repair + escalation | imd         | IMD missing               |  129 |      89.922 |    0.434 |         51.875 |
-| Policy repair + escalation | disability  | Disability: no            | 3532 |      91.082 |    0.682 |         49.517 |
-| Policy repair + escalation | disability  | Disability: yes           |  382 |      92.408 |    0.718 |         48.576 |
-| DiCE + full gate           | gender      | Female                    | 1647 |      98.543 |    1.485 |         59.597 |
-| DiCE + full gate           | gender      | Male                      | 2267 |      99.824 |    1.242 |         83.123 |
-| DiCE + full gate           | age         | 0-35                      | 2825 |      99.398 |    1.328 |         74.432 |
-| DiCE + full gate           | age         | 35+                       | 1089 |      98.99  |    1.385 |         70.341 |
-| DiCE + full gate           | imd         | IMD 0-30% (most deprived) | 1609 |      99.254 |    1.361 |         73.082 |
-| DiCE + full gate           | imd         | IMD 30-70%                | 1370 |      99.197 |    1.349 |         72.052 |
-| DiCE + full gate           | imd         | IMD 70-100%               |  806 |      99.38  |    1.325 |         73.969 |
-| DiCE + full gate           | imd         | IMD missing               |  129 |     100     |    1.185 |         84.908 |
-| DiCE + full gate           | disability  | Disability: no            | 3532 |      99.264 |    1.345 |         73.556 |
-| DiCE + full gate           | disability  | Disability: yes           |  382 |      99.476 |    1.335 |         70.914 |
-| Framework                  | gender      | Female                    | 1647 |      99.939 |    1.125 |         50.844 |
-| Framework                  | gender      | Male                      | 2267 |      99.956 |    0.69  |         66.01  |
-| Framework                  | age         | 0-35                      | 2825 |      99.965 |    0.854 |         60.367 |
-| Framework                  | age         | 35+                       | 1089 |      99.908 |    0.922 |         57.712 |
-| Framework                  | imd         | IMD 0-30% (most deprived) | 1609 |     100     |    0.904 |         58.95  |
-| Framework                  | imd         | IMD 30-70%                | 1370 |      99.854 |    0.878 |         59.229 |
-| Framework                  | imd         | IMD 70-100%               |  806 |     100     |    0.84  |         60.578 |
-| Framework                  | imd         | IMD missing               |  129 |     100     |    0.642 |         66.406 |
-| Framework                  | disability  | Disability: no            | 3532 |      99.943 |    0.87  |         59.87  |
-| Framework                  | disability  | Disability: yes           |  382 |     100     |    0.902 |         57.402 |
-| Framework + fallback       | gender      | Female                    | 1647 |     100     |    1.125 |         50.847 |
-| Framework + fallback       | gender      | Male                      | 2267 |     100     |    0.691 |         66.004 |
-| Framework + fallback       | age         | 0-35                      | 2825 |     100     |    0.854 |         60.369 |
-| Framework + fallback       | age         | 35+                       | 1089 |     100     |    0.923 |         57.698 |
-| Framework + fallback       | imd         | IMD 0-30% (most deprived) | 1609 |     100     |    0.904 |         58.95  |
-| Framework + fallback       | imd         | IMD 30-70%                | 1370 |     100     |    0.879 |         59.214 |
-| Framework + fallback       | imd         | IMD 70-100%               |  806 |     100     |    0.84  |         60.591 |
-| Framework + fallback       | imd         | IMD missing               |  129 |     100     |    0.642 |         66.406 |
-| Framework + fallback       | disability  | Disability: no            | 3532 |     100     |    0.87  |         59.864 |
-| Framework + fallback       | disability  | Disability: yes           |  382 |     100     |    0.902 |         57.429 |
+| CARE (bounded)             | gender      | Female                    |  130 |      20     |    2.006 |         45.643 |
+| CARE (bounded)             | gender      | Male                      |  170 |      36.471 |    1.429 |         45.209 |
+| CARE (bounded)             | age         | 0-35                      |  221 |      28.959 |    1.498 |         45.049 |
+| CARE (bounded)             | age         | 35+                       |   79 |      30.38  |    1.87  |         46.107 |
+| CARE (bounded)             | imd         | IMD 0-30% (most deprived) |  124 |      29.032 |    1.659 |         45.526 |
+| CARE (bounded)             | imd         | IMD 30-70%                |  115 |      28.696 |    1.624 |         44.416 |
+| CARE (bounded)             | imd         | IMD 70-100%               |   51 |      33.333 |    1.417 |         46.892 |
+| CARE (bounded)             | imd         | IMD missing               |   10 |      20     |    1.671 |         43.938 |
+| CARE (bounded)             | disability  | Disability: no            |  273 |      29.304 |    1.567 |         45.356 |
+| CARE (bounded)             | disability  | Disability: yes           |   27 |      29.63  |    1.92  |         45.154 |
+| MCCE (bounded)             | gender      | Female                    | 1963 |      50.993 |    3.103 |         48.319 |
+| MCCE (bounded)             | gender      | Male                      | 2537 |      40.796 |    1.771 |         46.395 |
+| MCCE (bounded)             | age         | 0-35                      | 3291 |      44.272 |    2.316 |         47.211 |
+| MCCE (bounded)             | age         | 35+                       | 1209 |      47.891 |    2.702 |         47.666 |
+| MCCE (bounded)             | imd         | IMD 0-30% (most deprived) | 1861 |      45.997 |    2.573 |         47.583 |
+| MCCE (bounded)             | imd         | IMD 30-70%                | 1676 |      44.451 |    2.39  |         47.202 |
+| MCCE (bounded)             | imd         | IMD 70-100%               |  861 |      44.251 |    2.241 |         46.978 |
+| MCCE (bounded)             | imd         | IMD missing               |  102 |      52.941 |    1.903 |         47.971 |
+| MCCE (bounded)             | disability  | Disability: no            | 4097 |      45.033 |    2.425 |         47.351 |
+| MCCE (bounded)             | disability  | Disability: yes           |  403 |      47.395 |    2.438 |         47.244 |
+| NICE (bounded)             | gender      | Female                    | 1963 |       1.63  |    1.238 |         43.008 |
+| NICE (bounded)             | gender      | Male                      | 2537 |       7.489 |    1.245 |         42.07  |
+| NICE (bounded)             | age         | 0-35                      | 3291 |       5.074 |    1.28  |         42.233 |
+| NICE (bounded)             | age         | 35+                       | 1209 |       4.549 |    1.134 |         42.122 |
+| NICE (bounded)             | imd         | IMD 0-30% (most deprived) | 1861 |       3.923 |    1.205 |         42.28  |
+| NICE (bounded)             | imd         | IMD 30-70%                | 1676 |       4.833 |    1.305 |         42.278 |
+| NICE (bounded)             | imd         | IMD 70-100%               |  861 |       6.969 |    1.199 |         41.947 |
+| NICE (bounded)             | imd         | IMD missing               |  102 |       7.843 |    1.325 |         42.72  |
+| NICE (bounded)             | disability  | Disability: no            | 4097 |       5.028 |    1.246 |         42.214 |
+| NICE (bounded)             | disability  | Disability: yes           |  403 |       3.97  |    1.216 |         42.09  |
+| DiCE first candidate       | gender      | Female                    | 1963 |      25.675 |    1.828 |         49.071 |
+| DiCE first candidate       | gender      | Male                      | 2537 |      41.348 |    1.647 |         51.04  |
+| DiCE first candidate       | age         | 0-35                      | 3291 |      35.339 |    1.697 |         50.549 |
+| DiCE first candidate       | age         | 35+                       | 1209 |      32.258 |    1.733 |         49.96  |
+| DiCE first candidate       | imd         | IMD 0-30% (most deprived) | 1861 |      31.703 |    1.724 |         49.977 |
+| DiCE first candidate       | imd         | IMD 30-70%                | 1676 |      35.74  |    1.711 |         50.259 |
+| DiCE first candidate       | imd         | IMD 70-100%               |  861 |      36.353 |    1.671 |         51.401 |
+| DiCE first candidate       | imd         | IMD missing               |  102 |      50     |    1.654 |         50.815 |
+| DiCE first candidate       | disability  | Disability: no            | 4097 |      34.513 |    1.708 |         50.608 |
+| DiCE first candidate       | disability  | Disability: yes           |  403 |      34.491 |    1.687 |         48.295 |
+| Policy repair + escalation | gender      | Female                    | 1963 |      94.294 |    2.16  |         49.444 |
+| Policy repair + escalation | gender      | Male                      | 2537 |      88.727 |    1.786 |         53.53  |
+| Policy repair + escalation | age         | 0-35                      | 3291 |      90.641 |    1.949 |         52.252 |
+| Policy repair + escalation | age         | 35+                       | 1209 |      92.556 |    1.972 |         50.176 |
+| Policy repair + escalation | imd         | IMD 0-30% (most deprived) | 1861 |      91.564 |    2.03  |         51.936 |
+| Policy repair + escalation | imd         | IMD 30-70%                | 1676 |      91.05  |    1.933 |         51.13  |
+| Policy repair + escalation | imd         | IMD 70-100%               |  861 |      90.244 |    1.864 |         52.355 |
+| Policy repair + escalation | imd         | IMD missing               |  102 |      93.137 |    1.704 |         50.658 |
+| Policy repair + escalation | disability  | Disability: no            | 4097 |      91.335 |    1.958 |         51.785 |
+| Policy repair + escalation | disability  | Disability: yes           |  403 |      89.33  |    1.925 |         50.653 |
+| DiCE + full gate           | gender      | Female                    | 1963 |      60.061 |    1.929 |         48.865 |
+| DiCE + full gate           | gender      | Male                      | 2537 |      78.952 |    1.728 |         50.506 |
+| DiCE + full gate           | age         | 0-35                      | 3291 |      71.316 |    1.792 |         50.125 |
+| DiCE + full gate           | age         | 35+                       | 1209 |      69.065 |    1.83  |         49.262 |
+| DiCE + full gate           | imd         | IMD 0-30% (most deprived) | 1861 |      69.694 |    1.838 |         49.721 |
+| DiCE + full gate           | imd         | IMD 30-70%                | 1676 |      70.167 |    1.79  |         49.824 |
+| DiCE + full gate           | imd         | IMD 70-100%               |  861 |      71.893 |    1.752 |         50.277 |
+| DiCE + full gate           | imd         | IMD missing               |  102 |      88.235 |    1.798 |         50.816 |
+| DiCE + full gate           | disability  | Disability: no            | 4097 |      70.759 |    1.804 |         50.05  |
+| DiCE + full gate           | disability  | Disability: yes           |  403 |      70.223 |    1.784 |         48.344 |
+| Framework                  | gender      | Female                    | 1963 |      93.938 |    1.946 |         43.946 |
+| Framework                  | gender      | Male                      | 2537 |      94.482 |    1.646 |         45.721 |
+| Framework                  | age         | 0-35                      | 3291 |      93.953 |    1.763 |         45.105 |
+| Framework                  | age         | 35+                       | 1209 |      95.037 |    1.812 |         44.528 |
+| Framework                  | imd         | IMD 0-30% (most deprived) | 1861 |      93.928 |    1.821 |         45.052 |
+| Framework                  | imd         | IMD 30-70%                | 1676 |      94.57  |    1.771 |         44.532 |
+| Framework                  | imd         | IMD 70-100%               |  861 |      93.844 |    1.712 |         45.403 |
+| Framework                  | imd         | IMD missing               |  102 |      98.039 |    1.617 |         46.082 |
+| Framework                  | disability  | Disability: no            | 4097 |      94.313 |    1.778 |         45.005 |
+| Framework                  | disability  | Disability: yes           |  403 |      93.548 |    1.762 |         44.374 |
+| Framework + fallback       | gender      | Female                    | 1963 |      95.008 |    1.949 |         43.91  |
+| Framework + fallback       | gender      | Male                      | 2537 |      95.27  |    1.653 |         45.683 |
+| Framework + fallback       | age         | 0-35                      | 3291 |      94.926 |    1.769 |         45.062 |
+| Framework + fallback       | age         | 35+                       | 1209 |      95.782 |    1.816 |         44.502 |
+| Framework + fallback       | imd         | IMD 0-30% (most deprived) | 1861 |      94.841 |    1.824 |         45.013 |
+| Framework + fallback       | imd         | IMD 30-70%                | 1676 |      95.465 |    1.777 |         44.498 |
+| Framework + fallback       | imd         | IMD 70-100%               |  861 |      94.89  |    1.719 |         45.354 |
+| Framework + fallback       | imd         | IMD missing               |  102 |      98.039 |    1.617 |         46.082 |
+| Framework + fallback       | disability  | Disability: no            | 4097 |      95.143 |    1.783 |         44.97  |
+| Framework + fallback       | disability  | Disability: yes           |  403 |      95.285 |    1.77  |         44.31  |
 
 ## B. Recourse gaps and tests (Holm-adjusted)
 | method                     | attribute   |    n |   yield_gap_pp |   p_yield |   effort_gap |   effort_gap_rel_pct |   p_effort |   p_yield_holm |   p_effort_holm |
 |:---------------------------|:------------|-----:|---------------:|----------:|-------------:|---------------------:|-----------:|---------------:|----------------:|
-| CARE (bounded)             | gender      |  300 |        43.85   |    0      |       0.0917 |              11.2888 |     0.3619 |         0      |          1      |
-| CARE (bounded)             | age         |  300 |         4.5833 |    0.5715 |       0.0834 |              10.3333 |     0.1749 |         1      |          1      |
-| CARE (bounded)             | imd         |  300 |        24.5614 |    0.7164 |       0.2172 |              26.8365 |     0.3446 |         1      |          1      |
-| CARE (bounded)             | disability  |  300 |         3.3333 |    0.8767 |       0.1924 |              27.124  |     0.0658 |         1      |          0.9863 |
-| MCCE (bounded)             | gender      | 3914 |        27.8212 |    0      |       0.0415 |               3.2591 |     0.0206 |         0      |          0.37   |
-| MCCE (bounded)             | age         | 3914 |         4.0228 |    0.0254 |       0.0167 |               1.3095 |     0.5042 |         0.3813 |          1      |
-| MCCE (bounded)             | imd         | 3914 |        25.5231 |    0      |       0.0834 |               6.5912 |     0.1414 |         0      |          1      |
-| MCCE (bounded)             | disability  | 3914 |         1.1438 |    0.7089 |       0.0495 |               3.9223 |     0.1823 |         1      |          1      |
-| NICE (bounded)             | gender      | 3914 |        17.6887 |    0      |       0.0451 |               8.4061 |     0.6154 |         0      |          1      |
-| NICE (bounded)             | age         | 3914 |         4.4241 |    0.0007 |       0.0201 |               3.821  |     0.6832 |         0.0135 |          1      |
-| NICE (bounded)             | imd         | 3914 |         7.9408 |    0.0008 |       0.0139 |               2.6776 |     0.5095 |         0.0145 |          1      |
-| NICE (bounded)             | disability  | 3914 |         2.5678 |    0.2127 |       0.0722 |              14.7171 |     0.0542 |         1      |          0.868  |
-| DiCE first candidate       | gender      | 3914 |        30.2646 |    0      |       0.1945 |              14.7214 |     0      |         0      |          0      |
-| DiCE first candidate       | age         | 3914 |         7.1988 |    0      |       0.0538 |               4.1391 |     0.006  |         0      |          0.1141 |
-| DiCE first candidate       | imd         | 3914 |        20.9693 |    0      |       0.1259 |               9.9808 |     0.0407 |         0      |          0.6915 |
-| DiCE first candidate       | disability  | 3914 |         5.9193 |    0.0114 |       0.038  |               2.9877 |     0.1641 |         0.1824 |          1      |
-| Policy repair + escalation | gender      | 3914 |         9.1991 |    0      |       0.4656 |              65.4558 |     0      |         0      |          0      |
-| Policy repair + escalation | age         | 3914 |         2.7623 |    0.0075 |       0.0559 |               8.0149 |     0      |         0.1281 |          0.0001 |
-| Policy repair + escalation | imd         | 3914 |         3.5459 |    0.041  |       0.287  |              46.1211 |     0      |         0.5737 |          0      |
-| Policy repair + escalation | disability  | 3914 |         1.3268 |    0.4384 |       0.0357 |               5.0915 |     0.1397 |         1      |          1      |
-| DiCE + full gate           | gender      | 3914 |         1.2808 |    0      |       0.2424 |              17.7733 |     0      |         0.0001 |          0      |
-| DiCE + full gate           | age         | 3914 |         0.4083 |    0.2515 |       0.0572 |               4.2172 |     0.0012 |         1      |          0.0249 |
-| DiCE + full gate           | imd         | 3914 |         0.8029 |    0.7528 |       0.1759 |              13.4794 |     0.0005 |         1      |          0.0111 |
-| DiCE + full gate           | disability  | 3914 |         0.2126 |    0.8818 |       0.0094 |               0.6989 |     0.6122 |         1      |          1      |
-| Framework                  | gender      | 3914 |         0.0166 |    1      |       0.435  |              47.9303 |     0      |         1      |          0      |
-| Framework                  | age         | 3914 |         0.0564 |    1      |       0.0679 |               7.6408 |     0      |         1      |          0.0007 |
-| Framework                  | imd         | 3914 |         0.146  |    0.2938 |       0.2619 |              32.101  |     0      |         1      |          0      |
-| Framework                  | disability  | 3914 |         0.0566 |    1      |       0.0316 |               3.5628 |     0.1851 |         1      |          1      |
-| Framework + fallback       | gender      | 3914 |         0      |  nan      |       0.4344 |              47.8441 |     0      |       nan      |          0      |
-| Framework + fallback       | age         | 3914 |         0      |  nan      |       0.0689 |               7.7508 |     0      |       nan      |          0.0007 |
-| Framework + fallback       | imd         | 3914 |         0      |  nan      |       0.2619 |              32.0896 |     0      |       nan      |          0      |
-| Framework + fallback       | disability  | 3914 |         0      |  nan      |       0.0311 |               3.5108 |     0.1897 |       nan      |          1      |
+| CARE (bounded)             | gender      |  300 |        16.4706 |    0.0029 |       0.5772 |              33.6065 |     0.0025 |         0.0728 |          0.0534 |
+| CARE (bounded)             | age         |  300 |         1.4205 |    0.9251 |       0.3714 |              22.054  |     0.045  |         1      |          0.6295 |
+| CARE (bounded)             | imd         |  300 |        13.3333 |    0.8394 |       0.2535 |              15.9158 |     0.3381 |         1      |          1      |
+| CARE (bounded)             | disability  |  300 |         0.3256 |    1      |       0.3526 |              20.2224 |     0.0816 |         1      |          1      |
+| MCCE (bounded)             | gender      | 4500 |        10.1972 |    0      |       1.3328 |              54.6864 |     0      |         0      |          0      |
+| MCCE (bounded)             | age         | 4500 |         3.6186 |    0.0333 |       0.3862 |              15.3898 |     0      |         0.7668 |          0      |
+| MCCE (bounded)             | imd         | 4500 |         8.6903 |    0.3039 |       0.6699 |              29.4258 |     0      |         1      |          0      |
+| MCCE (bounded)             | disability  | 4500 |         2.3616 |    0.3918 |       0.013  |               0.5364 |     0.7805 |         1      |          1      |
+| NICE (bounded)             | gender      | 4500 |         5.859  |    0      |       0.0074 |               0.5995 |     0.8923 |         0      |          1      |
+| NICE (bounded)             | age         | 4500 |         0.5252 |    0.5199 |       0.1461 |              12.1078 |     0.0157 |         1      |          0.2512 |
+| NICE (bounded)             | imd         | 4500 |         3.9205 |    0.0036 |       0.1267 |              10.0673 |     0.1634 |         0.0866 |          1      |
+| NICE (bounded)             | disability  | 4500 |         1.0578 |    0.415  |       0.0302 |               2.4493 |     0.934  |         1      |          1      |
+| DiCE first candidate       | gender      | 4500 |        15.6731 |    0      |       0.1806 |              10.3937 |     0      |         0      |          0      |
+| DiCE first candidate       | age         | 4500 |         3.0807 |    0.0586 |       0.0368 |               2.1482 |     0.0321 |         1      |          0.4816 |
+| DiCE first candidate       | imd         | 4500 |        18.2966 |    0.0002 |       0.0701 |               4.1481 |     0.4484 |         0.0052 |          1      |
+| DiCE first candidate       | disability  | 4500 |         0.0217 |    1      |       0.0208 |               1.2261 |     0.2303 |         1      |          1      |
+| Policy repair + escalation | gender      | 4500 |         5.5676 |    0      |       0.3735 |              18.9269 |     0      |         0      |          0      |
+| Policy repair + escalation | age         | 4500 |         1.9147 |    0.0517 |       0.0236 |               1.2017 |     0.3402 |         1      |          1      |
+| Policy repair + escalation | imd         | 4500 |         2.8934 |    0.6167 |       0.3256 |              17.2945 |     0      |         1      |          0      |
+| Policy repair + escalation | disability  | 4500 |         2.0051 |    0.2074 |       0.0332 |               1.7091 |     0.3004 |         1      |          1      |
+| DiCE + full gate           | gender      | 4500 |        18.8904 |    0      |       0.2018 |              11.0356 |     0      |         0      |          0      |
+| DiCE + full gate           | age         | 4500 |         2.2504 |    0.1517 |       0.0381 |               2.1059 |     0.0092 |         1      |          0.165  |
+| DiCE + full gate           | imd         | 4500 |        18.5416 |    0.0007 |       0.0863 |               4.8101 |     0.0049 |         0.0195 |          0.099  |
+| DiCE + full gate           | disability  | 4500 |         0.5358 |    0.8665 |       0.0197 |               1.0969 |     0.196  |         1      |          1      |
+| Framework                  | gender      | 4500 |         0.5438 |    0.4763 |       0.3002 |              16.7132 |     0      |         1      |          0      |
+| Framework                  | age         | 4500 |         1.084  |    0.1896 |       0.0486 |               2.7207 |     0.0076 |         1      |          0.1436 |
+| Framework                  | imd         | 4500 |         4.1948 |    0.3038 |       0.2032 |              11.744  |     0      |         1      |          0      |
+| Framework                  | disability  | 4500 |         0.7645 |    0.6054 |       0.0156 |               0.8815 |     0.5481 |         1      |          1      |
+| Framework + fallback       | gender      | 4500 |         0.2624 |    0.7365 |       0.2963 |              16.4543 |     0      |         1      |          0      |
+| Framework + fallback       | age         | 4500 |         0.8561 |    0.2682 |       0.0468 |               2.6123 |     0.0106 |         1      |          0.181  |
+| Framework + fallback       | imd         | 4500 |         3.1977 |    0.437  |       0.2068 |              11.9238 |     0      |         1      |          0      |
+| Framework + fallback       | disability  | 4500 |         0.1426 |    0.9955 |       0.0127 |               0.7174 |     0.6084 |         1      |          1      |
 
 ## C. Module x stage adjusted contrasts (cluster-robust by learner, Holm)
-| method                     | attribute   | contrast                                | outcome   |    n |   raw_diff |   adj_diff |    ci_lo |    ci_hi |        p |   p_holm |
-|:---------------------------|:------------|:----------------------------------------|:----------|-----:|-----------:|-----------:|---------:|---------:|---------:|---------:|
-| CARE (bounded)             | gender      | Female - Male                           | yield_pp  |  300 |   -43.85   |     6.8335 |  -5.0157 |  18.6827 |   0.2583 |     1    |
-| CARE (bounded)             | gender      | Female - Male                           | effort    |  131 |     0.0917 |    -0.0098 |  -0.1594 |   0.1399 |   0.8982 |     1    |
-| CARE (bounded)             | age         | 35+ - 0-35                              | yield_pp  |  300 |    -4.5833 |     2.0924 |  -7.9814 |  12.1661 |   0.6839 |     1    |
-| CARE (bounded)             | age         | 35+ - 0-35                              | effort    |  131 |     0.0834 |     0.0166 |  -0.1173 |   0.1505 |   0.8085 |     1    |
-| CARE (bounded)             | imd         | IMD 0-30% (most deprived) - IMD 70-100% | yield_pp  |  190 |     1.5038 |     1.4438 | -10.649  |  13.5366 |   0.815  |     1    |
-| CARE (bounded)             | imd         | IMD 0-30% (most deprived) - IMD 70-100% | effort    |   82 |     0.1169 |     0.1126 |  -0.068  |   0.2933 |   0.2216 |     1    |
-| CARE (bounded)             | disability  | Disability: yes - Disability: no        | yield_pp  |  300 |     3.3333 |     3.7281 | -10.2629 |  17.7191 |   0.6015 |     1    |
-| CARE (bounded)             | disability  | Disability: yes - Disability: no        | effort    |  131 |    -0.1924 |    -0.1385 |  -0.2902 |   0.0132 |   0.0735 |     1    |
-| MCCE (bounded)             | gender      | Female - Male                           | yield_pp  | 3914 |   -27.8212 |     5.9051 |   0.9963 |  10.814  |   0.0184 |     1    |
-| MCCE (bounded)             | gender      | Female - Male                           | effort    | 1731 |    -0.0415 |    -0.0742 |  -0.1318 |  -0.0166 |   0.0115 |     0.68 |
-| MCCE (bounded)             | age         | 35+ - 0-35                              | yield_pp  | 3914 |    -4.0228 |     0.4427 |  -3.4301 |   4.3155 |   0.8227 |     1    |
-| MCCE (bounded)             | age         | 35+ - 0-35                              | effort    | 1731 |    -0.0167 |    -0.0346 |  -0.0772 |   0.008  |   0.1111 |     1    |
-| MCCE (bounded)             | imd         | IMD 0-30% (most deprived) - IMD 70-100% | yield_pp  | 2415 |    -6.375  |    -2.57   |  -7.4443 |   2.3042 |   0.3014 |     1    |
-| MCCE (bounded)             | imd         | IMD 0-30% (most deprived) - IMD 70-100% | effort    | 1045 |     0.0518 |     0.0259 |  -0.0301 |   0.0819 |   0.3643 |     1    |
-| MCCE (bounded)             | disability  | Disability: yes - Disability: no        | yield_pp  | 3914 |    -1.1438 |     2.4795 |  -2.9237 |   7.8826 |   0.3684 |     1    |
-| MCCE (bounded)             | disability  | Disability: yes - Disability: no        | effort    | 1731 |    -0.0495 |    -0.0181 |  -0.0855 |   0.0494 |   0.5995 |     1    |
-| NICE (bounded)             | gender      | Female - Male                           | yield_pp  | 3914 |   -17.6887 |     1.6247 |  -1.5761 |   4.8254 |   0.3198 |     1    |
-| NICE (bounded)             | gender      | Female - Male                           | effort    |  603 |     0.0451 |    -0.0411 |  -0.0863 |   0.0041 |   0.0746 |     1    |
-| NICE (bounded)             | age         | 35+ - 0-35                              | yield_pp  | 3914 |    -4.4241 |    -1.5384 |  -3.8429 |   0.7662 |   0.1908 |     1    |
-| NICE (bounded)             | age         | 35+ - 0-35                              | effort    |  603 |     0.0201 |    -0.003  |  -0.0325 |   0.0266 |   0.8427 |     1    |
-| NICE (bounded)             | imd         | IMD 0-30% (most deprived) - IMD 70-100% | yield_pp  | 2415 |    -2.147  |    -0.0874 |  -3.0532 |   2.8784 |   0.9539 |     1    |
-| NICE (bounded)             | imd         | IMD 0-30% (most deprived) - IMD 70-100% | effort    |  331 |    -0.007  |     0.0059 |  -0.03   |   0.0419 |   0.7464 |     1    |
-| NICE (bounded)             | disability  | Disability: yes - Disability: no        | yield_pp  | 3914 |    -2.5678 |     0.7036 |  -2.6655 |   4.0728 |   0.6823 |     1    |
-| NICE (bounded)             | disability  | Disability: yes - Disability: no        | effort    |  603 |    -0.0722 |    -0.0349 |  -0.0837 |   0.014  |   0.1617 |     1    |
-| DiCE first candidate       | gender      | Female - Male                           | yield_pp  | 3914 |   -30.2646 |     1.8106 |  -1.7871 |   5.4083 |   0.3239 |     1    |
-| DiCE first candidate       | gender      | Female - Male                           | effort    | 2996 |     0.1945 |     0.0088 |  -0.0378 |   0.0554 |   0.7115 |     1    |
-| DiCE first candidate       | age         | 35+ - 0-35                              | yield_pp  | 3914 |    -7.1988 |    -1.7021 |  -4.4968 |   1.0926 |   0.2326 |     1    |
-| DiCE first candidate       | age         | 35+ - 0-35                              | effort    | 2996 |     0.0538 |     0.0186 |  -0.0148 |   0.052  |   0.275  |     1    |
-| DiCE first candidate       | imd         | IMD 0-30% (most deprived) - IMD 70-100% | yield_pp  | 2415 |    -1.7192 |     2.4257 |  -0.7844 |   5.6358 |   0.1386 |     1    |
-| DiCE first candidate       | imd         | IMD 0-30% (most deprived) - IMD 70-100% | effort    | 1854 |     0.026  |     0.0049 |  -0.0376 |   0.0474 |   0.8212 |     1    |
-| DiCE first candidate       | disability  | Disability: yes - Disability: no        | yield_pp  | 3914 |    -5.9193 |    -2.2934 |  -6.1858 |   1.599  |   0.2482 |     1    |
-| DiCE first candidate       | disability  | Disability: yes - Disability: no        | effort    | 2996 |    -0.038  |    -0.0508 |  -0.1086 |   0.007  |   0.0848 |     1    |
-| Policy repair + escalation | gender      | Female - Male                           | yield_pp  | 3914 |     9.1991 |     0.1142 |  -3.351  |   3.5794 |   0.9485 |     1    |
-| Policy repair + escalation | gender      | Female - Male                           | effort    | 3570 |     0.4656 |    -0.0179 |  -0.0522 |   0.0163 |   0.3041 |     1    |
-| Policy repair + escalation | age         | 35+ - 0-35                              | yield_pp  | 3914 |     2.7623 |     1.0558 |  -1.3321 |   3.4437 |   0.3862 |     1    |
-| Policy repair + escalation | age         | 35+ - 0-35                              | effort    | 3570 |     0.0559 |    -0.0305 |  -0.0577 |  -0.0033 |   0.0282 |     1    |
-| Policy repair + escalation | imd         | IMD 0-30% (most deprived) - IMD 70-100% | yield_pp  | 2415 |     2.0928 |     1.0662 |  -2.263  |   4.3954 |   0.5302 |     1    |
-| Policy repair + escalation | imd         | IMD 0-30% (most deprived) - IMD 70-100% | effort    | 2185 |     0.0802 |     0.0326 |   0.0009 |   0.0643 |   0.0438 |     1    |
-| Policy repair + escalation | disability  | Disability: yes - Disability: no        | yield_pp  | 3914 |     1.3268 |     0.8539 |  -2.7394 |   4.4472 |   0.6414 |     1    |
-| Policy repair + escalation | disability  | Disability: yes - Disability: no        | effort    | 3570 |     0.0357 |    -0.0179 |  -0.0596 |   0.0239 |   0.4015 |     1    |
-| DiCE + full gate           | gender      | Female - Male                           | yield_pp  | 3914 |    -1.2808 |    -0.1064 |  -0.9783 |   0.7654 |   0.8109 |     1    |
-| DiCE + full gate           | gender      | Female - Male                           | effort    | 3886 |     0.2424 |    -0.0033 |  -0.0423 |   0.0356 |   0.8678 |     1    |
-| DiCE + full gate           | age         | 35+ - 0-35                              | yield_pp  | 3914 |    -0.4083 |    -0.1843 |  -0.8975 |   0.5289 |   0.6125 |     1    |
-| DiCE + full gate           | age         | 35+ - 0-35                              | effort    | 3886 |     0.0572 |     0.0129 |  -0.0148 |   0.0405 |   0.3616 |     1    |
-| DiCE + full gate           | imd         | IMD 0-30% (most deprived) - IMD 70-100% | yield_pp  | 2415 |    -0.1255 |     0.0147 |  -0.6484 |   0.6777 |   0.9654 |     1    |
-| DiCE + full gate           | imd         | IMD 0-30% (most deprived) - IMD 70-100% | effort    | 2398 |     0.0357 |     0.0057 |  -0.0316 |   0.043  |   0.7637 |     1    |
-| DiCE + full gate           | disability  | Disability: yes - Disability: no        | yield_pp  | 3914 |     0.2126 |     0.3466 |  -0.6303 |   1.3235 |   0.4868 |     1    |
-| DiCE + full gate           | disability  | Disability: yes - Disability: no        | effort    | 3886 |    -0.0094 |    -0.041  |  -0.0882 |   0.0061 |   0.088  |     1    |
-| Framework                  | gender      | Female - Male                           | yield_pp  | 3914 |    -0.0166 |     0.0596 |  -0.1173 |   0.2365 |   0.5088 |     1    |
-| Framework                  | gender      | Female - Male                           | effort    | 3912 |     0.435  |    -0.0242 |  -0.0553 |   0.0069 |   0.1274 |     1    |
-| Framework                  | age         | 35+ - 0-35                              | yield_pp  | 3914 |    -0.0564 |    -0.0154 |  -0.1446 |   0.1139 |   0.8158 |     1    |
-| Framework                  | age         | 35+ - 0-35                              | effort    | 3912 |     0.0679 |    -0.0139 |  -0.0385 |   0.0107 |   0.2697 |     1    |
-| Framework                  | imd         | IMD 0-30% (most deprived) - IMD 70-100% | yield_pp  | 2415 |     0      |   nan      | nan      | nan      | nan      |   nan    |
-| Framework                  | imd         | IMD 0-30% (most deprived) - IMD 70-100% | effort    | 2415 |     0.0635 |     0.0083 |  -0.0224 |   0.0389 |   0.5973 |     1    |
-| Framework                  | disability  | Disability: yes - Disability: no        | yield_pp  | 3914 |     0.0566 |     0.0519 |  -0.0262 |   0.1301 |   0.1929 |     1    |
-| Framework                  | disability  | Disability: yes - Disability: no        | effort    | 3912 |     0.0316 |    -0.0261 |  -0.0609 |   0.0087 |   0.1414 |     1    |
-| Framework + fallback       | gender      | Female - Male                           | yield_pp  | 3914 |     0      |   nan      | nan      | nan      | nan      |   nan    |
-| Framework + fallback       | gender      | Female - Male                           | effort    | 3914 |     0.4344 |    -0.0252 |  -0.0564 |   0.006  |   0.1134 |     1    |
-| Framework + fallback       | age         | 35+ - 0-35                              | yield_pp  | 3914 |     0      |   nan      | nan      | nan      | nan      |   nan    |
-| Framework + fallback       | age         | 35+ - 0-35                              | effort    | 3914 |     0.0689 |    -0.0133 |  -0.0379 |   0.0114 |   0.2914 |     1    |
-| Framework + fallback       | imd         | IMD 0-30% (most deprived) - IMD 70-100% | yield_pp  | 2415 |     0      |   nan      | nan      | nan      | nan      |   nan    |
-| Framework + fallback       | imd         | IMD 0-30% (most deprived) - IMD 70-100% | effort    | 2415 |     0.0635 |     0.0083 |  -0.0224 |   0.0389 |   0.5973 |     1    |
-| Framework + fallback       | disability  | Disability: yes - Disability: no        | yield_pp  | 3914 |     0      |   nan      | nan      | nan      | nan      |   nan    |
-| Framework + fallback       | disability  | Disability: yes - Disability: no        | effort    | 3914 |     0.0311 |    -0.0264 |  -0.0612 |   0.0085 |   0.1378 |     1    |
+| method                     | attribute   | contrast                                | outcome   |    n |   raw_diff |   adj_diff |    ci_lo |   ci_hi |      p |   p_holm |
+|:---------------------------|:------------|:----------------------------------------|:----------|-----:|-----------:|-----------:|---------:|--------:|-------:|---------:|
+| CARE (bounded)             | gender      | Female - Male                           | yield_pp  |  300 |   -16.4706 |    -2.333  | -21.6694 | 17.0033 | 0.8131 |   1      |
+| CARE (bounded)             | gender      | Female - Male                           | effort    |   88 |     0.5772 |     0.0588 |  -0.2678 |  0.3853 | 0.7244 |   1      |
+| CARE (bounded)             | age         | 35+ - 0-35                              | yield_pp  |  300 |     1.4205 |    -0.9242 | -13.2732 | 11.4248 | 0.8834 |   1      |
+| CARE (bounded)             | age         | 35+ - 0-35                              | effort    |   88 |     0.3714 |     0.1046 |  -0.1642 |  0.3735 | 0.4456 |   1      |
+| CARE (bounded)             | imd         | IMD 0-30% (most deprived) - IMD 70-100% | yield_pp  |  175 |    -4.3011 |    -5.3111 | -20.39   |  9.7679 | 0.49   |   1      |
+| CARE (bounded)             | imd         | IMD 0-30% (most deprived) - IMD 70-100% | effort    |   53 |     0.2416 |     0.0397 |  -0.2013 |  0.2806 | 0.7469 |   1      |
+| CARE (bounded)             | disability  | Disability: yes - Disability: no        | yield_pp  |  300 |     0.3256 |     5.0985 | -13.2327 | 23.4297 | 0.5857 |   1      |
+| CARE (bounded)             | disability  | Disability: yes - Disability: no        | effort    |   88 |     0.3526 |     0.2075 |  -0.0554 |  0.4704 | 0.1218 |   1      |
+| MCCE (bounded)             | gender      | Female - Male                           | yield_pp  | 4500 |    10.1972 |     1.7008 |  -3.3953 |  6.7969 | 0.513  |   1      |
+| MCCE (bounded)             | gender      | Female - Male                           | effort    | 2036 |     1.3328 |    -0.0754 |  -0.2125 |  0.0616 | 0.2805 |   1      |
+| MCCE (bounded)             | age         | 35+ - 0-35                              | yield_pp  | 4500 |     3.6186 |     1.3718 |  -2.6101 |  5.3536 | 0.4995 |   1      |
+| MCCE (bounded)             | age         | 35+ - 0-35                              | effort    | 2036 |     0.3862 |     0.1007 |  -0.0112 |  0.2126 | 0.0777 |   1      |
+| MCCE (bounded)             | imd         | IMD 0-30% (most deprived) - IMD 70-100% | yield_pp  | 2722 |     1.7459 |    -1.0653 |  -5.8196 |  3.6889 | 0.6605 |   1      |
+| MCCE (bounded)             | imd         | IMD 0-30% (most deprived) - IMD 70-100% | effort    | 1237 |     0.3318 |    -0.0091 |  -0.1301 |  0.1119 | 0.883  |   1      |
+| MCCE (bounded)             | disability  | Disability: yes - Disability: no        | yield_pp  | 4500 |     2.3616 |     4.1601 |  -2.021  | 10.3412 | 0.1871 |   1      |
+| MCCE (bounded)             | disability  | Disability: yes - Disability: no        | effort    | 2036 |     0.013  |     0.0142 |  -0.1457 |  0.1742 | 0.8615 |   1      |
+| NICE (bounded)             | gender      | Female - Male                           | yield_pp  | 4500 |    -5.859  |    -0.0267 |  -2.0248 |  1.9714 | 0.9791 |   1      |
+| NICE (bounded)             | gender      | Female - Male                           | effort    |  222 |    -0.0074 |     0.0466 |  -0.0433 |  0.1365 | 0.3093 |   1      |
+| NICE (bounded)             | age         | 35+ - 0-35                              | yield_pp  | 4500 |    -0.5252 |     0.2904 |  -1.3734 |  1.9542 | 0.7323 |   1      |
+| NICE (bounded)             | age         | 35+ - 0-35                              | effort    |  222 |    -0.1461 |    -0.0641 |  -0.1117 | -0.0165 | 0.0083 |   0.5291 |
+| NICE (bounded)             | imd         | IMD 0-30% (most deprived) - IMD 70-100% | yield_pp  | 2722 |    -3.046  |    -1.757  |  -3.8565 |  0.3426 | 0.101  |   1      |
+| NICE (bounded)             | imd         | IMD 0-30% (most deprived) - IMD 70-100% | effort    |  133 |     0.0062 |    -0.0181 |  -0.0832 |  0.047  | 0.5857 |   1      |
+| NICE (bounded)             | disability  | Disability: yes - Disability: no        | yield_pp  | 4500 |    -1.0578 |    -0.853  |  -3.1511 |  1.445  | 0.4669 |   1      |
+| NICE (bounded)             | disability  | Disability: yes - Disability: no        | effort    |  222 |    -0.0302 |    -0.0139 |  -0.0777 |  0.0499 | 0.6692 |   1      |
+| DiCE first candidate       | gender      | Female - Male                           | yield_pp  | 4500 |   -15.6731 |     3.1931 |  -0.9201 |  7.3063 | 0.1281 |   1      |
+| DiCE first candidate       | gender      | Female - Male                           | effort    | 1553 |     0.1806 |     0.0115 |  -0.059  |  0.0819 | 0.7497 |   1      |
+| DiCE first candidate       | age         | 35+ - 0-35                              | yield_pp  | 4500 |    -3.0807 |    -0.5157 |  -3.9802 |  2.9488 | 0.7705 |   1      |
+| DiCE first candidate       | age         | 35+ - 0-35                              | effort    | 1553 |     0.0368 |     0.0097 |  -0.0358 |  0.0551 | 0.6768 |   1      |
+| DiCE first candidate       | imd         | IMD 0-30% (most deprived) - IMD 70-100% | yield_pp  | 2722 |    -4.6497 |    -0.6173 |  -5.0101 |  3.7754 | 0.783  |   1      |
+| DiCE first candidate       | imd         | IMD 0-30% (most deprived) - IMD 70-100% | effort    |  903 |     0.0537 |     0.0013 |  -0.0534 |  0.056  | 0.9639 |   1      |
+| DiCE first candidate       | disability  | Disability: yes - Disability: no        | yield_pp  | 4500 |    -0.0217 |    -0.761  |  -6.2249 |  4.7029 | 0.7849 |   1      |
+| DiCE first candidate       | disability  | Disability: yes - Disability: no        | effort    | 1553 |    -0.0208 |    -0.022  |  -0.0913 |  0.0474 | 0.5346 |   1      |
+| Policy repair + escalation | gender      | Female - Male                           | yield_pp  | 4500 |     5.5676 |    -0.1727 |  -2.6801 |  2.3347 | 0.8926 |   1      |
+| Policy repair + escalation | gender      | Female - Male                           | effort    | 4102 |     0.3735 |    -0.064  |  -0.1427 |  0.0148 | 0.1117 |   1      |
+| Policy repair + escalation | age         | 35+ - 0-35                              | yield_pp  | 4500 |     1.9147 |     0.5941 |  -1.2619 |  2.4502 | 0.5304 |   1      |
+| Policy repair + escalation | age         | 35+ - 0-35                              | effort    | 4102 |     0.0236 |    -0.0464 |  -0.1071 |  0.0143 | 0.1341 |   1      |
+| Policy repair + escalation | imd         | IMD 0-30% (most deprived) - IMD 70-100% | yield_pp  | 2722 |     1.3198 |    -0.045  |  -2.4212 |  2.3312 | 0.9704 |   1      |
+| Policy repair + escalation | imd         | IMD 0-30% (most deprived) - IMD 70-100% | effort    | 2481 |     0.1662 |     0.0411 |  -0.0329 |  0.1152 | 0.2765 |   1      |
+| Policy repair + escalation | disability  | Disability: yes - Disability: no        | yield_pp  | 4500 |    -2.0051 |    -0.9088 |  -4.2264 |  2.4089 | 0.5914 |   1      |
+| Policy repair + escalation | disability  | Disability: yes - Disability: no        | effort    | 4102 |    -0.0332 |    -0.0062 |  -0.0989 |  0.0866 | 0.8964 |   1      |
+| DiCE + full gate           | gender      | Female - Male                           | yield_pp  | 4500 |   -18.8904 |     0.0091 |  -4.6743 |  4.6925 | 0.997  |   1      |
+| DiCE + full gate           | gender      | Female - Male                           | effort    | 3182 |     0.2018 |    -0.0416 |  -0.0961 |  0.0129 | 0.1348 |   1      |
+| DiCE + full gate           | age         | 35+ - 0-35                              | yield_pp  | 4500 |    -2.2504 |     0.4231 |  -3.0343 |  3.8806 | 0.8104 |   1      |
+| DiCE + full gate           | age         | 35+ - 0-35                              | effort    | 3182 |     0.0381 |     0.0055 |  -0.0324 |  0.0435 | 0.7749 |   1      |
+| DiCE + full gate           | imd         | IMD 0-30% (most deprived) - IMD 70-100% | yield_pp  | 2722 |    -2.1994 |     2.2454 |  -2.0512 |  6.542  | 0.3057 |   1      |
+| DiCE + full gate           | imd         | IMD 0-30% (most deprived) - IMD 70-100% | effort    | 1916 |     0.0863 |     0.0197 |  -0.0263 |  0.0657 | 0.4008 |   1      |
+| DiCE + full gate           | disability  | Disability: yes - Disability: no        | yield_pp  | 4500 |    -0.5358 |    -0.4987 |  -5.396  |  4.3985 | 0.8418 |   1      |
+| DiCE + full gate           | disability  | Disability: yes - Disability: no        | effort    | 3182 |    -0.0197 |    -0.0145 |  -0.0692 |  0.0401 | 0.6023 |   1      |
+| Framework                  | gender      | Female - Male                           | yield_pp  | 4500 |    -0.5438 |     0.7924 |  -1.0821 |  2.667  | 0.4074 |   1      |
+| Framework                  | gender      | Female - Male                           | effort    | 4241 |     0.3002 |    -0.0417 |  -0.1069 |  0.0236 | 0.2109 |   1      |
+| Framework                  | age         | 35+ - 0-35                              | yield_pp  | 4500 |     1.084  |     0.5097 |  -0.9116 |  1.9309 | 0.4821 |   1      |
+| Framework                  | age         | 35+ - 0-35                              | effort    | 4241 |     0.0486 |    -0.0118 |  -0.0605 |  0.0369 | 0.6353 |   1      |
+| Framework                  | imd         | IMD 0-30% (most deprived) - IMD 70-100% | yield_pp  | 2722 |     0.0836 |    -0.0484 |  -1.9692 |  1.8724 | 0.9606 |   1      |
+| Framework                  | imd         | IMD 0-30% (most deprived) - IMD 70-100% | effort    | 2556 |     0.1083 |     0.01   |  -0.0515 |  0.0715 | 0.749  |   1      |
+| Framework                  | disability  | Disability: yes - Disability: no        | yield_pp  | 4500 |    -0.7645 |    -0.732  |  -3.176  |  1.7119 | 0.5571 |   1      |
+| Framework                  | disability  | Disability: yes - Disability: no        | effort    | 4241 |    -0.0156 |    -0.0132 |  -0.085  |  0.0585 | 0.7177 |   1      |
+| Framework + fallback       | gender      | Female - Male                           | yield_pp  | 4500 |    -0.2624 |     0.1296 |  -1.5535 |  1.8128 | 0.88   |   1      |
+| Framework + fallback       | gender      | Female - Male                           | effort    | 4282 |     0.2963 |    -0.0447 |  -0.1097 |  0.0204 | 0.1785 |   1      |
+| Framework + fallback       | age         | 35+ - 0-35                              | yield_pp  | 4500 |     0.8561 |     0.1519 |  -1.1602 |  1.464  | 0.8205 |   1      |
+| Framework + fallback       | age         | 35+ - 0-35                              | effort    | 4282 |     0.0468 |    -0.0129 |  -0.0617 |  0.0359 | 0.6046 |   1      |
+| Framework + fallback       | imd         | IMD 0-30% (most deprived) - IMD 70-100% | yield_pp  | 2722 |    -0.0482 |    -0.3791 |  -2.1274 |  1.3692 | 0.6708 |   1      |
+| Framework + fallback       | imd         | IMD 0-30% (most deprived) - IMD 70-100% | effort    | 2582 |     0.1048 |     0.0081 |  -0.0533 |  0.0695 | 0.7969 |   1      |
+| Framework + fallback       | disability  | Disability: yes - Disability: no        | yield_pp  | 4500 |     0.1426 |     0.1265 |  -2.0154 |  2.2683 | 0.9079 |   1      |
+| Framework + fallback       | disability  | Disability: yes - Disability: no        | effort    | 4282 |    -0.0127 |    -0.0105 |  -0.0823 |  0.0613 | 0.7738 |   1      |

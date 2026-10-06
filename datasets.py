@@ -20,37 +20,37 @@ class Config:
 
 
 # ----------------------------------------------------------------- OULAD
-# Modules whose Test_k columns are weighted contributions to a 0-100
-# course score and which have no exam component in this extract.
+# Built by tools/prepare_oulad.py from the raw OULAD tables: Test_k is the
+# contribution of the k-th weighted coursework assessment (score x weight / 100,
+# exams excluded) and W_k its weight, so sum_k Test_k is the 0-100 coursework
+# score to which the Open University's 40% threshold applies.
 OULAD_MODULES = ['AAA', 'BBB', 'EEE', 'FFF']
-OULAD_TESTS = ['Test_1', 'Test_2', 'Test_3', 'Test_4', 'Test_5', 'Test_6']
 
 
 def load_oulad():
-    o = pd.read_csv(f'{DATA}/OULAD/OULAD_All_Courses.csv')
+    o = pd.read_csv(f'{DATA}/OULAD/OULAD_coursework.csv')
     o = o[o.code_module.isin(OULAD_MODULES)].copy()
     # Withdrawn learners have no final assessment outcome; they are excluded.
     o = o[o.final_result != 'Withdrawn'].copy()
     o['y'] = o.final_result.isin(['Pass', 'Distinction']).astype(int)
-    o[OULAD_TESTS] = o[OULAD_TESTS].fillna(0.0).astype(float)  # non-submission
+    tests = sorted([c for c in o.columns if c.startswith('Test_')], key=lambda c: int(c.split('_')[1]))
+    o[tests] = o[tests].fillna(0.0).astype(float)          # non-submission = 0
     o['sum_click'] = o['sum_click'].astype(float)
     mods = pd.get_dummies(o.code_module, prefix='mod').astype(float)
     o = pd.concat([o, mods], axis=1)
     mod_cols = list(mods.columns)
-    features = OULAD_TESTS + ['sum_click'] + mod_cols
-    # Per-module upper bound of each assessment = observed maximum
-    # contribution (the assessment's weight in the course score).
-    ub = o.groupby('code_module')[OULAD_TESTS].max()
+    features = tests + ['sum_click'] + mod_cols
     click_hi = o.groupby('code_module')['sum_click'].quantile(0.95)
     return Config(
         name='OULAD', df=o.reset_index(drop=True), y='y', group='id_student',
-        features=features, tests=OULAD_TESTS, immutable_extra=mod_cols,
+        features=features, tests=tests, immutable_extra=mod_cols,
         engagement=['sum_click'], stages=[1, 2, 3],
-        policy_weights={t: 1.0 for t in OULAD_TESTS}, tau=40.0,
+        policy_weights={t: 1.0 for t in tests}, tau=40.0,
         tau_sweep=[30.0, 40.0, 50.0, 60.0],
-        test_ub=lambda row: {t: float(ub.loc[row['code_module'], t]) for t in OULAD_TESTS},
+        # upper bound of each assessment = its weight in this presentation
+        test_ub=lambda row: {t: float(row['W_' + t.split('_')[1]]) for t in tests},
         click_hi=lambda row: float(click_hi.loc[row['code_module']]),
-        policy_desc='sum of weighted assessment contributions (0-100 scale) >= 40 (OU pass mark)')
+        policy_desc='coursework score (sum of weighted assessment contributions, 0-100) >= 40 (OU threshold)')
 
 
 # ------------------------------------------------------------------- AUC

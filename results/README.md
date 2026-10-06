@@ -88,7 +88,7 @@ Before gating, differences of at most 1e-6·max(1, |x₀|) between a returned ve
 |---|---|---|
 | `predictive_all.csv`, `predictive_catboost.csv`, `predictive_friedman.csv` | Predictive performance (Table 4, Table S1) | `analyze.py` |
 | `cohort.csv`, `pools.csv` | Query cohorts and DiCE pools (Table 5) | `analyze.py` |
-| `ablation_yield.csv`, `yield_by_stage.csv`, `paired_tests.csv`, `paired_effort.csv`, `framework_rejections.csv`, `accepted_characteristics.csv` | Matched ablation (Table 6, Tables S2–S3) | `analyze.py` |
+| `ablation_yield.csv`, `yield_by_stage.csv`, `paired_tests.csv`, `framework_rejections.csv`, `accepted_characteristics.csv` | Matched ablation (Table 6, Tables S2–S3) | `analyze.py` |
 | `objective_audit.csv` | Objective audit and weight sensitivity (Table 7, Table S4) | `analyze.py` |
 | `tau_sweep.csv` | Alternative thresholds (Table 8, Table S5) | `analyze.py` |
 | `external_*.csv` | External methods: yields, paired tests, rejection reasons, runtime (Table 9) | `ext_analyze.py` |

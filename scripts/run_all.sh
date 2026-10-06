@@ -7,6 +7,8 @@ cd "$(dirname "$0")/.."
 mkdir -p results/tables logs
 STUDENTINFO=${STUDENTINFO:-data/OULAD/studentInfo.csv}
 
+# Inputs (once): python tools/prepare_oulad.py path/to/oulad_raw ; python tools/prepare_harvardx.py path/to/person_course.csv
+
 # RQ1: predictive models (13 classifiers x 3 resampling conditions, grouped 5-fold CV)
 python predictive.py AUC HarvardX OULAD                                   > logs/predictive.log 2>&1
 

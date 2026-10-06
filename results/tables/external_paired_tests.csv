@@ -35,39 +35,39 @@ HarvardX,aligned,Framework (ranking + edit + gate),NICE_bounded+edit,1999,49.375
 HarvardX,aligned,Framework + fallback,NICE_bounded+edit,1999,49.375,47.224,51.626,987,0,0.0,0.0
 HarvardX,aligned,Framework (ranking + edit + gate),NICE_native,1999,49.375,47.224,51.626,987,0,0.0,0.0
 HarvardX,aligned,Framework + fallback,NICE_native,1999,49.375,47.224,51.626,987,0,0.0,0.0
-OULAD,aligned,Framework (ranking + edit + gate),CARE_bounded,300,56.333,50.336,61.746,169,0,0.0,0.0
-OULAD,aligned,Framework + fallback,CARE_bounded,300,56.333,50.336,61.746,169,0,0.0,0.0
-OULAD,aligned,Framework (ranking + edit + gate),CARE_bounded+edit,300,17.0,12.957,21.452,51,0,0.0,0.0
-OULAD,aligned,Framework + fallback,CARE_bounded+edit,300,17.0,12.957,21.452,51,0,0.0,0.0
-OULAD,aligned,Framework (ranking + edit + gate),CARE_native,300,85.333,81.271,89.216,256,0,0.0,0.0
-OULAD,aligned,Framework + fallback,CARE_native,300,85.333,81.271,89.216,256,0,0.0,0.0
-OULAD,aligned,Framework (ranking + edit + gate),MCCE_bounded,3914,55.723,54.03,57.344,2182,1,0.0,0.0
-OULAD,aligned,Framework + fallback,MCCE_bounded,3914,55.774,54.097,57.38,2183,0,0.0,0.0
-OULAD,aligned,Framework (ranking + edit + gate),MCCE_bounded+edit,3914,32.652,31.155,34.05,1279,1,0.0,0.0
-OULAD,aligned,Framework + fallback,MCCE_bounded+edit,3914,32.703,31.206,34.12,1280,0,0.0,0.0
-OULAD,aligned,Framework (ranking + edit + gate),MCCE_native,3914,73.454,72.029,74.944,2875,0,0.0,0.0
-OULAD,aligned,Framework + fallback,MCCE_native,3914,73.505,72.068,74.981,2877,0,0.0,0.0
-OULAD,aligned,Framework (ranking + edit + gate),NICE_bounded,3914,84.543,83.24,85.847,3309,0,0.0,0.0
-OULAD,aligned,Framework + fallback,NICE_bounded,3914,84.594,83.312,85.893,3311,0,0.0,0.0
-OULAD,aligned,Framework (ranking + edit + gate),NICE_bounded+edit,3914,42.003,40.345,43.795,1645,1,0.0,0.0
-OULAD,aligned,Framework + fallback,NICE_bounded+edit,3914,42.054,40.395,43.839,1646,0,0.0,0.0
-OULAD,aligned,Framework (ranking + edit + gate),NICE_native,3914,84.543,83.24,85.847,3309,0,0.0,0.0
-OULAD,aligned,Framework + fallback,NICE_native,3914,84.594,83.312,85.893,3311,0,0.0,0.0
-OULAD,floor,Framework (ranking + edit + gate),CARE_bounded,100,76.0,67.0,84.468,77,1,0.0,0.0
-OULAD,floor,Framework + fallback,CARE_bounded,100,80.0,72.0,87.5,80,0,0.0,0.0
-OULAD,floor,Framework (ranking + edit + gate),CARE_bounded+edit,100,16.0,7.611,25.0,19,3,0.001,0.008
-OULAD,floor,Framework + fallback,CARE_bounded+edit,100,20.0,12.121,28.713,20,0,0.0,0.0
-OULAD,floor,Framework (ranking + edit + gate),CARE_native,100,96.0,91.919,99.029,96,0,0.0,0.0
-OULAD,floor,Framework + fallback,CARE_native,100,100.0,100.0,100.0,100,0,0.0,0.0
-OULAD,floor,Framework (ranking + edit + gate),MCCE_bounded,3914,83.572,82.302,84.797,3281,10,0.0,0.0
-OULAD,floor,Framework + fallback,MCCE_bounded,3914,85.079,83.928,86.245,3331,1,0.0,0.0
-OULAD,floor,Framework (ranking + edit + gate),MCCE_bounded+edit,3914,83.572,82.302,84.797,3281,10,0.0,0.0
-OULAD,floor,Framework + fallback,MCCE_bounded+edit,3914,85.079,83.928,86.245,3331,1,0.0,0.0
-OULAD,floor,Framework (ranking + edit + gate),MCCE_native,3914,98.39,97.977,98.771,3851,0,0.0,0.0
-OULAD,floor,Framework + fallback,MCCE_native,3914,99.898,99.773,99.975,3910,0,0.0,0.0
-OULAD,floor,Framework (ranking + edit + gate),NICE_bounded,3914,11.446,10.315,12.574,462,14,0.0,0.0
-OULAD,floor,Framework + fallback,NICE_bounded,3914,12.954,11.762,14.079,507,0,0.0,0.0
-OULAD,floor,Framework (ranking + edit + gate),NICE_bounded+edit,3914,11.446,10.315,12.574,462,14,0.0,0.0
-OULAD,floor,Framework + fallback,NICE_bounded+edit,3914,12.954,11.762,14.079,507,0,0.0,0.0
-OULAD,floor,Framework (ranking + edit + gate),NICE_native,3914,98.416,98.0,98.801,3852,0,0.0,0.0
-OULAD,floor,Framework + fallback,NICE_native,3914,99.923,99.821,100.0,3911,0,0.0,0.0
+OULAD,aligned,Framework (ranking + edit + gate),CARE_bounded,300,64.0,58.471,69.831,193,1,0.0,0.0
+OULAD,aligned,Framework + fallback,CARE_bounded,300,65.0,59.468,70.667,195,0,0.0,0.0
+OULAD,aligned,Framework (ranking + edit + gate),CARE_bounded+edit,300,26.333,21.121,31.79,81,2,0.0,0.0
+OULAD,aligned,Framework + fallback,CARE_bounded+edit,300,27.333,22.331,32.55,82,0,0.0,0.0
+OULAD,aligned,Framework (ranking + edit + gate),CARE_native,300,84.333,79.796,88.553,253,0,0.0,0.0
+OULAD,aligned,Framework + fallback,CARE_native,300,85.333,81.0,89.227,256,0,0.0,0.0
+OULAD,aligned,Framework (ranking + edit + gate),MCCE_bounded,4500,49.0,47.373,50.694,2224,19,0.0,0.0
+OULAD,aligned,Framework + fallback,MCCE_bounded,4500,49.911,48.353,51.529,2251,5,0.0,0.0
+OULAD,aligned,Framework (ranking + edit + gate),MCCE_bounded+edit,4500,31.756,30.424,33.184,1455,26,0.0,0.0
+OULAD,aligned,Framework + fallback,MCCE_bounded+edit,4500,32.667,31.368,34.032,1477,7,0.0,0.0
+OULAD,aligned,Framework (ranking + edit + gate),MCCE_native,4500,68.756,67.377,70.21,3100,6,0.0,0.0
+OULAD,aligned,Framework + fallback,MCCE_native,4500,69.667,68.295,71.088,3135,0,0.0,0.0
+OULAD,aligned,Framework (ranking + edit + gate),NICE_bounded,4500,89.311,88.421,90.255,4019,0,0.0,0.0
+OULAD,aligned,Framework + fallback,NICE_bounded,4500,90.222,89.379,91.117,4060,0,0.0,0.0
+OULAD,aligned,Framework (ranking + edit + gate),NICE_bounded+edit,4500,56.8,55.128,58.454,2577,21,0.0,0.0
+OULAD,aligned,Framework + fallback,NICE_bounded+edit,4500,57.711,56.045,59.365,2606,9,0.0,0.0
+OULAD,aligned,Framework (ranking + edit + gate),NICE_native,4500,89.311,88.421,90.255,4019,0,0.0,0.0
+OULAD,aligned,Framework + fallback,NICE_native,4500,90.222,89.379,91.117,4060,0,0.0,0.0
+OULAD,floor,Framework (ranking + edit + gate),CARE_bounded,100,45.0,34.694,55.556,47,2,0.0,0.0
+OULAD,floor,Framework + fallback,CARE_bounded,100,46.0,35.92,56.436,48,2,0.0,0.0
+OULAD,floor,Framework (ranking + edit + gate),CARE_bounded+edit,100,20.0,9.998,30.0,26,6,0.001,0.005
+OULAD,floor,Framework + fallback,CARE_bounded+edit,100,21.0,11.34,31.0,26,5,0.0,0.002
+OULAD,floor,Framework (ranking + edit + gate),CARE_native,100,82.0,74.257,89.323,82,0,0.0,0.0
+OULAD,floor,Framework + fallback,CARE_native,100,83.0,75.248,90.099,83,0,0.0,0.0
+OULAD,floor,Framework (ranking + edit + gate),MCCE_bounded,4500,18.667,17.152,20.204,1107,267,0.0,0.0
+OULAD,floor,Framework + fallback,MCCE_bounded,4500,21.844,20.426,23.285,1155,172,0.0,0.0
+OULAD,floor,Framework (ranking + edit + gate),MCCE_bounded+edit,4500,18.667,17.152,20.204,1107,267,0.0,0.0
+OULAD,floor,Framework + fallback,MCCE_bounded+edit,4500,21.844,20.426,23.285,1155,172,0.0,0.0
+OULAD,floor,Framework (ranking + edit + gate),MCCE_native,4500,76.667,75.305,78.035,3466,16,0.0,0.0
+OULAD,floor,Framework + fallback,MCCE_native,4500,79.844,78.646,81.086,3593,0,0.0,0.0
+OULAD,floor,Framework (ranking + edit + gate),NICE_bounded,4500,35.467,33.736,37.185,1855,259,0.0,0.0
+OULAD,floor,Framework + fallback,NICE_bounded,4500,38.644,36.944,40.267,1922,183,0.0,0.0
+OULAD,floor,Framework (ranking + edit + gate),NICE_bounded+edit,4500,35.467,33.736,37.185,1855,259,0.0,0.0
+OULAD,floor,Framework + fallback,NICE_bounded+edit,4500,38.644,36.944,40.267,1922,183,0.0,0.0
+OULAD,floor,Framework (ranking + edit + gate),NICE_native,4500,82.067,80.905,83.196,3695,2,0.0,0.0
+OULAD,floor,Framework + fallback,NICE_native,4500,85.244,84.157,86.261,3836,0,0.0,0.0

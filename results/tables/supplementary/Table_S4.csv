@@ -1,37 +1,37 @@
 Variant,Accepted yield (%),Selection changed (%),Mean effort (accepted)
 "*OULAD, aligned bounds*",,,
-"Reference (λ = 1000, 1000, 1, 0.5)",99.9 ± 0.1,0.0,0.87
-Without policy penalty,92.1 ± 4.0,39.0,0.80
-Without feasibility penalty,99.8 ± 0.1,0.2,0.87
-Without proximity,99.9 ± 0.1,18.4,0.93
-Without sparsity,99.9 ± 0.1,6.1,0.87
-λ_{policy} = 1,92.8 ± 4.1,37.6,0.79
-λ_{policy} = 10,98.5 ± 1.4,10.3,0.83
-λ_{policy} = 100,99.9 ± 0.1,0.6,0.87
-λ_{prox} = 0.1,99.9 ± 0.1,0.6,0.87
-λ_{prox} = 10,99.9 ± 0.1,4.7,0.86
+"Reference (λ = 1000, 1000, 1, 0.5)",94.2 ± 1.2,0.0,1.78
+Without policy penalty,78.8 ± 10.6,77.6,1.74
+Without feasibility penalty,91.0 ± 1.4,3.7,1.75
+Without proximity,94.2 ± 1.2,3.8,1.79
+Without sparsity,94.2 ± 1.2,0.6,1.78
+λ_{policy} = 1,83.7 ± 5.5,64.9,1.69
+λ_{policy} = 10,92.9 ± 1.4,11.5,1.75
+λ_{policy} = 100,94.1 ± 1.3,0.9,1.77
+λ_{prox} = 0.1,94.2 ± 1.2,0.0,1.78
+λ_{prox} = 10,94.1 ± 1.3,1.1,1.77
 "*OULAD, floor bounds*",,,
-"Reference (λ = 1000, 1000, 1, 0.5)",98.5 ± 1.4,0.0,3.17
-Without policy penalty,96.3 ± 3.1,24.4,3.04
-Without feasibility penalty,98.5 ± 1.0,65.9,3.12
-Without proximity,98.9 ± 1.0,39.4,3.46
-Without sparsity,98.5 ± 1.4,0.1,3.17
-λ_{policy} = 1,96.3 ± 3.1,23.5,3.04
-λ_{policy} = 10,98.3 ± 1.4,6.3,3.13
-λ_{policy} = 100,98.5 ± 1.4,0.4,3.16
-λ_{prox} = 0.1,98.5 ± 1.4,0.7,3.17
-λ_{prox} = 10,98.5 ± 1.4,0.5,3.16
+"Reference (λ = 1000, 1000, 1, 0.5)",82.8 ± 5.5,0.0,4.46
+Without policy penalty,71.9 ± 6.0,50.4,4.04
+Without feasibility penalty,80.4 ± 4.7,12.8,4.40
+Without proximity,82.8 ± 5.5,2.6,4.48
+Without sparsity,82.8 ± 5.5,1.0,4.46
+λ_{policy} = 1,73.6 ± 4.2,48.9,4.13
+λ_{policy} = 10,81.0 ± 5.6,7.5,4.45
+λ_{policy} = 100,82.7 ± 5.4,0.7,4.46
+λ_{prox} = 0.1,82.8 ± 5.5,0.1,4.46
+λ_{prox} = 10,82.7 ± 5.4,1.3,4.46
 "*OULAD, mismatch bounds*",,,
-"Reference (λ = 1000, 1000, 1, 0.5)",98.6 ± 1.2,0.0,3.19
-Without policy penalty,96.5 ± 3.0,22.9,3.07
-Without feasibility penalty,91.9 ± 2.2,66.4,3.17
-Without proximity,98.8 ± 0.9,35.7,3.46
-Without sparsity,98.6 ± 1.2,0.0,3.19
-λ_{policy} = 1,96.5 ± 3.0,22.0,3.07
-λ_{policy} = 10,98.4 ± 1.4,5.6,3.16
-λ_{policy} = 100,98.6 ± 1.2,0.5,3.19
-λ_{prox} = 0.1,98.6 ± 1.2,0.5,3.19
-λ_{prox} = 10,98.6 ± 1.2,0.6,3.19
+"Reference (λ = 1000, 1000, 1, 0.5)",84.1 ± 5.3,0.0,4.53
+Without policy penalty,71.6 ± 6.2,49.6,4.05
+Without feasibility penalty,81.7 ± 5.1,13.8,4.46
+Without proximity,84.1 ± 5.3,2.6,4.55
+Without sparsity,84.1 ± 5.3,0.3,4.53
+λ_{policy} = 1,73.5 ± 5.0,47.4,4.16
+λ_{policy} = 10,82.3 ± 5.0,7.7,4.50
+λ_{policy} = 100,83.8 ± 5.4,0.8,4.53
+λ_{prox} = 0.1,84.1 ± 5.3,0.0,4.53
+λ_{prox} = 10,83.9 ± 5.4,0.9,4.53
 "*AUC, aligned bounds*",,,
 "Reference (λ = 1000, 1000, 1, 0.5)",65.6 ± 4.2,0.0,2.09
 Without policy penalty,52.0 ± 5.2,78.0,2.19

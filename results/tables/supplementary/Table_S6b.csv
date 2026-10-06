@@ -1,33 +1,33 @@
 Method,Attribute,Yield gap (pp),p (Holm),Effort gap (relative),p (Holm)
-DiCE first candidate,Gender,30.3,< .001,0.195 (15%),< .001
-DiCE first candidate,Age band,7.2,< .001,0.054 (4%),0.114
-DiCE first candidate,IMD band,21.0,< .001,0.126 (10%),0.692
-DiCE first candidate,Disability,5.9,0.182,0.038 (3%),1.000
-DiCE + full gate,Gender,1.3,< .001,0.242 (18%),< .001
-DiCE + full gate,Age band,0.4,1.000,0.057 (4%),0.025
-DiCE + full gate,IMD band,0.8,1.000,0.176 (13%),0.011
-DiCE + full gate,Disability,0.2,1.000,0.009 (1%),1.000
-Framework,Gender,0.0,1.000,0.435 (48%),< .001
-Framework,Age band,0.1,1.000,0.068 (8%),< .001
-Framework,IMD band,0.1,1.000,0.262 (32%),< .001
-Framework,Disability,0.1,1.000,0.032 (4%),1.000
-Framework + fallback,Gender,0.0,–,0.434 (48%),< .001
-Framework + fallback,Age band,0.0,–,0.069 (8%),< .001
-Framework + fallback,IMD band,0.0,–,0.262 (32%),< .001
-Framework + fallback,Disability,0.0,–,0.031 (4%),1.000
-Policy repair + escalation,Gender,9.2,< .001,0.466 (65%),< .001
-Policy repair + escalation,Age band,2.8,0.128,0.056 (8%),< .001
-Policy repair + escalation,IMD band,3.5,0.574,0.287 (46%),< .001
-Policy repair + escalation,Disability,1.3,1.000,0.036 (5%),1.000
-NICE (bounded),Gender,17.7,< .001,0.045 (8%),1.000
-NICE (bounded),Age band,4.4,0.013,0.020 (4%),1.000
-NICE (bounded),IMD band,7.9,0.015,0.014 (3%),1.000
-NICE (bounded),Disability,2.6,1.000,0.072 (15%),0.868
-MCCE (bounded),Gender,27.8,< .001,0.042 (3%),0.370
-MCCE (bounded),Age band,4.0,0.381,0.017 (1%),1.000
-MCCE (bounded),IMD band,25.5,< .001,0.083 (7%),1.000
-MCCE (bounded),Disability,1.1,1.000,0.050 (4%),1.000
-CARE (bounded),Gender,43.9,< .001,0.092 (11%),1.000
-CARE (bounded),Age band,4.6,1.000,0.083 (10%),1.000
-CARE (bounded),IMD band,24.6,1.000,0.217 (27%),1.000
-CARE (bounded),Disability,3.3,1.000,0.192 (27%),0.986
+DiCE first candidate,Gender,15.7,< .001,0.181 (10%),< .001
+DiCE first candidate,Age band,3.1,1.000,0.037 (2%),0.482
+DiCE first candidate,IMD band,18.3,0.005,0.070 (4%),1.000
+DiCE first candidate,Disability,0.0,1.000,0.021 (1%),1.000
+DiCE + full gate,Gender,18.9,< .001,0.202 (11%),< .001
+DiCE + full gate,Age band,2.3,1.000,0.038 (2%),0.165
+DiCE + full gate,IMD band,18.5,0.019,0.086 (5%),0.099
+DiCE + full gate,Disability,0.5,1.000,0.020 (1%),1.000
+Framework,Gender,0.5,1.000,0.300 (17%),< .001
+Framework,Age band,1.1,1.000,0.049 (3%),0.144
+Framework,IMD band,4.2,1.000,0.203 (12%),< .001
+Framework,Disability,0.8,1.000,0.016 (1%),1.000
+Framework + fallback,Gender,0.3,1.000,0.296 (16%),< .001
+Framework + fallback,Age band,0.9,1.000,0.047 (3%),0.181
+Framework + fallback,IMD band,3.2,1.000,0.207 (12%),< .001
+Framework + fallback,Disability,0.1,1.000,0.013 (1%),1.000
+Policy repair + escalation,Gender,5.6,< .001,0.373 (19%),< .001
+Policy repair + escalation,Age band,1.9,1.000,0.024 (1%),1.000
+Policy repair + escalation,IMD band,2.9,1.000,0.326 (17%),< .001
+Policy repair + escalation,Disability,2.0,1.000,0.033 (2%),1.000
+NICE (bounded),Gender,5.9,< .001,0.007 (1%),1.000
+NICE (bounded),Age band,0.5,1.000,0.146 (12%),0.251
+NICE (bounded),IMD band,3.9,0.087,0.127 (10%),1.000
+NICE (bounded),Disability,1.1,1.000,0.030 (2%),1.000
+MCCE (bounded),Gender,10.2,< .001,1.333 (55%),< .001
+MCCE (bounded),Age band,3.6,0.767,0.386 (15%),< .001
+MCCE (bounded),IMD band,8.7,1.000,0.670 (29%),< .001
+MCCE (bounded),Disability,2.4,1.000,0.013 (1%),1.000
+CARE (bounded),Gender,16.5,0.073,0.577 (34%),0.053
+CARE (bounded),Age band,1.4,1.000,0.371 (22%),0.629
+CARE (bounded),IMD band,13.3,1.000,0.254 (16%),1.000
+CARE (bounded),Disability,0.3,1.000,0.353 (20%),1.000

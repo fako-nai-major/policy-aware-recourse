@@ -33,8 +33,9 @@ def dataset_block(name):
     if name == 'OULAD':
         mods = sorted(df.code_module.unique())
         out['modules'] = mods
-        out['assessment_upper_bounds_by_module'] = {
-            m: {t: ROUND(v) for t, v in cfg.test_ub(df[df.code_module == m].iloc[0]).items()} for m in mods}
+        out['assessment_weights_by_presentation'] = {
+            f'{m} {pr}': {t: ROUND(v) for t, v in cfg.test_ub(g.iloc[0]).items() if v > 0}
+            for (m, pr), g in df.groupby(['code_module', 'code_presentation'])}
         out['sum_click_upper_bound_by_module'] = {m: ROUND(cfg.click_hi(df[df.code_module == m].iloc[0])) for m in mods}
     elif name == 'AUC':
         out['assessment_upper_bounds'] = {t: ROUND(v) for t, v in cfg.test_ub(df.iloc[0]).items()}

@@ -4,22 +4,21 @@
 
 | Path | Included | Source |
 |---|---|---|
-| `OULAD/OULAD_All_Courses.csv` | yes | Derived from the Open University Learning Analytics Dataset |
+| `OULAD/OULAD_coursework.csv` | yes | Built from the raw Open University Learning Analytics Dataset by `tools/prepare_oulad.py` |
 | `HarvardX/harvardx-cs250.csv` | no | HarvardX-MITx person-course data (CS50x, 2012); download and run `tools/prepare_harvardx.py` |
 | `AUC/assignment_grades_cleaned.csv` | no | Institutional course records from Athabasca University; not publicly available |
-| `OULAD/studentInfo.csv` | no | Raw OULAD file; needed only by `fairness.py` |
+| `OULAD/studentInfo.csv` | no | Raw OULAD file; needed only by `fairness.py` (and, with the other raw tables, by `tools/prepare_oulad.py`) |
 
 ## OULAD
 
-One row per learner and module presentation (30,121 rows; all seven modules, 2013B–2014J), built from the raw OULAD tables. The columns are:
+One row per learner and module presentation for modules AAA, BBB, EEE and FFF (19,353 rows; 13,714 after `datasets.py` drops withdrawn learners), built from the raw OULAD tables by `tools/prepare_oulad.py`:
 
-- `id_student`, `code_module`, `code_presentation`;
-- `date_accessed`, `sum_click` (total VLE clicks);
-- for each `Test_1` … `Test_6`: the weighted contribution of the k-th assessment to the course score, plus its due date (`Test_k_due`) and submission date (`Test_k_submit`);
-- `final_exam`;
-- `final_result`.
+- `id_student`, `code_module`, `code_presentation`, `final_result`;
+- `sum_click`: total VLE clicks of the learner in the presentation (from `studentVle.csv`);
+- `Test_1` … `Test_11`: the contribution of the k-th weighted coursework assessment (TMA or CMA with weight > 0, ordered by due date; examinations excluded) to the coursework score, i.e. score × weight / 100. A missing submission contributes 0;
+- `W_1` … `W_11`: the weight of that assessment in the presentation, used as its upper bound. Assessments that do not exist in a presentation have weight 0.
 
-`NULL` marks an assessment that does not exist or was not submitted. `datasets.py` keeps modules AAA, BBB, EEE and FFF, drops withdrawn learners, and treats `Pass` and `Distinction` as passing.
+In every presentation the coursework weights sum to 100, so Σ Test_k is the 0–100 coursework score to which the Open University's 40% threshold applies. This threshold is necessary but not sufficient for passing, because the modules also have an examination. To rebuild the file, download the raw tables from https://analyse.kmi.open.ac.uk/open_dataset and run `python tools/prepare_oulad.py path/to/raw_folder`.
 
 OULAD is © The Open University and released under CC BY 4.0. Please cite Kuzilek, J., Hlosta, M., & Zdrahal, Z. (2017). Open University Learning Analytics dataset. *Scientific Data*, 4, 170171. https://doi.org/10.1038/sdata.2017.171
 

@@ -87,7 +87,7 @@ for meth in ['NICE', 'MCCE', 'CARE']:
 S.append(dict(id='S3', caption='**Table S3.** Accepted yield (% of eligible queries, mean ± SD over seeds) under the three bound configurations.',
               header=['Strategy'] + [f'{d_} {g_}' for d_, g_ in keys], widths=[2700] + [1050] * 6,
               rows=rows + [['*External methods (same queries, models, bounds and gate)*'] + [''] * 6] + ext_rows, sectionrow=[len(rows)],
-              foot='Aligned: DiCE search range and gate bounds both [0, w] for a pending assessment of weight w. Floor: both [0.4w, w]. Mismatch: DiCE searches [0, w] while the gate enforces [0.4w, w]. Queries per configuration: AUC 2,587 (10 seeds); OULAD 3,914 (5 seeds). On AUC the bounds bind rarely, so the three configurations give similar results. NICE and MCCE were run on all queries under aligned bounds and, for OULAD, floor bounds; CARE on 100 queries per seed for seeds 0–2 (aligned, n = 300) and seed 0 (OULAD floor, n = 100, single run, no SD). External methods were not run under the mismatch configuration (–). For the CARE subset, framework yields on the same queries are reported in the main text (Table 9).'))
+              foot='Aligned: DiCE search range and gate bounds both [0, w] for a pending assessment of weight w. Floor: both [0.4w, w]. Mismatch: DiCE searches [0, w] while the gate enforces [0.4w, w]. Queries per configuration: AUC 2,587 (10 seeds); OULAD 4,500 (5 seeds). On AUC the bounds bind rarely, so the three configurations give similar results. NICE and MCCE were run on all queries under aligned bounds and, for OULAD, floor bounds; CARE on 100 queries per seed for seeds 0–2 (aligned, n = 300) and seed 0 (OULAD floor, n = 100, single run, no SD). External methods were not run under the mismatch configuration (–). For the CARE subset, framework yields on the same queries are reported in the main text (Table 9).'))
 
 # ------------------------------------------------------------------ S4
 o = pd.read_csv(f'{T}/objective_audit.csv')
@@ -121,7 +121,7 @@ S.append(dict(id='S5', caption='**Table S5.** Accepted yield (%, mean ± SD over
               header=['Dataset', 'Threshold', 'DiCE first', 'DiCE + full gate', 'Ranking, no edit', 'Framework', 'Framework + fallback', 'Repair + escalation'],
               widths=[900, 1500, 1100, 1100, 1100, 1100, 1100, 1100],
               rows=[[r.dataset, tlab(r)] + [r._asdict()[f'_{t.columns.get_loc(k) + 1}'] for k in tc] for r in t.itertuples()],
-              foot='Only the threshold τ changes; models, query cohorts and DiCE pools are those of the primary analysis. AUC thresholds are on the final grade (one quarter of the sum of assignment marks); OULAD thresholds are on the 0–100 course score. The large SDs of repair + escalation on OULAD at 30–40 come mainly from one seed (seed 4), in which escalation satisfied f for 69% and 77% of queries against 90–98% for the other seeds.'))
+              foot='Only the threshold τ changes; models, query cohorts and DiCE pools are those of the primary analysis. AUC thresholds are on the final grade (one quarter of the sum of assignment marks); OULAD thresholds are on the 0–100 coursework score.'))
 
 # ------------------------------------------------------------------ S6
 METH = ['DiCE first candidate', 'DiCE + full gate', 'Framework', 'Framework + fallback', 'Policy repair + escalation', 'NICE (bounded)', 'MCCE (bounded)', 'CARE (bounded)']
@@ -135,7 +135,7 @@ for me in METH:
 S.append(dict(id='S6a', caption='**Table S6a.** Recourse outcomes by learner group (OULAD, aligned bounds, τ = 40; unadjusted).',
               header=['Attribute', 'Group', 'Queries', 'Accepted yield (%)', 'Mean effort', 'Mean policy score'], widths=[1400, 2700, 1100, 1300, 1200, 1300],
               rows=rows, sectionrow=sec, repeat=True,
-              foot='Group attributes come from studentInfo.csv (100% match on learner and module presentation) and are not used by any model. CARE was run on 300 queries; all other methods on all 3,914 queries (5 seeds). Effort and policy score are averaged over accepted recommendations only. The adjusted IMD contrast (Table S6c) compares the most and least deprived bands; "IMD missing" is shown for completeness.'))
+              foot='Group attributes come from studentInfo.csv (100% match on learner and module presentation) and are not used by any model. CARE was run on 300 queries; all other methods on all 4,500 queries (5 seeds). Effort and policy score are averaged over accepted recommendations only. The adjusted IMD contrast (Table S6c) compares the most and least deprived bands; "IMD missing" is shown for completeness.'))
 
 ut = pd.read_csv(f'{T}/fairness_recourse_tests.csv')
 pf = lambda p: '–' if pd.isna(p) else ('< .001' if p < 0.001 else f'{p:.3f}')
@@ -146,7 +146,7 @@ for me in METH:
 S.append(dict(id='S6b', caption='**Table S6b.** Unadjusted group gaps in recourse (largest minus smallest group; Holm-adjusted p).',
               header=['Method', 'Attribute', 'Yield gap (pp)', 'p (Holm)', 'Effort gap (relative)', 'p (Holm)'], widths=[2400, 1200, 1300, 1000, 2000, 1000],
               rows=rows, repeat=True,
-              foot='Gaps are absolute differences between the groups with the highest and lowest value (direction in Table S6a). Yield gaps are tested with χ² tests and effort gaps with Kruskal–Wallis tests; Holm correction within each outcome across all methods and attributes. The framework with fallback accepts every query, so it has no yield gap (–). Most of these gaps disappear once module and stage are controlled for (Table S6c), so they reflect differences in course composition between groups rather than group membership itself.'))
+              foot='Gaps are absolute differences between the groups with the highest and lowest value (direction in Table S6a). Yield gaps are tested with χ² tests and effort gaps with Kruskal–Wallis tests; Holm correction within each outcome across all methods and attributes. Most of these gaps disappear once module and stage are controlled for (Table S6c), so they reflect differences in course composition between groups rather than group membership itself.'))
 
 ad = pd.read_csv(f'{T}/fairness_recourse_adjusted.csv')
 rows = []
@@ -159,7 +159,7 @@ for me in METH:
 S.append(dict(id='S6c', caption='**Table S6c.** Module- and stage-adjusted group contrasts for all methods (OULAD, aligned bounds).',
               header=['Method', 'Contrast', 'Outcome', 'n', 'Raw diff.', 'Adjusted diff. [95% CI]', 'p', 'p (Holm)'], widths=[1900, 1500, 900, 700, 800, 1800, 700, 700],
               rows=rows, repeat=True,
-              foot='Linear models with module × stage fixed effects; standard errors clustered by learner. Yield contrasts use all queries; effort contrasts use accepted recommendations only. Contrasts that cannot be estimated (no variation in the outcome, e.g. the framework with fallback, which accepts every query) are omitted, leaving 59 estimable contrasts. Holm correction across all contrasts; the smallest adjusted p is 0.68.'))
+              foot='Linear models with module × stage fixed effects; standard errors clustered by learner. Yield contrasts use all queries; effort contrasts use accepted recommendations only. Contrasts that cannot be estimated (no variation in the outcome) are omitted, leaving 64 estimable contrasts. Holm correction across all contrasts; the smallest adjusted p is 0.53.'))
 
 pg = pd.read_csv(f'{T}/fairness_prediction_gaps.csv', header=[0, 1], index_col=[0, 1])
 rows = []

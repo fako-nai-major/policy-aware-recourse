@@ -46,54 +46,54 @@
 | HarvardX  | aligned  | NICE queries (n=1999, seeds=5)  | DiCE + post-hoc full gate         | 99.9 ± 0.1  |             1.412 |
 | HarvardX  | aligned  | NICE queries (n=1999, seeds=5)  | Framework (ranking + edit + gate) | 99.9 ± 0.1  |             0.843 |
 | HarvardX  | aligned  | NICE queries (n=1999, seeds=5)  | Framework + fallback              | 99.9 ± 0.1  |             0.843 |
-| OULAD     | aligned  | CARE queries (n=300, seeds=3)   | CARE_bounded                      | 43.7 ± 3.1  |             0.785 |
-| OULAD     | aligned  | CARE queries (n=300, seeds=3)   | CARE_bounded+edit                 | 83.0 ± 8.2  |             0.991 |
-| OULAD     | aligned  | CARE queries (n=300, seeds=3)   | CARE_native                       | 14.7 ± 3.1  |             0.681 |
-| OULAD     | aligned  | CARE queries (n=300, seeds=3)   | DiCE first candidate              | 76.0 ± 5.0  |             1.29  |
-| OULAD     | aligned  | CARE queries (n=300, seeds=3)   | Direct policy repair + escalation | 94.7 ± 2.1  |             0.706 |
-| OULAD     | aligned  | CARE queries (n=300, seeds=3)   | DiCE + post-hoc full gate         | 98.7 ± 0.6  |             1.371 |
-| OULAD     | aligned  | CARE queries (n=300, seeds=3)   | Framework (ranking + edit + gate) | 100.0 ± 0.0 |             0.879 |
-| OULAD     | aligned  | CARE queries (n=300, seeds=3)   | Framework + fallback              | 100.0 ± 0.0 |             0.879 |
-| OULAD     | aligned  | MCCE queries (n=3914, seeds=5)  | MCCE_bounded                      | 44.3 ± 5.3  |             1.283 |
-| OULAD     | aligned  | MCCE queries (n=3914, seeds=5)  | MCCE_bounded+edit                 | 67.3 ± 2.1  |             1.363 |
-| OULAD     | aligned  | MCCE queries (n=3914, seeds=5)  | MCCE_native                       | 26.5 ± 3.3  |             1.223 |
-| OULAD     | aligned  | MCCE queries (n=3914, seeds=5)  | DiCE first candidate              | 76.5 ± 2.1  |             1.287 |
-| OULAD     | aligned  | MCCE queries (n=3914, seeds=5)  | Direct policy repair + escalation | 91.2 ± 8.6  |             0.686 |
-| OULAD     | aligned  | MCCE queries (n=3914, seeds=5)  | DiCE + post-hoc full gate         | 99.3 ± 0.4  |             1.344 |
-| OULAD     | aligned  | MCCE queries (n=3914, seeds=5)  | Framework (ranking + edit + gate) | 99.9 ± 0.1  |             0.873 |
-| OULAD     | aligned  | MCCE queries (n=3914, seeds=5)  | Framework + fallback              | 100.0 ± 0.0 |             0.873 |
-| OULAD     | aligned  | NICE queries (n=3914, seeds=5)  | NICE_bounded                      | 15.5 ± 7.7  |             0.521 |
-| OULAD     | aligned  | NICE queries (n=3914, seeds=5)  | NICE_bounded+edit                 | 57.9 ± 9.6  |             0.902 |
-| OULAD     | aligned  | NICE queries (n=3914, seeds=5)  | NICE_native                       | 15.5 ± 7.7  |             0.521 |
-| OULAD     | aligned  | NICE queries (n=3914, seeds=5)  | DiCE first candidate              | 76.5 ± 2.1  |             1.287 |
-| OULAD     | aligned  | NICE queries (n=3914, seeds=5)  | Direct policy repair + escalation | 91.2 ± 8.6  |             0.686 |
-| OULAD     | aligned  | NICE queries (n=3914, seeds=5)  | DiCE + post-hoc full gate         | 99.3 ± 0.4  |             1.344 |
-| OULAD     | aligned  | NICE queries (n=3914, seeds=5)  | Framework (ranking + edit + gate) | 99.9 ± 0.1  |             0.873 |
-| OULAD     | aligned  | NICE queries (n=3914, seeds=5)  | Framework + fallback              | 100.0 ± 0.0 |             0.873 |
-| OULAD     | floor    | CARE queries (n=100, seeds=1)   | CARE_bounded                      | 20.0        |             3.729 |
-| OULAD     | floor    | CARE queries (n=100, seeds=1)   | CARE_bounded+edit                 | 80.0        |             3.371 |
-| OULAD     | floor    | CARE queries (n=100, seeds=1)   | CARE_native                       | 0.0         |           nan     |
-| OULAD     | floor    | CARE queries (n=100, seeds=1)   | DiCE first candidate              | 0.0         |           nan     |
-| OULAD     | floor    | CARE queries (n=100, seeds=1)   | Direct policy repair + escalation | 99.0        |             2.753 |
-| OULAD     | floor    | CARE queries (n=100, seeds=1)   | DiCE + post-hoc full gate         | 1.0         |             3.043 |
-| OULAD     | floor    | CARE queries (n=100, seeds=1)   | Framework (ranking + edit + gate) | 96.0        |             3.273 |
-| OULAD     | floor    | CARE queries (n=100, seeds=1)   | Framework + fallback              | 100.0       |             3.28  |
-| OULAD     | floor    | MCCE queries (n=3914, seeds=5)  | MCCE_bounded                      | 14.8 ± 2.1  |             4.132 |
-| OULAD     | floor    | MCCE queries (n=3914, seeds=5)  | MCCE_bounded+edit                 | 14.8 ± 2.1  |             4.132 |
-| OULAD     | floor    | MCCE queries (n=3914, seeds=5)  | MCCE_native                       | 0.1 ± 0.1   |             1.894 |
-| OULAD     | floor    | MCCE queries (n=3914, seeds=5)  | DiCE first candidate              | 0.3 ± 0.1   |             2.496 |
-| OULAD     | floor    | MCCE queries (n=3914, seeds=5)  | Direct policy repair + escalation | 99.6 ± 0.3  |             2.655 |
-| OULAD     | floor    | MCCE queries (n=3914, seeds=5)  | DiCE + post-hoc full gate         | 0.7 ± 0.2   |             2.58  |
-| OULAD     | floor    | MCCE queries (n=3914, seeds=5)  | Framework (ranking + edit + gate) | 98.5 ± 1.4  |             3.166 |
-| OULAD     | floor    | MCCE queries (n=3914, seeds=5)  | Framework + fallback              | 99.9 ± 0.1  |             3.17  |
-| OULAD     | floor    | NICE queries (n=3914, seeds=5)  | NICE_bounded                      | 87.1 ± 5.2  |             2.72  |
-| OULAD     | floor    | NICE queries (n=3914, seeds=5)  | NICE_bounded+edit                 | 87.1 ± 5.2  |             2.72  |
-| OULAD     | floor    | NICE queries (n=3914, seeds=5)  | NICE_native                       | 0.0 ± 0.1   |             1.588 |
-| OULAD     | floor    | NICE queries (n=3914, seeds=5)  | DiCE first candidate              | 0.3 ± 0.1   |             2.496 |
-| OULAD     | floor    | NICE queries (n=3914, seeds=5)  | Direct policy repair + escalation | 99.6 ± 0.3  |             2.655 |
-| OULAD     | floor    | NICE queries (n=3914, seeds=5)  | DiCE + post-hoc full gate         | 0.7 ± 0.2   |             2.58  |
-| OULAD     | floor    | NICE queries (n=3914, seeds=5)  | Framework (ranking + edit + gate) | 98.5 ± 1.4  |             3.166 |
-| OULAD     | floor    | NICE queries (n=3914, seeds=5)  | Framework + fallback              | 99.9 ± 0.1  |             3.17  |
+| OULAD     | aligned  | CARE queries (n=300, seeds=3)   | CARE_bounded                      | 29.3 ± 7.1  |             1.599 |
+| OULAD     | aligned  | CARE queries (n=300, seeds=3)   | CARE_bounded+edit                 | 67.0 ± 2.6  |             1.813 |
+| OULAD     | aligned  | CARE queries (n=300, seeds=3)   | CARE_native                       | 9.0 ± 4.6   |             1.267 |
+| OULAD     | aligned  | CARE queries (n=300, seeds=3)   | DiCE first candidate              | 37.7 ± 2.5  |             1.724 |
+| OULAD     | aligned  | CARE queries (n=300, seeds=3)   | Direct policy repair + escalation | 91.0 ± 2.6  |             1.911 |
+| OULAD     | aligned  | CARE queries (n=300, seeds=3)   | DiCE + post-hoc full gate         | 70.0 ± 7.5  |             1.789 |
+| OULAD     | aligned  | CARE queries (n=300, seeds=3)   | Framework (ranking + edit + gate) | 93.3 ± 1.2  |             1.759 |
+| OULAD     | aligned  | CARE queries (n=300, seeds=3)   | Framework + fallback              | 94.3 ± 1.2  |             1.765 |
+| OULAD     | aligned  | MCCE queries (n=4500, seeds=5)  | MCCE_bounded                      | 45.2 ± 2.2  |             2.426 |
+| OULAD     | aligned  | MCCE queries (n=4500, seeds=5)  | MCCE_bounded+edit                 | 62.5 ± 1.8  |             2.414 |
+| OULAD     | aligned  | MCCE queries (n=4500, seeds=5)  | MCCE_native                       | 25.5 ± 5.0  |             1.967 |
+| OULAD     | aligned  | MCCE queries (n=4500, seeds=5)  | DiCE first candidate              | 34.5 ± 3.6  |             1.706 |
+| OULAD     | aligned  | MCCE queries (n=4500, seeds=5)  | Direct policy repair + escalation | 91.2 ± 2.0  |             1.955 |
+| OULAD     | aligned  | MCCE queries (n=4500, seeds=5)  | DiCE + post-hoc full gate         | 70.7 ± 6.5  |             1.802 |
+| OULAD     | aligned  | MCCE queries (n=4500, seeds=5)  | Framework (ranking + edit + gate) | 94.2 ± 1.2  |             1.776 |
+| OULAD     | aligned  | MCCE queries (n=4500, seeds=5)  | Framework + fallback              | 95.2 ± 1.0  |             1.782 |
+| OULAD     | aligned  | NICE queries (n=4500, seeds=5)  | NICE_bounded                      | 4.9 ± 1.2   |             1.244 |
+| OULAD     | aligned  | NICE queries (n=4500, seeds=5)  | NICE_bounded+edit                 | 37.4 ± 5.6  |             1.693 |
+| OULAD     | aligned  | NICE queries (n=4500, seeds=5)  | NICE_native                       | 4.9 ± 1.2   |             1.244 |
+| OULAD     | aligned  | NICE queries (n=4500, seeds=5)  | DiCE first candidate              | 34.5 ± 3.6  |             1.706 |
+| OULAD     | aligned  | NICE queries (n=4500, seeds=5)  | Direct policy repair + escalation | 91.2 ± 2.0  |             1.955 |
+| OULAD     | aligned  | NICE queries (n=4500, seeds=5)  | DiCE + post-hoc full gate         | 70.7 ± 6.5  |             1.802 |
+| OULAD     | aligned  | NICE queries (n=4500, seeds=5)  | Framework (ranking + edit + gate) | 94.2 ± 1.2  |             1.776 |
+| OULAD     | aligned  | NICE queries (n=4500, seeds=5)  | Framework + fallback              | 95.2 ± 1.0  |             1.782 |
+| OULAD     | floor    | CARE queries (n=100, seeds=1)   | CARE_bounded                      | 40.0        |             3.222 |
+| OULAD     | floor    | CARE queries (n=100, seeds=1)   | CARE_bounded+edit                 | 65.0        |             4.913 |
+| OULAD     | floor    | CARE queries (n=100, seeds=1)   | CARE_native                       | 3.0         |             1.68  |
+| OULAD     | floor    | CARE queries (n=100, seeds=1)   | DiCE first candidate              | 10.0        |             2.408 |
+| OULAD     | floor    | CARE queries (n=100, seeds=1)   | Direct policy repair + escalation | 93.0        |             4.512 |
+| OULAD     | floor    | CARE queries (n=100, seeds=1)   | DiCE + post-hoc full gate         | 21.0        |             2.55  |
+| OULAD     | floor    | CARE queries (n=100, seeds=1)   | Framework (ranking + edit + gate) | 85.0        |             4.721 |
+| OULAD     | floor    | CARE queries (n=100, seeds=1)   | Framework + fallback              | 86.0        |             4.776 |
+| OULAD     | floor    | MCCE queries (n=4500, seeds=5)  | MCCE_bounded                      | 64.1 ± 1.7  |             5.543 |
+| OULAD     | floor    | MCCE queries (n=4500, seeds=5)  | MCCE_bounded+edit                 | 64.1 ± 1.7  |             5.543 |
+| OULAD     | floor    | MCCE queries (n=4500, seeds=5)  | MCCE_native                       | 6.1 ± 1.8   |             2.414 |
+| OULAD     | floor    | MCCE queries (n=4500, seeds=5)  | DiCE first candidate              | 7.7 ± 1.1   |             2.359 |
+| OULAD     | floor    | MCCE queries (n=4500, seeds=5)  | Direct policy repair + escalation | 91.2 ± 2.0  |             4.507 |
+| OULAD     | floor    | MCCE queries (n=4500, seeds=5)  | DiCE + post-hoc full gate         | 20.6 ± 2.2  |             2.581 |
+| OULAD     | floor    | MCCE queries (n=4500, seeds=5)  | Framework (ranking + edit + gate) | 82.8 ± 5.5  |             4.464 |
+| OULAD     | floor    | MCCE queries (n=4500, seeds=5)  | Framework + fallback              | 86.0 ± 3.9  |             4.516 |
+| OULAD     | floor    | NICE queries (n=4500, seeds=5)  | NICE_bounded                      | 47.3 ± 5.9  |             4.312 |
+| OULAD     | floor    | NICE queries (n=4500, seeds=5)  | NICE_bounded+edit                 | 47.3 ± 5.9  |             4.312 |
+| OULAD     | floor    | NICE queries (n=4500, seeds=5)  | NICE_native                       | 0.7 ± 0.4   |             1.889 |
+| OULAD     | floor    | NICE queries (n=4500, seeds=5)  | DiCE first candidate              | 7.7 ± 1.1   |             2.359 |
+| OULAD     | floor    | NICE queries (n=4500, seeds=5)  | Direct policy repair + escalation | 91.2 ± 2.0  |             4.507 |
+| OULAD     | floor    | NICE queries (n=4500, seeds=5)  | DiCE + post-hoc full gate         | 20.6 ± 2.2  |             2.581 |
+| OULAD     | floor    | NICE queries (n=4500, seeds=5)  | Framework (ranking + edit + gate) | 82.8 ± 5.5  |             4.464 |
+| OULAD     | floor    | NICE queries (n=4500, seeds=5)  | Framework + fallback              | 86.0 ± 3.9  |             4.516 |
 
 ## Paired tests vs framework (McNemar, learner-cluster bootstrap, Holm)
 | dataset   | regime   | framework                         | baseline          |    n |   diff_pp |   ci_lo |   ci_hi |   only_framework |   only_baseline |     p |   p_holm |
@@ -134,42 +134,42 @@
 | HarvardX  | aligned  | Framework + fallback              | NICE_bounded+edit | 1999 |    49.375 |  47.224 |  51.626 |              987 |               0 | 0     |    0     |
 | HarvardX  | aligned  | Framework (ranking + edit + gate) | NICE_native       | 1999 |    49.375 |  47.224 |  51.626 |              987 |               0 | 0     |    0     |
 | HarvardX  | aligned  | Framework + fallback              | NICE_native       | 1999 |    49.375 |  47.224 |  51.626 |              987 |               0 | 0     |    0     |
-| OULAD     | aligned  | Framework (ranking + edit + gate) | CARE_bounded      |  300 |    56.333 |  50.336 |  61.746 |              169 |               0 | 0     |    0     |
-| OULAD     | aligned  | Framework + fallback              | CARE_bounded      |  300 |    56.333 |  50.336 |  61.746 |              169 |               0 | 0     |    0     |
-| OULAD     | aligned  | Framework (ranking + edit + gate) | CARE_bounded+edit |  300 |    17     |  12.957 |  21.452 |               51 |               0 | 0     |    0     |
-| OULAD     | aligned  | Framework + fallback              | CARE_bounded+edit |  300 |    17     |  12.957 |  21.452 |               51 |               0 | 0     |    0     |
-| OULAD     | aligned  | Framework (ranking + edit + gate) | CARE_native       |  300 |    85.333 |  81.271 |  89.216 |              256 |               0 | 0     |    0     |
-| OULAD     | aligned  | Framework + fallback              | CARE_native       |  300 |    85.333 |  81.271 |  89.216 |              256 |               0 | 0     |    0     |
-| OULAD     | aligned  | Framework (ranking + edit + gate) | MCCE_bounded      | 3914 |    55.723 |  54.03  |  57.344 |             2182 |               1 | 0     |    0     |
-| OULAD     | aligned  | Framework + fallback              | MCCE_bounded      | 3914 |    55.774 |  54.097 |  57.38  |             2183 |               0 | 0     |    0     |
-| OULAD     | aligned  | Framework (ranking + edit + gate) | MCCE_bounded+edit | 3914 |    32.652 |  31.155 |  34.05  |             1279 |               1 | 0     |    0     |
-| OULAD     | aligned  | Framework + fallback              | MCCE_bounded+edit | 3914 |    32.703 |  31.206 |  34.12  |             1280 |               0 | 0     |    0     |
-| OULAD     | aligned  | Framework (ranking + edit + gate) | MCCE_native       | 3914 |    73.454 |  72.029 |  74.944 |             2875 |               0 | 0     |    0     |
-| OULAD     | aligned  | Framework + fallback              | MCCE_native       | 3914 |    73.505 |  72.068 |  74.981 |             2877 |               0 | 0     |    0     |
-| OULAD     | aligned  | Framework (ranking + edit + gate) | NICE_bounded      | 3914 |    84.543 |  83.24  |  85.847 |             3309 |               0 | 0     |    0     |
-| OULAD     | aligned  | Framework + fallback              | NICE_bounded      | 3914 |    84.594 |  83.312 |  85.893 |             3311 |               0 | 0     |    0     |
-| OULAD     | aligned  | Framework (ranking + edit + gate) | NICE_bounded+edit | 3914 |    42.003 |  40.345 |  43.795 |             1645 |               1 | 0     |    0     |
-| OULAD     | aligned  | Framework + fallback              | NICE_bounded+edit | 3914 |    42.054 |  40.395 |  43.839 |             1646 |               0 | 0     |    0     |
-| OULAD     | aligned  | Framework (ranking + edit + gate) | NICE_native       | 3914 |    84.543 |  83.24  |  85.847 |             3309 |               0 | 0     |    0     |
-| OULAD     | aligned  | Framework + fallback              | NICE_native       | 3914 |    84.594 |  83.312 |  85.893 |             3311 |               0 | 0     |    0     |
-| OULAD     | floor    | Framework (ranking + edit + gate) | CARE_bounded      |  100 |    76     |  67     |  84.468 |               77 |               1 | 0     |    0     |
-| OULAD     | floor    | Framework + fallback              | CARE_bounded      |  100 |    80     |  72     |  87.5   |               80 |               0 | 0     |    0     |
-| OULAD     | floor    | Framework (ranking + edit + gate) | CARE_bounded+edit |  100 |    16     |   7.611 |  25     |               19 |               3 | 0.001 |    0.008 |
-| OULAD     | floor    | Framework + fallback              | CARE_bounded+edit |  100 |    20     |  12.121 |  28.713 |               20 |               0 | 0     |    0     |
-| OULAD     | floor    | Framework (ranking + edit + gate) | CARE_native       |  100 |    96     |  91.919 |  99.029 |               96 |               0 | 0     |    0     |
-| OULAD     | floor    | Framework + fallback              | CARE_native       |  100 |   100     | 100     | 100     |              100 |               0 | 0     |    0     |
-| OULAD     | floor    | Framework (ranking + edit + gate) | MCCE_bounded      | 3914 |    83.572 |  82.302 |  84.797 |             3281 |              10 | 0     |    0     |
-| OULAD     | floor    | Framework + fallback              | MCCE_bounded      | 3914 |    85.079 |  83.928 |  86.245 |             3331 |               1 | 0     |    0     |
-| OULAD     | floor    | Framework (ranking + edit + gate) | MCCE_bounded+edit | 3914 |    83.572 |  82.302 |  84.797 |             3281 |              10 | 0     |    0     |
-| OULAD     | floor    | Framework + fallback              | MCCE_bounded+edit | 3914 |    85.079 |  83.928 |  86.245 |             3331 |               1 | 0     |    0     |
-| OULAD     | floor    | Framework (ranking + edit + gate) | MCCE_native       | 3914 |    98.39  |  97.977 |  98.771 |             3851 |               0 | 0     |    0     |
-| OULAD     | floor    | Framework + fallback              | MCCE_native       | 3914 |    99.898 |  99.773 |  99.975 |             3910 |               0 | 0     |    0     |
-| OULAD     | floor    | Framework (ranking + edit + gate) | NICE_bounded      | 3914 |    11.446 |  10.315 |  12.574 |              462 |              14 | 0     |    0     |
-| OULAD     | floor    | Framework + fallback              | NICE_bounded      | 3914 |    12.954 |  11.762 |  14.079 |              507 |               0 | 0     |    0     |
-| OULAD     | floor    | Framework (ranking + edit + gate) | NICE_bounded+edit | 3914 |    11.446 |  10.315 |  12.574 |              462 |              14 | 0     |    0     |
-| OULAD     | floor    | Framework + fallback              | NICE_bounded+edit | 3914 |    12.954 |  11.762 |  14.079 |              507 |               0 | 0     |    0     |
-| OULAD     | floor    | Framework (ranking + edit + gate) | NICE_native       | 3914 |    98.416 |  98     |  98.801 |             3852 |               0 | 0     |    0     |
-| OULAD     | floor    | Framework + fallback              | NICE_native       | 3914 |    99.923 |  99.821 | 100     |             3911 |               0 | 0     |    0     |
+| OULAD     | aligned  | Framework (ranking + edit + gate) | CARE_bounded      |  300 |    64     |  58.471 |  69.831 |              193 |               1 | 0     |    0     |
+| OULAD     | aligned  | Framework + fallback              | CARE_bounded      |  300 |    65     |  59.468 |  70.667 |              195 |               0 | 0     |    0     |
+| OULAD     | aligned  | Framework (ranking + edit + gate) | CARE_bounded+edit |  300 |    26.333 |  21.121 |  31.79  |               81 |               2 | 0     |    0     |
+| OULAD     | aligned  | Framework + fallback              | CARE_bounded+edit |  300 |    27.333 |  22.331 |  32.55  |               82 |               0 | 0     |    0     |
+| OULAD     | aligned  | Framework (ranking + edit + gate) | CARE_native       |  300 |    84.333 |  79.796 |  88.553 |              253 |               0 | 0     |    0     |
+| OULAD     | aligned  | Framework + fallback              | CARE_native       |  300 |    85.333 |  81     |  89.227 |              256 |               0 | 0     |    0     |
+| OULAD     | aligned  | Framework (ranking + edit + gate) | MCCE_bounded      | 4500 |    49     |  47.373 |  50.694 |             2224 |              19 | 0     |    0     |
+| OULAD     | aligned  | Framework + fallback              | MCCE_bounded      | 4500 |    49.911 |  48.353 |  51.529 |             2251 |               5 | 0     |    0     |
+| OULAD     | aligned  | Framework (ranking + edit + gate) | MCCE_bounded+edit | 4500 |    31.756 |  30.424 |  33.184 |             1455 |              26 | 0     |    0     |
+| OULAD     | aligned  | Framework + fallback              | MCCE_bounded+edit | 4500 |    32.667 |  31.368 |  34.032 |             1477 |               7 | 0     |    0     |
+| OULAD     | aligned  | Framework (ranking + edit + gate) | MCCE_native       | 4500 |    68.756 |  67.377 |  70.21  |             3100 |               6 | 0     |    0     |
+| OULAD     | aligned  | Framework + fallback              | MCCE_native       | 4500 |    69.667 |  68.295 |  71.088 |             3135 |               0 | 0     |    0     |
+| OULAD     | aligned  | Framework (ranking + edit + gate) | NICE_bounded      | 4500 |    89.311 |  88.421 |  90.255 |             4019 |               0 | 0     |    0     |
+| OULAD     | aligned  | Framework + fallback              | NICE_bounded      | 4500 |    90.222 |  89.379 |  91.117 |             4060 |               0 | 0     |    0     |
+| OULAD     | aligned  | Framework (ranking + edit + gate) | NICE_bounded+edit | 4500 |    56.8   |  55.128 |  58.454 |             2577 |              21 | 0     |    0     |
+| OULAD     | aligned  | Framework + fallback              | NICE_bounded+edit | 4500 |    57.711 |  56.045 |  59.365 |             2606 |               9 | 0     |    0     |
+| OULAD     | aligned  | Framework (ranking + edit + gate) | NICE_native       | 4500 |    89.311 |  88.421 |  90.255 |             4019 |               0 | 0     |    0     |
+| OULAD     | aligned  | Framework + fallback              | NICE_native       | 4500 |    90.222 |  89.379 |  91.117 |             4060 |               0 | 0     |    0     |
+| OULAD     | floor    | Framework (ranking + edit + gate) | CARE_bounded      |  100 |    45     |  34.694 |  55.556 |               47 |               2 | 0     |    0     |
+| OULAD     | floor    | Framework + fallback              | CARE_bounded      |  100 |    46     |  35.92  |  56.436 |               48 |               2 | 0     |    0     |
+| OULAD     | floor    | Framework (ranking + edit + gate) | CARE_bounded+edit |  100 |    20     |   9.998 |  30     |               26 |               6 | 0.001 |    0.005 |
+| OULAD     | floor    | Framework + fallback              | CARE_bounded+edit |  100 |    21     |  11.34  |  31     |               26 |               5 | 0     |    0.002 |
+| OULAD     | floor    | Framework (ranking + edit + gate) | CARE_native       |  100 |    82     |  74.257 |  89.323 |               82 |               0 | 0     |    0     |
+| OULAD     | floor    | Framework + fallback              | CARE_native       |  100 |    83     |  75.248 |  90.099 |               83 |               0 | 0     |    0     |
+| OULAD     | floor    | Framework (ranking + edit + gate) | MCCE_bounded      | 4500 |    18.667 |  17.152 |  20.204 |             1107 |             267 | 0     |    0     |
+| OULAD     | floor    | Framework + fallback              | MCCE_bounded      | 4500 |    21.844 |  20.426 |  23.285 |             1155 |             172 | 0     |    0     |
+| OULAD     | floor    | Framework (ranking + edit + gate) | MCCE_bounded+edit | 4500 |    18.667 |  17.152 |  20.204 |             1107 |             267 | 0     |    0     |
+| OULAD     | floor    | Framework + fallback              | MCCE_bounded+edit | 4500 |    21.844 |  20.426 |  23.285 |             1155 |             172 | 0     |    0     |
+| OULAD     | floor    | Framework (ranking + edit + gate) | MCCE_native       | 4500 |    76.667 |  75.305 |  78.035 |             3466 |              16 | 0     |    0     |
+| OULAD     | floor    | Framework + fallback              | MCCE_native       | 4500 |    79.844 |  78.646 |  81.086 |             3593 |               0 | 0     |    0     |
+| OULAD     | floor    | Framework (ranking + edit + gate) | NICE_bounded      | 4500 |    35.467 |  33.736 |  37.185 |             1855 |             259 | 0     |    0     |
+| OULAD     | floor    | Framework + fallback              | NICE_bounded      | 4500 |    38.644 |  36.944 |  40.267 |             1922 |             183 | 0     |    0     |
+| OULAD     | floor    | Framework (ranking + edit + gate) | NICE_bounded+edit | 4500 |    35.467 |  33.736 |  37.185 |             1855 |             259 | 0     |    0     |
+| OULAD     | floor    | Framework + fallback              | NICE_bounded+edit | 4500 |    38.644 |  36.944 |  40.267 |             1922 |             183 | 0     |    0     |
+| OULAD     | floor    | Framework (ranking + edit + gate) | NICE_native       | 4500 |    82.067 |  80.905 |  83.196 |             3695 |               2 | 0     |    0     |
+| OULAD     | floor    | Framework + fallback              | NICE_native       | 4500 |    85.244 |  84.157 |  86.261 |             3836 |               0 | 0     |    0     |
 
 ## Rejection reasons (% of rejected)
 |                                              |   below_policy_threshold |   classifier_target_not_met |   immutable_changed |   no_candidate |   out_of_bounds |
@@ -190,24 +190,24 @@
 | ('HarvardX', 'aligned', 'NICE_bounded')      |                      0   |                       100   |                 0   |            0   |             0   |
 | ('HarvardX', 'aligned', 'NICE_bounded+edit') |                      0   |                       100   |                 0   |            0   |             0   |
 | ('HarvardX', 'aligned', 'NICE_native')       |                      0   |                         0   |                 0.5 |            0   |            99.5 |
-| ('OULAD', 'aligned', 'CARE_bounded')         |                     96.4 |                         0   |                 3.6 |            0   |             0   |
-| ('OULAD', 'aligned', 'CARE_bounded+edit')    |                     21.6 |                        66.7 |                11.8 |            0   |             0   |
-| ('OULAD', 'aligned', 'CARE_native')          |                     73.8 |                         0   |                23.4 |            0   |             2.7 |
-| ('OULAD', 'aligned', 'MCCE_bounded')         |                     47.2 |                         0   |                 0   |           52.8 |             0   |
-| ('OULAD', 'aligned', 'MCCE_bounded+edit')    |                      2.1 |                         7.9 |                 0   |           90   |             0   |
-| ('OULAD', 'aligned', 'MCCE_native')          |                     41.8 |                         0   |                 0   |           36.7 |            21.5 |
-| ('OULAD', 'aligned', 'NICE_bounded')         |                     85.4 |                        14.6 |                 0   |            0   |             0   |
-| ('OULAD', 'aligned', 'NICE_bounded+edit')    |                      0.7 |                        99.3 |                 0   |            0   |             0   |
-| ('OULAD', 'aligned', 'NICE_native')          |                     62.2 |                         0   |                33.2 |            0   |             4.6 |
-| ('OULAD', 'floor', 'CARE_bounded')           |                     15   |                         0   |                 2.5 |            0   |            82.5 |
-| ('OULAD', 'floor', 'CARE_bounded+edit')      |                      0   |                        20   |                10   |            0   |            70   |
-| ('OULAD', 'floor', 'CARE_native')            |                     56   |                         0   |                 0   |            0   |            44   |
-| ('OULAD', 'floor', 'MCCE_bounded')           |                      0.1 |                         0   |                 0   |           99.8 |             0.1 |
-| ('OULAD', 'floor', 'MCCE_bounded+edit')      |                      0.1 |                         0   |                 0   |           99.8 |             0.1 |
-| ('OULAD', 'floor', 'MCCE_native')            |                     30.8 |                         0   |                 0   |           27   |            42.3 |
-| ('OULAD', 'floor', 'NICE_bounded')           |                     40.5 |                        59.5 |                 0   |            0   |             0   |
-| ('OULAD', 'floor', 'NICE_bounded+edit')      |                     40.5 |                        59.5 |                 0   |            0   |             0   |
-| ('OULAD', 'floor', 'NICE_native')            |                     52.7 |                         0   |                 0.1 |            0   |            47.2 |
+| ('OULAD', 'aligned', 'CARE_bounded')         |                     96.7 |                         0   |                 2.8 |            0   |             0.5 |
+| ('OULAD', 'aligned', 'CARE_bounded+edit')    |                     83.8 |                         3   |                 6.1 |            0   |             7.1 |
+| ('OULAD', 'aligned', 'CARE_native')          |                     72.2 |                         0   |                24.9 |            0   |             2.9 |
+| ('OULAD', 'aligned', 'MCCE_bounded')         |                     49.7 |                         0   |                 0   |           50.3 |             0   |
+| ('OULAD', 'aligned', 'MCCE_bounded+edit')    |                     21.8 |                         4.7 |                 0   |           73.5 |             0   |
+| ('OULAD', 'aligned', 'MCCE_native')          |                     40.7 |                         0   |                 0.3 |           31.1 |            27.9 |
+| ('OULAD', 'aligned', 'NICE_bounded')         |                     97.8 |                         2.2 |                 0   |            0   |             0   |
+| ('OULAD', 'aligned', 'NICE_bounded+edit')    |                     67.6 |                        32.4 |                 0   |            0   |             0   |
+| ('OULAD', 'aligned', 'NICE_native')          |                     77.5 |                         0   |                18.5 |            0   |             4   |
+| ('OULAD', 'floor', 'CARE_bounded')           |                     48.3 |                         0   |                 1.7 |            0   |            50   |
+| ('OULAD', 'floor', 'CARE_bounded+edit')      |                     62.9 |                         2.9 |                 2.9 |            0   |            31.4 |
+| ('OULAD', 'floor', 'CARE_native')            |                     78.4 |                         0   |                 4.1 |            0   |            17.5 |
+| ('OULAD', 'floor', 'MCCE_bounded')           |                      7.9 |                         0   |                 0   |           88.6 |             3.5 |
+| ('OULAD', 'floor', 'MCCE_bounded+edit')      |                      7.9 |                         0   |                 0   |           88.6 |             3.5 |
+| ('OULAD', 'floor', 'MCCE_native')            |                     32.3 |                         0   |                 0.1 |           24.7 |            42.9 |
+| ('OULAD', 'floor', 'NICE_bounded')           |                     67.9 |                        32.1 |                 0   |            0   |             0   |
+| ('OULAD', 'floor', 'NICE_bounded+edit')      |                     67.9 |                        32.1 |                 0   |            0   |             0   |
+| ('OULAD', 'floor', 'NICE_native')            |                     74.2 |                         0   |                 0.8 |            0   |            25   |
 
 ## Mean seconds per query
 |                      |   seconds |
@@ -218,6 +218,6 @@
 | ('HarvardX', 'CARE') |     9.572 |
 | ('HarvardX', 'MCCE') |     0.038 |
 | ('HarvardX', 'NICE') |     0.005 |
-| ('OULAD', 'CARE')    |    12.402 |
-| ('OULAD', 'MCCE')    |     0.028 |
-| ('OULAD', 'NICE')    |     0.008 |
+| ('OULAD', 'CARE')    |    13.83  |
+| ('OULAD', 'MCCE')    |     0.047 |
+| ('OULAD', 'NICE')    |     0.013 |
