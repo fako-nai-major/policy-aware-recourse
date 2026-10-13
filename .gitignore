@@ -9,3 +9,10 @@ external/
 data/AUC/*.csv
 data/HarvardX/*.csv
 data/OULAD/studentInfo.csv
+
+# v2 smoke-test data
+data/SYNTH/
+results_v2test/
+# raw HMDA export (>100 MB, regenerate from the CFPB Data Browser)
+data/HMDA/state_*.csv
+data/PIMA/dataset

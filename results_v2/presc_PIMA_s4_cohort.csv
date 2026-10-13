@@ -1,0 +1,2 @@
+dataset,seed,stage,n_test,n_at_risk,n_eligible,n_evaluated,true_fail_rate_eligible
+PIMA,4,0,145,145,51,51,0.7058823529411764

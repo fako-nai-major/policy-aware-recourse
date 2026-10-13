@@ -1,0 +1,4 @@
+dataset,seed,stage,n_test,n_at_risk,n_eligible,n_evaluated,true_fail_rate_eligible
+OULAD,0,1,2745,325,325,300,0.8
+OULAD,0,2,2745,501,501,300,0.8343313373253494
+OULAD,0,3,2745,569,569,300,0.8734622144112478

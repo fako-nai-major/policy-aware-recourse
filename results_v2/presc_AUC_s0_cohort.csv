@@ -1,0 +1,4 @@
+dataset,seed,stage,n_test,n_at_risk,n_eligible,n_evaluated,true_fail_rate_eligible
+AUC,0,1,134,92,92,92,0.8152173913043479
+AUC,0,2,134,83,83,83,0.891566265060241
+AUC,0,3,134,85,85,85,0.9176470588235294
