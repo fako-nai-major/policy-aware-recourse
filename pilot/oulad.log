@@ -1,0 +1,20 @@
+25 {'optimal': 25} sec med 13.4 max 26.8
+50 {'optimal': 50} sec med 13.15 max 33.9
+75 {'optimal': 75} sec med 10.02 max 33.9
+100 {'optimal': 100} sec med 8.57 max 33.9
+125 {'optimal': 125} sec med 8.31 max 33.9
+150 {'optimal': 150} sec med 9.38 max 72.4
+175 {'optimal': 175} sec med 9.07 max 72.4
+200 {'optimal': 200} sec med 8.42 max 72.4
+225 {'optimal': 225} sec med 8.2 max 72.4
+                n    acc        sec     secmax     nb
+regime  stage                                        
+aligned 1      40  0.900  14.182181  33.901035  570.5
+        2      40  0.950   7.830655  12.914690  456.0
+        3      40  0.725   6.103861  13.036798  438.5
+floor   1      40  1.000  34.304502  72.425463  485.0
+        2      40  1.000   2.875294  19.365555  387.5
+        3      40  0.925   3.684236  15.904227  371.5
+status
+optimal    240
+Name: count, dtype: int64

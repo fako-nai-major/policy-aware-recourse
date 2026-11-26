@@ -16,3 +16,7 @@ results_v2test/
 # raw HMDA export (>100 MB, regenerate from the CFPB Data Browser)
 data/HMDA/state_*.csv
 data/PIMA/dataset
+
+# transfer bundles and local backups
+_xfer_*
+recourse/core_v2_backup.py

@@ -69,7 +69,11 @@ def main():
     # objective audit (grid completion, as in v1)
     au = d[d.condition.str.startswith('audit:') | (d.condition == 'rank_edit')]
     au = au[au.primary & (au.regime == 'aligned')]
-    a2 = au.groupby(['dataset', 'condition', 'seed']).accepted.mean().groupby(['dataset', 'condition']).agg(ms).unstack('condition')
+    # audit rows exist only for queries with a DiCE pool; use all queries (rank_edit rows) as denominator
+    nq = au[au.condition == 'rank_edit'].groupby(['dataset', 'seed']).size().rename('nq')
+    a2 = au.groupby(['dataset', 'condition', 'seed']).accepted.sum().reset_index().join(nq, on=['dataset', 'seed'])
+    a2['accepted'] = a2.accepted / a2.nq
+    a2 = a2.groupby(['dataset', 'condition']).accepted.agg(ms).unstack('condition')
     a2.to_csv(f'{OUT}/objective_audit_v2.csv'); md += ['## Objective audit (grid completion)', a2.to_markdown(), '']
 
     # external methods

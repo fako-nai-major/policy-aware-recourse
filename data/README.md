@@ -46,3 +46,8 @@ The data are de-identified but subject to the provider's terms of use, so they a
 These are institutional records that cannot be shared. [State access conditions, e.g. "available from the corresponding author on reasonable request, subject to approval by …"]
 
 The released AUC per-query results contain pseudonymous learner codes (`L0001`…) instead of student IDs. The counterfactual feature vectors have been removed from them.
+
+## ADULT, GMSC (v3 benchmarks)
+`ADULT/adult.csv` and `GMSC/gmsc.csv` are the CARLA versions of UCI Adult and Kaggle "Give Me Some Credit"
+(https://github.com/carla-recourse/cf-data, MIT licence for the preprocessing; original data: UCI ML Repository,
+Kaggle 2011 competition). Missing values removed, categoricals binarised, outcome 1 = desired.

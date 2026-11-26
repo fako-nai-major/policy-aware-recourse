@@ -115,7 +115,9 @@ class Tabular(Domain):
     def spec(self, row, k, regime):
         act, gate_b = [], {}
         for f, a in self.c['actionable'].items():
-            x = float(row[f]); lo, hi = float(a['lo']), float(a['hi'])
+            x = float(row[f])
+            lo = float(a['lo'](row)) if callable(a['lo']) else float(a['lo'])
+            hi = float(a['hi'](row)) if callable(a['hi']) else float(a['hi'])
             d = a.get('direction', 'both')
             lb, ub = (x, max(x, hi)) if d == 'increase' else (min(x, lo), x) if d == 'decrease' else (min(x, lo), max(x, hi))
             if ub - lb > 1e-9:
@@ -123,13 +125,17 @@ class Tabular(Domain):
         if not act:
             return None
         imm = [f for f in self.features if f not in act]
-        return Spec(self.features, act, imm, gate_b), {f: list(gate_b[f]) for f in act}, act
+        links = self.c['links'](row) if self.c.get('links') else []
+        derived = tuple(f for f in self.c.get('derived', ()) if f in act)
+        return Spec(self.features, act, imm, gate_b, links=links, derived=derived), {f: list(gate_b[f]) for f in act}, act
 
     def policy(self, tau=None):
-        cons = [Constraint(dict(p['weights']), p['op'], p['tau'], p.get('name', 'policy')) for p in self.c['policy']]
+        mk = lambda p: Constraint(dict(p['weights']), p['op'], p['tau'], p.get('name', 'policy'))
+        cons = [mk(p) for p in self.c['policy']]
         if tau is not None and cons:
             cons[0] = Constraint(cons[0].weights, cons[0].op, tau, cons[0].name)
-        return Policy(cons)
+        any_of = [[mk(p) for p in br] for br in self.c.get('any_of', [])]
+        return Policy(cons, any_of, self.c.get('any_of_name', 'any_of'))
 
 
 def register(config):

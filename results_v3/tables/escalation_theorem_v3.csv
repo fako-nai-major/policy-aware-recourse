@@ -1,0 +1,30 @@
+dataset,regime,subset,n,esc_success_pct,end_point_ok_pct,agreement_pct,esc_fail_but_end_ok,esc_ok_but_end_fail
+HMDA,aligned,all,492,100.0,100.0,100.0,0,0
+HMDA,aligned,seed 0,74,100.0,100.0,100.0,0,0
+HMDA,aligned,seed 1,109,100.0,100.0,100.0,0,0
+HMDA,aligned,seed 2,92,100.0,100.0,100.0,0,0
+HMDA,aligned,seed 3,99,100.0,100.0,100.0,0,0
+HMDA,aligned,seed 4,118,100.0,100.0,100.0,0,0
+OULAD,aligned,all,300,95.3,95.3,100.0,0,0
+OULAD,aligned,seed 0,60,95.0,95.0,100.0,0,0
+OULAD,aligned,seed 1,60,96.7,96.7,100.0,0,0
+OULAD,aligned,seed 2,60,96.7,96.7,100.0,0,0
+OULAD,aligned,seed 3,60,91.7,91.7,100.0,0,0
+OULAD,aligned,seed 4,60,96.7,96.7,100.0,0,0
+OULAD,floor,all,300,95.3,95.3,100.0,0,0
+OULAD,floor,seed 0,60,95.0,95.0,100.0,0,0
+OULAD,floor,seed 1,60,96.7,96.7,100.0,0,0
+OULAD,floor,seed 2,60,96.7,96.7,100.0,0,0
+OULAD,floor,seed 3,60,91.7,91.7,100.0,0,0
+OULAD,floor,seed 4,60,96.7,96.7,100.0,0,0
+PIMA,aligned,all,427,100.0,100.0,100.0,0,0
+PIMA,aligned,seed 0,50,100.0,100.0,100.0,0,0
+PIMA,aligned,seed 1,36,100.0,100.0,100.0,0,0
+PIMA,aligned,seed 2,31,100.0,100.0,100.0,0,0
+PIMA,aligned,seed 3,53,100.0,100.0,100.0,0,0
+PIMA,aligned,seed 4,42,100.0,100.0,100.0,0,0
+PIMA,aligned,seed 5,40,100.0,100.0,100.0,0,0
+PIMA,aligned,seed 6,43,100.0,100.0,100.0,0,0
+PIMA,aligned,seed 7,32,100.0,100.0,100.0,0,0
+PIMA,aligned,seed 8,53,100.0,100.0,100.0,0,0
+PIMA,aligned,seed 9,47,100.0,100.0,100.0,0,0
