@@ -1,7 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite the paper."
-title: "Policy-aware counterfactual recourse with verified acceptance for educational early warning: code, configuration and per-query results"
+title: "Rule-verified counterfactual recourse for decision support: a generator-agnostic method for lending, clinical screening and education: code, configuration and per-query results"
 type: software
+version: "eaai-v1.0"
+date-released: "2026-11-27"
 license: MIT
 repository-code: "https://github.com/fako-nai-major/policy-aware-recourse"
 authors:
@@ -15,8 +17,8 @@ authors:
     given-names: Rebeca
 preferred-citation:
   type: article
-  title: "Policy-aware counterfactual recourse with verified acceptance for educational early warning"
-  journal: "Knowledge-Based Systems"
+  title: "Rule-verified counterfactual recourse for decision support: a generator-agnostic method for lending, clinical screening and education"
+  journal: "Engineering Applications of Artificial Intelligence"
   status: submitted
   authors:
     - family-names: Ako-Nai

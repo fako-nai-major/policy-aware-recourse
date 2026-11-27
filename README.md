@@ -1,3 +1,9 @@
+> **Release `eaai-v1.0` (branch `eaai`)** accompanies
+> Ako-Nai, F., de la Cal Marin, E., Tan, Q., & Soler Costa, R. *Rule-verified counterfactual recourse for decision support: a generator-agnostic method for lending, clinical screening and education.* Submitted to *Engineering Applications of Artificial Intelligence*.
+> Code for that paper: `recourse/`, `experiment.py`, `external_v2.py`, `ext_joint_education.py`, `analyze_v2.py` and the
+> `run_*.sh` scripts (see `README_v2.md`); per-query results and tables in `results_v2/`.
+> The rest of this README describes the earlier *Knowledge-Based Systems* code, which is kept unchanged.
+
 # Policy-aware counterfactual recourse with verified acceptance
 
 Code, configuration and per-query results for the paper
