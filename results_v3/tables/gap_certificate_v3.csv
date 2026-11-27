@@ -44,8 +44,8 @@ OULAD,aligned,lr,repair_esc,286,0.354,0.354,100.0
 OULAD,aligned,lr,framework,286,0.303,0.303,100.0
 OULAD,aligned,mlp,repair_esc,282,0.514,0.662,50.4
 OULAD,aligned,mlp,framework,290,0.336,0.511,49.3
-OULAD,aligned,rf,repair_esc,163,0.539,0.577,84.0
-OULAD,aligned,rf,framework,165,0.271,0.314,83.0
+OULAD,aligned,rf,repair_esc,169,0.556,0.596,82.8
+OULAD,aligned,rf,framework,171,0.265,0.31,81.9
 OULAD,floor,cat,repair_esc,270,0.647,0.8,46.3
 OULAD,floor,cat,framework,284,1.025,1.194,44.7
 OULAD,floor,lr,repair_esc,286,0.216,0.216,100.0

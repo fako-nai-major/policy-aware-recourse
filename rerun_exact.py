@@ -65,7 +65,18 @@ def main():
                 partials[k] = dom.stage(k, dte, f, dtr, P.cat(seed))[0]
             row = df.loc[q]; x0 = partials[k].loc[q].astype(float)
             spec = dom.spec(row, k, rg)[0]
-            r = E.solve_exact(enc, x0, spec, pol, lam_spar=LAM_SPAR, time_limit=LIMIT.get(name, 120))
+            xs = None
+            if os.environ.get('WS') == '1':       # warm start: cheapest accepted heuristic that is cheap to recompute
+                cands = [C.repair(x0, spec, pol, predict), E.repair_sparse(x0, spec, pol, predict, lam_spar=LAM_SPAR)]
+                if 'vector' in d.columns:
+                    vv = d[(d.condition == 'ocean_joint_free') & (d.stage == k) & (d['query'] == q) & (d.regime == rg)].vector
+                    if len(vv) and isinstance(vv.iloc[0], str) and vv.iloc[0]:
+                        import json
+                        v = json.loads(vv.iloc[0]); cands.append(pd.Series({f_: v[f_] for f_ in dom.features}))
+                cands = [c for c in cands if c is not None and C.gate(c, x0, spec, pol, predict)[0]]
+                if cands:
+                    xs = min(cands, key=lambda c: cost(c, x0, spec))
+            r = E.solve_exact(enc, x0, spec, pol, lam_spar=LAM_SPAR, time_limit=LIMIT.get(name, 120), start=xs)
             ok, reasons, _ = C.gate(r.x, x0, spec, pol, predict)
             new.append(dict(stage=k, query=q, regime=rg, accepted=int(ok), reasons=';'.join(reasons) or 'OK',
                             effort=C.effort(r.x, x0, spec) if r.x is not None else np.nan,

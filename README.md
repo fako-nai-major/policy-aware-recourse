@@ -1,3 +1,10 @@
+> **Release `ml-v1.0` (branch `v2`)** accompanies
+> Ako-Nai, F., de la Cal Marin, E., Tan, Q., & Soler Costa, R. *Recourse an institution will accept: exact rule-verified counterfactual recourse with certified abstention.* Submitted to *Machine Learning*.
+> Code for that paper: `recourse/` (exact MILP solver in `recourse/exact.py`), `experiment_v3.py`, `rerun_exact.py`,
+> `verify_bounds.py`, `analyze_v3.py`, `scalability.py`, `sensitivity.py`, `analyze_scale_sens.py` and the `run_*.sh` scripts;
+> per-query results in `results_v3/`, `results_scale/` and `results_sens/`, tables in `results_v3/tables/`.
+> The rest of this README describes the earlier *Knowledge-Based Systems* code, which is kept unchanged.
+
 # Policy-aware counterfactual recourse with verified acceptance
 
 Code, configuration and per-query results for the paper

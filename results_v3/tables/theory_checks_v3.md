@@ -30,7 +30,7 @@ exact infeasible: 3472; of which rule-infeasible (R empty): 88; rule-feasible bu
 | OULAD     | aligned  | cat     |  288 |               75.3 |                      48 |                  nan |                 17.5 |
 | OULAD     | aligned  | lr      |  286 |               24.5 |                      32 |                  nan |                 11.2 |
 | OULAD     | aligned  | mlp     |  290 |               37.2 |                      30 |                  nan |                 10.6 |
-| OULAD     | aligned  | rf      |  174 |               78.7 |                      38 |                  nan |                 22.1 |
+| OULAD     | aligned  | rf      |  174 |               80.5 |                      38 |                  nan |                 22.1 |
 | OULAD     | floor    | cat     |  288 |               38.9 |                      55 |                  nan |                 20.4 |
 | OULAD     | floor    | lr      |  286 |               14.7 |                      42 |                  nan |                 15.4 |
 | OULAD     | floor    | mlp     |  290 |               18.3 |                      34 |                  nan |                 12.1 |
@@ -157,8 +157,8 @@ exact infeasible: 3472; of which rule-infeasible (R empty): 88; rule-feasible bu
 | OULAD     | aligned  | lr      | framework  |  286 |      0.303 |           0.303 |                   100   |
 | OULAD     | aligned  | mlp     | repair_esc |  282 |      0.514 |           0.662 |                    50.4 |
 | OULAD     | aligned  | mlp     | framework  |  290 |      0.336 |           0.511 |                    49.3 |
-| OULAD     | aligned  | rf      | repair_esc |  163 |      0.539 |           0.577 |                    84   |
-| OULAD     | aligned  | rf      | framework  |  165 |      0.271 |           0.314 |                    83   |
+| OULAD     | aligned  | rf      | repair_esc |  169 |      0.556 |           0.596 |                    82.8 |
+| OULAD     | aligned  | rf      | framework  |  171 |      0.265 |           0.31  |                    81.9 |
 | OULAD     | floor    | cat     | repair_esc |  270 |      0.647 |           0.8   |                    46.3 |
 | OULAD     | floor    | cat     | framework  |  284 |      1.025 |           1.194 |                    44.7 |
 | OULAD     | floor    | lr      | repair_esc |  286 |      0.216 |           0.216 |                   100   |

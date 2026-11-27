@@ -22,7 +22,7 @@ HMDA_S,aligned,rf,837,99.9,836,,99.9
 OULAD,aligned,cat,288,75.3,48,,17.5
 OULAD,aligned,lr,286,24.5,32,,11.2
 OULAD,aligned,mlp,290,37.2,30,,10.6
-OULAD,aligned,rf,174,78.7,38,,22.1
+OULAD,aligned,rf,174,80.5,38,,22.1
 OULAD,floor,cat,288,38.9,55,,20.4
 OULAD,floor,lr,286,14.7,42,,15.4
 OULAD,floor,mlp,290,18.3,34,,12.1

@@ -140,7 +140,7 @@ class _Builder:
                 self.rows.append(self.nr); self.cols.append(j); self.vals.append(v)
         self.rlo.append(lo); self.rhi.append(hi); self.nr += 1
 
-    def solve(self, time_limit=60, gap=1e-6, int_tol=1e-9, presolve=True):
+    def solve(self, time_limit=60, gap=1e-6, int_tol=1e-9, presolve=True, start=None):
         """Solve with HiGHS directly (highspy), so that the integrality tolerance can be tightened:
         with the default 1e-6, big-M rows such as u <= M s admit moves of M*1e-6 at no sparsity cost."""
         import highspy
@@ -161,7 +161,11 @@ class _Builder:
         for k, v in dict(output_flag=False, time_limit=float(time_limit), mip_rel_gap=gap,
                          mip_feasibility_tolerance=int_tol, threads=1, presolve='on' if presolve else 'off').items():
             h.setOptionValue(k, v)
-        h.passModel(lp); h.run()
+        h.passModel(lp)
+        if start:                       # partial MIP start: integer values; HiGHS completes the rest
+            idx = np.array(sorted(start), dtype=np.int32)
+            h.setSolution(len(idx), idx, np.array([float(start[i]) for i in idx]))
+        h.run()
         ms = h.getModelStatus(); M = highspy.HighsModelStatus
         info = h.getInfo()
         has_sol = info.primal_solution_status == 2       # feasible primal solution available
@@ -187,13 +191,15 @@ class ExactResult:
     bound: float = np.nan        # valid lower bound on the optimum (MILP dual bound)
 
 
-def solve_exact(enc, x0, spec, policy, lam_spar=0.5, time_limit=60, extra_rules=None, int_tol=None):
-    """x0: pd.Series over spec.features.  spec: recourse.core.Spec.  policy: recourse.core.Policy.
+def solve_exact(enc, x0, spec, policy, lam_spar=0.5, time_limit=60, extra_rules=None, int_tol=None, start=None):
+    """start: optional vector (pd.Series over spec.features), e.g. an accepted heuristic output; its
+    integer pattern (sparsity, split sides, OR branch, ReLU phases) is passed to HiGHS as a MIP start.
+    x0: pd.Series over spec.features.  spec: recourse.core.Spec.  policy: recourse.core.Policy.
     extra_rules: optional list of (coef dict, lo, hi) linear rows over features (e.g. ratio rules)."""
     t0 = time.time()
     feats = list(spec.features); fidx = {f: i for i, f in enumerate(feats)}
     act = [f for f in spec.actionable]
-    B = _Builder(); svar = {}
+    B = _Builder(); svar = {}; branch_vars = []; avar = {}; relu = []
     # feature variables (fixed features get lb = ub = x0)
     xv = {}
     for f in feats:
@@ -248,7 +254,7 @@ def solve_exact(enc, x0, spec, policy, lam_spar=0.5, time_limit=60, extra_rules=
         for c in policy.constraints:
             _rule_row(c)
         if policy.any_of:
-            inds = [B.var(0.0, 1.0, 0.0, integer=True) for _ in policy.any_of]
+            inds = [B.var(0.0, 1.0, 0.0, integer=True) for _ in policy.any_of]; branch_vars = list(zip(inds, policy.any_of))
             B.row([(i, 1.0) for i in inds], 1.0, np.inf)
             for ind, branch in zip(inds, policy.any_of):
                 for c in branch:
@@ -274,6 +280,7 @@ def solve_exact(enc, x0, spec, policy, lam_spar=0.5, time_limit=60, extra_rules=
         prev = [xv[f] for f in feats]
         lo = np.array([float(spec.bounds[f][0]) if f in act else float(x0[f]) for f in feats])
         hi = np.array([float(spec.bounds[f][1]) if f in act else float(x0[f]) for f in feats])
+        relu = []
         for li, (W, b) in enumerate(enc.layers):
             Wp, Wn = np.maximum(W, 0), np.minimum(W, 0)
             L = lo @ Wp + hi @ Wn + b; U = hi @ Wp + lo @ Wn + b
@@ -289,7 +296,7 @@ def solve_exact(enc, x0, spec, policy, lam_spar=0.5, time_limit=60, extra_rules=
                     y = B.var(float(L[j]), float(U[j]))
                     B.row([(y, 1.0)] + lin, float(b[j]), float(b[j]))                 # y = pre
                 else:
-                    y = B.var(0.0, float(U[j])); dl = B.var(0.0, 1.0, 0.0, integer=True)
+                    y = B.var(0.0, float(U[j])); dl = B.var(0.0, 1.0, 0.0, integer=True); relu.append((li, j, dl))
                     B.row([(y, 1.0)] + lin, float(b[j]), np.inf)                      # y >= pre
                     B.row([(y, 1.0)] + lin + [(dl, -float(L[j]))], -np.inf, float(b[j] - L[j]))  # y <= pre - L(1-d)
                     B.row([(y, 1.0), (dl, -float(U[j]))], -np.inf, 0.0)               # y <= U d
@@ -418,7 +425,23 @@ def solve_exact(enc, x0, spec, policy, lam_spar=0.5, time_limit=60, extra_rules=
     # take fractional values (u <= M*1e-7 moves for free).  Networks are therefore solved with tolerance 1e-9
     # and presolve off.
     is_net = isinstance(enc, MLP)
-    res = B.solve(time_limit=time_limit, int_tol=int_tol if int_tol is not None else 1e-9, presolve=not is_net)
+    st = None
+    if start is not None:
+        xs0 = start[feats].astype(float)
+        st = {}
+        for f, sv in svar.items():
+            st[sv] = 0.0 if abs(float(xs0[f]) - float(x0[f])) <= 1e-8 + 1e-5 * abs(float(x0[f])) else 1.0
+        for (f, t), a in avar.items():
+            st[a] = 1.0 if float(xs0[f]) <= t else 0.0
+        for ind, br in branch_vars:
+            st[ind] = 1.0 if policy.branch_ok(xs0, br) else 0.0
+        if isinstance(enc, MLP) and relu:
+            h = xs0.values.astype(float); pres = []
+            for i, (W, b) in enumerate(enc.layers[:-1]):
+                pre = h @ W + b; pres.append(pre); h = np.maximum(pre, 0.0)
+            for li, j, dl in relu:
+                st[dl] = 1.0 if pres[li][j] > 0 else 0.0
+    res = B.solve(time_limit=time_limit, int_tol=int_tol if int_tol is not None else 1e-9, presolve=not is_net, start=st)
     sec = time.time() - t0
     st = {0: 'optimal', 1: 'time_limit', 2: 'infeasible'}.get(res.status, 'error')
     if res.x is None:

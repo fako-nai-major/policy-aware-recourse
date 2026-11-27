@@ -63,6 +63,12 @@ yields were unchanged.
   so that features moved by ~1e-5 "for free" (4 OULAD queries in which a heuristic beat the reported optimum).
   Networks are therefore solved at tolerance 1e-9 with presolve off; after this all checks pass.
 
+*Warm start (added 26 Nov).* `solve_exact(..., start=x)` passes the integer pattern of an accepted vector
+(sparsity binaries, split sides, OR branch, ReLU phases) to HiGHS as a MIP start. It changes neither the program nor
+the guarantees below: it only gives the solver an incumbent. When HiGHS accepts the start (it may not, if the start sits within the
+tightening margins of a boundary), a time-limited solve returns a vector no worse than it, together with a valid
+dual bound.
+
 ## 3. Soundness
 
 **Theorem 1 (soundness).** Let $(x,u,\sigma,a,z,\delta)$ be feasible for $M_\varepsilon(x_0)$. Then $x\in A(x_0)$,

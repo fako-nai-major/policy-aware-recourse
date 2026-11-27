@@ -20,3 +20,7 @@ data/PIMA/dataset
 # transfer bundles and local backups
 _xfer_*
 recourse/core_v2_backup.py
+
+# paper drafts and working notes (kept locally, not published)
+manuscript/
+docs/PROGRESS_v3.md
